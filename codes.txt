@@ -1,0 +1,61 @@
+ <!-- <div class="side-bar">
+      <ul>
+        <li>
+          <a href="https://wa.me/2349157750858" target="_blank"><img id="logo" width="40px" src="./img/whatsapp_logo.png" alt="" /></a>
+          <hr color="blue" />
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/quadri-kobiowu-955313233/" target="_blank"><img width="40px" id="logo" src="./img/linkedIn.png" /></a>
+          <hr color="blue" />
+        </li>
+        <li>
+          <a href="https://twitter.com/QuadriKobiowu" target="_blank"><img width="40px" id="logo" src="./img/Twitter-03.png" alt="" /></a>
+          <hr color="blue" />
+        </li>
+        <li>
+          <a href="https://github.com/kobiowuquadri" target="_blank"><img width="40px" id="logo" src="./img/github_logo.png" alt="" /></a>
+          <hr color="blue" />
+        </li>
+        <li>
+          <a href="mailto:kobiowuq@gmail.com"><img src="./img/email-logo.png"  width="40px" id="logo" alt=""></a>
+          <hr color="blue" />
+        </li>
+      </ul>
+    </div> -->
+
+/* .side-bar {
+  height: 100%;
+  width: 5rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: var(--dropdown-bg);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.side-bar ul {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  text-align: center;
+  gap: 30px;
+  width: 100%;
+  padding: 10px;
+  border: 2px solid var(--dropdown-bg);
+}
+
+.side-bar li {
+  transition: all 3s ease-in-out;
+}
+
+.side-bar img:hover {
+  transform: scale(1.2);
+  box-shadow: 2px 2px 10px var(--dropdown-bg);
+} */
+
+
+animate__animated animate__fadeInRight animate__delay-3s
+
