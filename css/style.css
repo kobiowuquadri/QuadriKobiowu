@@ -11,6 +11,10 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --bg: rgba(8, 8, 112, 0.9);
   --white: rgba(255, 255, 255, 0.79);
