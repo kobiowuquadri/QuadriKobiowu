@@ -12,6 +12,7 @@
 }
 
 html {
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -26,6 +27,7 @@ html {
 }
 
 body {
+
   -webkit-user-select: none;
   /* Safari */
   -moz-user-select: none;
@@ -34,7 +36,7 @@ body {
   /* Internet Explorer/Edge */
   user-select: none;
   /* Non-prefixed version, supported by Chrome and Opera */
-
+  overflow-x: hidden;
 }
 
 #brand-name {
@@ -87,6 +89,18 @@ nav {
   transform: scale(2rem);
 }
 
+
+.nav-links + button{
+  padding: 10px 30px;
+  background-color: transparent;
+  color: var(--white);
+  width: 200px;
+  border-radius: 10px;
+  border: 2px solid var(--white);
+
+}
+
+/* Menu bars */
 #hamburger-menu {
   display: none;
 }
@@ -176,7 +190,7 @@ nav {
   grid-template-columns: repeat(2, 1fr);
   justify-content: space-around;
   gap: 30px;
-  padding: 20px;
+  padding: 30px;
   background-color: var(--dark);
   color: var(--white);
 }
@@ -197,20 +211,30 @@ nav {
   
 }
 
+
 .languages ul {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   background-color: var(--dark);
   color: var(--white);
-  box-shadow: 0px 0px 20px var(--white);
+  box-shadow: 0px 0px 10px var(--white);
   text-align: center;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
+  padding: 20px;
 }
 
+
 .languages li {
-  padding: 30px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  border: 2px solid var(--white);
+  border-radius: 10px;
+  padding: 5px 10px;
+  gap: 5px;
 }
 
 
@@ -220,8 +244,10 @@ nav {
   font-size: 2rem;
 }
 
+
+
 @media (max-width:730px) {
-  .nav-links {
+  .nav-links,.nav-links + button {
     display: none;
   }
 
@@ -253,4 +279,9 @@ nav {
   .languages ul {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  #skill_logo{
+    width: 30px;
+  }
+
 }
