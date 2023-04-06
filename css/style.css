@@ -185,7 +185,9 @@ nav {
 }
 
 .info p {
+  text-align: justify;
   font-size: 1.5rem;
+  padding-top: 50px;
 }
 
 #about {
@@ -210,6 +212,12 @@ nav {
   padding: 30px;
 }
 
+
+.languages h2 {
+  text-align: center;
+  padding: 5px;
+  font-size: 2rem;
+}
 
 @media (max-width:730px) {
   .nav-links {
