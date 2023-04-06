@@ -246,7 +246,7 @@ nav {
 
 
 
-@media (max-width:730px) {
+@media (max-width:763px) {
   .nav-links,.nav-links + button {
     display: none;
   }
