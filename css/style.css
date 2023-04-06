@@ -21,6 +21,8 @@ html {
   --yellow: rgb(218, 218, 11);
   --dropdown-bg: rgba(10, 10, 82, 0.9);
   --lightblue: rgb(29, 29, 146);
+  --black:rgba(0,0,0,0.8);
+  --dark:rgb(0,0,0);
 }
 
 body {
@@ -60,12 +62,13 @@ nav {
   justify-content: space-between;
   text-align: center;
   align-items: center;
-  background: var(--lightblue);
+  background: var(--black);
   color: var(--white);
   padding: 0.5rem 5rem 0.5rem 2rem;
   position: fixed;
   z-index: 1;
   width: 100%;
+  border-bottom: 2px solid var(--white);
 }
 
 .nav-links ul {
@@ -100,7 +103,7 @@ nav {
 .nav-card {
   height: 100vh;
   width: 10rem;
-  background-color: var(--lightblue);
+  background-color: var(--dark);
   position: absolute;
   right: 0;
   bottom: 0;
@@ -172,9 +175,9 @@ nav {
   grid-template-columns: repeat(2, 1fr);
   justify-content: space-around;
   gap: 30px;
-  background-color: var(--lightblue);
-  color: var(--white);
   padding: 20px;
+  background-color: var(--dark);
+  color: var(--white);
 }
 
 .page.active {
@@ -186,14 +189,16 @@ nav {
 }
 
 #about {
-  background-color: var(--lightblue);
+  background-color: var(--dark);
   color: var(--white);
+  
 }
 
 .languages ul {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  background-color: var(--lightblue);
+  background-color: var(--dark);
+  color: var(--white);
   box-shadow: 0px 0px 20px var(--white);
   text-align: center;
   justify-content: center;
