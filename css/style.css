@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&display=swap");
 
 * {
   padding: 0;
@@ -22,12 +22,11 @@ html {
   --yellow: rgb(218, 218, 11);
   --dropdown-bg: rgba(10, 10, 82, 0.9);
   --lightblue: rgb(29, 29, 146);
-  --black:rgba(0,0,0,0.8);
-  --dark:rgb(0,0,0);
+  --black: rgba(0, 0, 0, 0.8);
+  --dark: rgb(0, 0, 0);
 }
 
 body {
-
   -webkit-user-select: none;
   /* Safari */
   -moz-user-select: none;
@@ -86,25 +85,23 @@ nav {
 .nav-link:hover {
   color: var(--yellow);
   transition: 0.5s ease-in-out;
-  transform: scale(2rem);
+  transform: scale(1.2);
 }
 
-
-.nav-links + button{
+.nav-links + button {
   padding: 10px 30px;
   background-color: transparent;
   color: var(--white);
   width: 200px;
   border-radius: 10px;
   border: 2px solid var(--white);
-
 }
 
 /* Menu bars */
 #hamburger-menu {
   display: none;
 }
-#hamburger-menu:checked{
+#hamburger-menu:checked {
   transform: scale(1.1);
 }
 
@@ -119,14 +116,14 @@ nav {
   height: 100vh;
   width: 10rem;
   background-color: var(--dark);
-  position: absolute;
+  position: fixed;
   right: 0;
-  bottom: 0;
-  z-index:8;
+  top: 0;
+  z-index: 5;
   display: none;
-  transition: transform 1.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  /* transition: transform 1.5s ease-in-out; */
 }
-
 
 .nav-card li {
   display: grid;
@@ -138,15 +135,19 @@ nav {
   margin-top: 50px;
 }
 
+.nav-card li a {
+  transition: all 2s ease-in-out;
+}
+
 .display {
   display: flex;
 }
 
-
 /* Main */
 
 .section {
-  background:linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.5)), url(../img/bg-image.jpg) no-repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+    url(../img/bg-image.jpg) no-repeat center;
   background-size: cover;
   color: var(--white);
   height: 700px;
@@ -161,8 +162,6 @@ nav {
   display: grid;
   gap: 40px;
   text-align: center;
-
-
 }
 
 .wrapper .static-txt {
@@ -173,24 +172,13 @@ nav {
   font-size: 3rem;
 }
 
-.section~h3 {
+.section ~ h3 {
   padding: 10px;
   text-align: center;
   font-size: 2rem;
 }
 
-
-
-/* About me */
-
-
-
-.about-me {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-content: space-around;
-  gap: 30px;
-  padding: 30px;
+#about {
   background-color: var(--dark);
   color: var(--white);
 }
@@ -199,44 +187,39 @@ nav {
   transform: translateY(0);
 }
 
-.info p {
-  text-align: justify;
-  font-size: 1.5rem;
-  padding-top: 50px;
-}
+/* About me */
 
-#about {
-  background-color: var(--dark);
-  color: var(--white);
-  
-}
-
-
-.languages ul {
+.about-me {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   background-color: var(--dark);
   color: var(--white);
-  box-shadow: 0px 0px 10px var(--white);
-  text-align: center;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 20px;
-  padding: 20px;
+  gap: 30px;
+  padding-right: 20px;
 }
 
+.languages ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  box-shadow: 0px 0px 10px var(--white);
+  margin: 20px;
+  gap: 10px;
+  justify-content: center;
+}
 
 .languages li {
   display: flex;
   align-items: center;
-  text-align: center;
+  padding: 10px;
   justify-content: center;
-  border: 2px solid var(--white);
-  border-radius: 10px;
-  padding: 5px 10px;
   gap: 5px;
 }
 
+.info p {
+  text-align: justify;
+  font-size: 1.5rem;
+  padding: 20px;
+}
 
 .languages h2 {
   text-align: center;
@@ -244,10 +227,9 @@ nav {
   font-size: 2rem;
 }
 
-
-
-@media (max-width:763px) {
-  .nav-links,.nav-links + button {
+@media (max-width: 763px) {
+  .nav-links,
+  .nav-links + button {
     display: none;
   }
 
@@ -259,29 +241,24 @@ nav {
     padding: 0.5rem 0.7rem;
   }
 
-  .about-me {
-    grid-template-columns: 1fr;
+  .wrapper #output-text {
+    font-size: 2.5rem;
   }
-
-  .info {
-    height: 100%;
-    width: 100%;
-  }
-
   .wrapper .static-txt {
     font-size: 3.5rem;
   }
 
-  .wrapper #output-text {
-    font-size: 2.5rem;
+  .about-me {
+    grid-template-columns: 1fr;
+    padding-right: 0;
   }
 
-  .languages ul {
-    grid-template-columns: repeat(2, 1fr);
+  .info p {
+    font-size: 1.1rem;
+    text-align: center;
+    padding-top: 10px;
   }
 
-  #skill_logo{
-    width: 30px;
-  }
+  
 
 }
