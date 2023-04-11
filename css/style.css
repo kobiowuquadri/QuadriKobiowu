@@ -11,11 +11,13 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* html */
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
+/* variables */
 :root {
   --bg: rgba(8, 8, 112, 0.9);
   --white: rgba(255, 255, 255, 0.79);
@@ -37,6 +39,8 @@ body {
   /* Non-prefixed version, supported by Chrome and Opera */
   overflow-x: hidden;
 }
+
+/* navbar section */
 
 #brand-name {
   color: var(--yellow);
@@ -95,6 +99,25 @@ nav {
   width: 200px;
   border-radius: 10px;
   border: 2px solid var(--white);
+}
+
+.glow-border {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 2px solid var(--white);
+  box-shadow: 0px 0px 5px var(--white);
+  animation: glow 1s ease-in-out infinite alternate;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0px 0px 5px var(--white);
+  }
+  to {
+    box-shadow: 0px 0px 20px var(--white);
+  }
 }
 
 /* Menu bars */
@@ -202,8 +225,10 @@ nav {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   box-shadow: 0px 0px 10px var(--white);
+  padding: 20px;
   margin: 20px;
   gap: 10px;
+  border-radius: 15px;
   justify-content: center;
 }
 
@@ -218,7 +243,7 @@ nav {
 .info p {
   text-align: justify;
   font-size: 1.5rem;
-  padding: 20px;
+  padding: 100px 20px 10px 20px;
 }
 
 .languages h2 {
@@ -226,6 +251,33 @@ nav {
   padding: 5px;
   font-size: 2rem;
 }
+
+/* Projects section */
+
+#projects {
+  background-color: var(--dark);
+  color: var(--white);
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  background-color: var(--dark);
+  color: var(--white);
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 763px) {
   .nav-links,

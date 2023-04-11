@@ -15,10 +15,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
 
   <body>
+    <!-- navbar card section -->
     <div class="nav-card">
       <a href="javascript:void()">
         <img src="./svg/close_bar.svg" id="close-bar" alt="close-bar" />
@@ -30,6 +33,8 @@
         <li><a href="#" class="nav-link scroll-link">RESUME</a></li>
       </ul>
     </div>
+
+    <!-- navbar section -->
     <header>
       <nav>
         <a href="./index.htm" id="brand-name">
@@ -58,7 +63,7 @@
             <li><a href="#" class="nav-link scroll-link">CONTACT ME</a></li>
           </ul>
         </div>
-        <button>
+        <button class="glow-border">
           <a href="#" class="nav-link scroll-link"
             ><i
               class="fa-solid fa-download fa fa-beat"
@@ -69,7 +74,9 @@
         </button>
       </nav>
     </header>
+    <!-- main -->
     <main>
+      <!-- wrapper -->
       <div class="section">
         <div class="wrapper">
           <h1
@@ -80,10 +87,11 @@
           <h1 id="output-text"></h1>
         </div>
       </div>
+      <!-- About section -->
       <h3 id="about">ABOUT ME</h3>
       <hr />
       <div class="about-me page">
-        <section class="info">
+        <section class="info" data-aos="fade-right">
           <p>
             I'm a Professional Frontend Developer specializing in the design and
             development of the user interface (UI) and user experience (UX) of
@@ -97,121 +105,111 @@
             organization and society at large.
           </p>
         </section>
-        <section class="languages">
+        <section class="languages" data-aos="fade-left">
           <div>
             <h2>Tools</h2>
             <ul>
               <li>
-                <img
-                  width="50px"
-                  id="skill_logo"
-                  src="./img/html_logo.png"
-                  alt=""
-                />
-                <span>HTML</span>
+                <button class="glow-border">
+                  <img
+                    width="50px"
+                    id="skill_logo"
+                    src="./img/html_logo.png"
+                    alt=""
+                  />
+                  <span>HTML</span>
+                </button>
               </li>
               <li>
-                <img
-                  width="40px"
-                  id="skill_logo"
-                  src="./img/css_logo.png"
-                  alt=""
-                />
-                <span>CSS</span>
+                <button class="glow-border">
+                  <img
+                    width="35px"
+                    id="skill_logo"
+                    src="./img/css_logo.png"
+                    alt=""
+                  />
+                  <span>CSS</span>
+                </button>
               </li>
               <li>
-                <img
-                  width="40px"
-                  id="skill_logo"
-                  src="./img/js_logo.png"
-                  alt=""
-                />
-                <span>JAVASCRIPT</span>
+                <button class="glow-border">
+                  <img
+                    width="35px"
+                    id="skill_logo"
+                    src="./img/js_logo.png"
+                    alt=""
+                  />
+                  <span>JAVASCRIPT</span>
+                </button>
               </li>
               <li>
-                <img
-                  width="50px"
-                  id="skill_logo"
-                  src="./svg/React-logo.svg"
-                  alt=""
-                />
-                <span>REACT</span>
+                <button class="glow-border">
+                  <img
+                    width="40px"
+                    id="skill_logo"
+                    src="./svg/React-logo.svg"
+                    alt=""
+                  />
+                  <span>REACT</span>
+                </button>
               </li>
               <li>
-                <img
-                  width="50px"
-                  id="skill_logo"
-                  src="./img/github_logo.png"
-                  alt=""
-                />
-                <span>GITHUB</span>
+                <button class="glow-border">
+                  <img
+                    width="40px"
+                    id="skill_logo"
+                    src="./img/github_logo.png"
+                    alt=""
+                  />
+                  <span>GITHUB</span>
+                </button>
               </li>
               <li>
-                <img
-                  width="50px"
-                  id="skill_logo"
-                  src="./svg/Bootstrap_logo.svg"
-                  alt=""
-                />
-                <span>BOOTSTRAP</span>
+                <button class="glow-border">
+                  <img
+                    width="40px"
+                    id="skill_logo"
+                    src="./svg/Bootstrap_logo.svg"
+                    alt=""
+                  />
+                  <span>BOOTSTRAP</span>
+                </button>
               </li>
               <li>
-                <img
-                  width="80px"
-                  id="skill_logo"
-                  src="./svg/Git-logo.svg"
-                  alt=""
-                />
+                <button class="glow-border">
+                  <img
+                    width="80px"
+                    id="skill_logo"
+                    src="./svg/Git-logo.svg"
+                    alt=""
+                  />
+                </button>
               </li>
               <li>
-                <img
-                  width="70px"
-                  id="skill_logo"
-                  src="./svg/Sass_Logo_Color.svg"
-                  alt=""
-                />
+                <button class="glow-border">
+                  <img
+                    width="60px"
+                    id="skill_logo"
+                    src="./svg/Sass_Logo_Color.svg"
+                    alt=""
+                  />
+                </button>
               </li>
             </ul>
           </div>
         </section>
       </div>
-
+       <!-- Projects  -->
       <h3 id="projects">PROJECTS</h3>
       <hr />
       <div class="projects page">
-        <section
-          class="languages animate__animated animate__fadeInRight animate__delay-3s"
-        >
-          <div></div>
-        </section>
-        <section
-          class="languages animate__animated animate__fadeInRight animate__delay-3s"
-        >
-          <div></div>
-        </section>
-        <section
-          class="languages animate__animated animate__fadeInRight animate__delay-3s"
-        >
-          <div></div>
-        </section>
-        <section
-          class="languages animate__animated animate__fadeInRight animate__delay-3s"
-        >
-          <div></div>
-        </section>
-        <section
-          class="languages animate__animated animate__fadeInRight animate__delay-3s"
-        >
-          <div></div>
-        </section>
-        <section
-          class="languages animate__animated animate__fadeInRight animate__delay-3s"
-        >
-          <div></div>
-        </section>
+          
       </div>
     </main>
 
     <script src="./js/script.js"></script>
+    <script>
+  AOS.init();
+</script>
   </body>
 </html>
