@@ -179,7 +179,7 @@ nav {
   background: url(../img/bg-image.jpg) no-repeat center;
   background-size: cover;
   color: var(--white);
-  height: 700px;
+  height: 100vh;
 }
 
 .hero_section {
