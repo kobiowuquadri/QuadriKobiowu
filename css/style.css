@@ -28,6 +28,10 @@ html {
   --dark: rgb(0, 0, 0);
 }
 
+html,body {
+  max-width: 100%;
+}
+
 body {
   -webkit-user-select: none;
   /* Safari */
@@ -171,26 +175,31 @@ nav {
 
 /* Main */
 
-.section {
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
-    url(../img/bg-image.jpg) no-repeat center;
+.hero_section {
+  background: url(../img/bg-image.jpg) no-repeat center;
   background-size: cover;
   color: var(--white);
   height: 700px;
-  background-blend-mode: multiply;
 }
 
-.wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: grid;
-  gap: 40px;
+.hero_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%;
+  justify-content: center;
+  gap: 50px;
+}
+
+.wrapper{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
   text-align: center;
 }
 
-.wrapper .static-txt {
+.hero_section > h1 {
   font-size: 4rem;
 }
 
@@ -198,7 +207,7 @@ nav {
   font-size: 3rem;
 }
 
-.section ~ h3 {
+.hero_section ~ h3 {
   padding: 10px;
   text-align: center;
   font-size: 2rem;
@@ -263,6 +272,11 @@ nav {
   font-size: 2rem;
 } 
 
+#btn_resume {
+  background-color: transparent;
+  
+}
+
 /* Projects section */
 
 #projects {
@@ -271,12 +285,16 @@ nav {
 }
 
 .projects {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 50px;
   background-color: var(--dark);
   color: var(--white);
 }
+
+.projects > p {
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 20px;
+}
+
 
 
 
@@ -324,14 +342,10 @@ nav {
     /* text-align: center; */
     padding-top: 10px;
   }
-/*    
-  #lang_1 {
-    width: 10px;
-    height: 40px;
+  .glow-border{
+    width: 100px;
+    height: 100px;
+    padding: 5px 10px;
   }
-  
-  #lang_2 {
-    width: 20px;
-  } */
 
 }
