@@ -80,3 +80,6 @@ var typed = new Typed('#output-text', {
   typeSpeed: 100,
   loop:true
 });
+
+
+

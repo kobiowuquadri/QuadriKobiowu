@@ -58,7 +58,7 @@ td {
   padding-right: 0.7rem;
 }
 
-a {
+.nav-link {
   color: var(--white);
   font-size: 1.2rem;
   font-weight: bold;
@@ -176,10 +176,11 @@ nav {
 /* Main */
 
 .hero_section {
-  background: url(../img/bg_image.jpg) no-repeat center;
+  background: url(../img/bg-image.jpg) no-repeat center;
   background-size: cover;
   color: var(--white);
-  height: 100vh;
+  height: 700px;
+  width: 100%;
 }
 
 .hero_section {
@@ -260,10 +261,13 @@ nav {
   gap: 5px;
 }
 
-.info p {
+.info {
   text-align: justify;
   font-size: 1.5rem;
   padding: 60px 20px 10px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }
 
 .languages h2 {
@@ -274,8 +278,27 @@ nav {
 
 #btn_resume {
   background-color: transparent;
-  
+  border: 3px solid var(--white);
+  padding: 15px 30px;
+  width: 240px;
+  height: 70px;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
+
+#btn_resume a {
+  color: var(--yellow);
+}
+
+#btn_resume a:hover {
+  color: var(--dark);
+}
+#btn_resume:hover{
+  background-color: var(--white);
+  transition: 1.5s ease-in-out;
+  color: var(--dark);
+}
+
 
 /* Projects section */
 
@@ -347,5 +370,8 @@ nav {
     height: 100px;
     padding: 5px 10px;
   }
-
+   
+  .languages ul {
+    justify-content: flex-start;
+  }
 }
