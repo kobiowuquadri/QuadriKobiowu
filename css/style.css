@@ -178,28 +178,40 @@ nav {
 /* Main */
 
 .hero_section {
-  background: url(../img/bg-image.jpg) no-repeat center;
-  background-size: cover;
   color: var(--white);
-  height: 700px;
+  height: 100%;
   width: 100%;
+  position: relative;
 }
 
-.hero_section {
+.hero_section img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  margin-bottom: -1%;
+}
+
+
+/* .hero_section {
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100%;
   justify-content: center;
   gap: 50px;
-}
+} */
 
 .wrapper {
-  display: flex;
+  /* display: flex;
   justify-content: center;
   width: 100%;
   align-items: center;
-  text-align: center;
+  text-align: center; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+ 
 }
 
 .hero_section > h1 {
