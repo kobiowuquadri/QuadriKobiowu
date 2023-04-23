@@ -77,10 +77,16 @@ window.addEventListener('load', checkSection)
 // typer
 var typed = new Typed('#output-text', {
   strings: [
-    'Quadri Kobiowu...',
-    ' a Frontend Developer...',
-    'a Web Developer...',
-    'a Coding Instructor...'
+    // 'Quadri Kobiowu...',
+    'a...'
+  ],
+  typeSpeed: 100,
+  loop: true
+})
+
+var typed_2 = new Typed('#output', {
+  strings: [
+    '...'
   ],
   typeSpeed: 100,
   loop: true
