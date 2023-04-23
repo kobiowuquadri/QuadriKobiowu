@@ -176,9 +176,7 @@ nav {
 }
 
 /* Main */
-main {
-  margin-top: 70px;
-}
+
 .hero_section {
   background-color: var(--dark);
   height: 100%;
@@ -186,7 +184,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding:50px;
+  padding:100px 50px 50px 50px;
 }
 
 .hero_section_content > h1 {
@@ -449,16 +447,15 @@ footer {
   .wrapper #output-text {
     font-size: 2.5rem;
   }
-  .wrapper .static-txt {
-    font-size: 3.5rem;
-  }
 
-  main {
-    margin-top: 20px;
-  }
+  .hero_section {
+    text-align: center;
+    flex-direction: column-reverse;
+    justify-content: center;
+   }
 
   .hero_section_image img{
-    width: 250px;
+    width: 200px;
   }
    
   .hero_section_content > h1{
@@ -466,7 +463,8 @@ footer {
   }
 
   .hero_section_content span{
-    font-size: 5rem;
+    text-align: center;
+    font-size: 3rem;
   }
 
   .about-me {
@@ -488,10 +486,6 @@ footer {
     height: 100px;
     padding: 5px 10px;
   }
-   .hero_section {
-    flex-direction: column-reverse;
-    padding: 100px 15px 15px 15px;
-   }
     
   
 
@@ -527,7 +521,5 @@ footer {
   .contact_me > p {
     width: 100%;
   }
-  .hero_section_content span{
-    font-size: 4rem;
-  }
+ 
 }
