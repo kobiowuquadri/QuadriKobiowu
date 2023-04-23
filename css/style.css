@@ -521,10 +521,13 @@ footer {
   }
 
   .contact_me > h1{
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .contact_me > p {
     width: 100%;
+  }
+  .hero_section_content span{
+    font-size: 4rem;
   }
 }
