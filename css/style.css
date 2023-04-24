@@ -7,7 +7,6 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style-type: none;
-  /* font-family: "Montserrat", sans-serif; */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -182,10 +181,11 @@ nav {
   height: 100%;
   color: var(--white);
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding:100px 50px 50px 50px;
   flex-wrap: wrap;
+  padding-top: 100px;
+  padding-bottom: 50px;
 }
 
 .hero_section_content > h1 {
@@ -516,9 +516,6 @@ footer {
 
 }
 
-/* .media_links li:hover {
-  background-color: rgb(34, 34, 122);
-} */
 
 .intro {
   display: flex;
@@ -531,13 +528,6 @@ footer {
   justify-self: center;
   padding: 50px 50px 30px 50px;
 }
-
-
-
-
-
-
-
 
 @media (max-width: 763px) {
   .nav-links,
