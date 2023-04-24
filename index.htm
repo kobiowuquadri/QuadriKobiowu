@@ -1,458 +1,379 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Quadri Kobiowu</title>
-        <link rel="shortcut icon" href="./img/my-pics.png" type="image/x-icon">
-        <link rel="stylesheet" href="./css/style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    </head>
-    <body>
-        <!-- navbar card section -->
-        <div class="nav-card">
-            <a href="javascript:void()">
-                <img src="./svg/close_bar.svg" id="close-bar" alt="close-bar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Quadri Kobiowu">
+    <title>Quadri Kobiowu</title>
+    <link rel="shortcut icon" href="./img/my-pics.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body>
+    <!-- navbar card section -->
+    <div class="nav-card">
+        <a href="javascript:void()">
+            <img src="./svg/close_bar.svg" id="close-bar" alt="close-bar">
+        </a>
+        <ul>
+            <li>
+                <a href="#about" class="nav-link scroll-link">ABOUT ME</a>
+            </li>
+            <li>
+                <a href="#projects" class="nav-link scroll-link">PROJECTS</a>
+            </li>
+            <li>
+                <a href="#contact_me" class="nav-link scroll-link">CONTACT ME</a>
+            </li>
+            <li>
+                <a href="./my_resume.pdf" class="nav-link scroll-link">RESUME</a>
+            </li>
+        </ul>
+    </div>
+    <!-- navbar section -->
+    <header>
+        <nav>
+            <a href="./index.htm" id="brand-name">
+                <table>
+                    <tr>
+                        <td>
+                            <img src="./img/my-pics.png" id="logo-img" alt="my-pics">
+                        </td>
+                        <td>QUADRI KOBIOWU</td>
+                    </tr>
+                </table>
             </a>
-            <ul>
-                <li>
-                    <a href="#about" class="nav-link scroll-link">ABOUT ME</a>
-                </li>
-                <li>
-                    <a href="#projects" class="nav-link scroll-link">PROJECTS</a>
-                </li>
-                <li>
-                    <a href="#contact_me" class="nav-link scroll-link">CONTACT ME</a>
-                </li>
-                <li>
-                    <a href="./my_resume.pdf" class="nav-link scroll-link">RESUME</a>
-                </li>
-            </ul>
+            <a href="javascript:void()">
+                <img src="./svg/hamburger_menu.svg" id="hamburger-menu" alt="hamburger-menu">
+            </a>
+            <div class="nav-links">
+                <ul>
+                    <li>
+                        <a href="#about" class="nav-link scroll-link">ABOUT ME</a>
+                    </li>
+                    <li>
+                        <a href="#projects" class="nav-link scroll-link">PROJECTS</a>
+                    </li>
+                    <li>
+                        <a href="#contact_me" class="nav-link scroll-link">CONTACT ME</a>
+                    </li>
+                </ul>
+            </div>
+            <button class="glow-border">
+                <a href="./my_resume.pdf" class="nav-link scroll-link">
+                    <i class="fa-solid fa-download fa fa-beat" style="color: #e2e5e9"></i>RESUME
+                </a>
+            </button>
+        </nav>
+    </header>
+    <!-- main -->
+    <main>
+        <!-- hero section -->
+        <div class="hero_section">
+            <div class="hero_section_content  animate__animated animate__backInLeft animate__delay-1s">
+                <h1>I'm
+                    <b id="output-text"></b>
+                </h1>
+                <p>
+                    <span style="color: var(--yellow);">FRONTEND</span>
+                    <br>
+                    <span>DEVELOPER</span>
+                </p>
+            </div>
+            <div class="hero_section_image animate__animated animate__flip animate__delay-1s">
+                <p>
+                    <img src="./img/my-pics.png" width="350px" alt="">
+                </p>
+            </div>
         </div>
-        <!-- navbar section -->
-        <header>
-            <nav>
-                <a href="./index.htm" id="brand-name">
-                    <table>
-                        <tr>
-                            <td>
-                                <img src="./img/my-pics.png" id="logo-img" alt="my-pics">
-                            </td>
-                            <td>QUADRI KOBIOWU</td>
-                        </tr>
-                    </table>
-                </a>
-                <a href="javascript:void()">
-                    <img src="./svg/hamburger_menu.svg" id="hamburger-menu" alt="hamburger-menu">
-                </a>
-                <div class="nav-links">
+        <!-- About section -->
+        <h3 id="about">ABOUT ME</h3>
+        <hr>
+        <div class="about-me page">
+            <section class="info" data-aos="fade-right">
+                <p>
+                    I'm a Professional Frontend Developer specializing in the design and
+                    development of the user interface (UI) and user experience (UX) of
+                    websites and web applications,
+                    <br>
+                    I also work to optimize the performance and accessibility of
+                    websites and web applications and to ensure compatibility across
+                    different devices and browsers.
+                    <br>
+                    I am a Self-motivated individual with great passion for integrity,
+                    and excellence, my aim is to proffer solution driven and result
+                    oriented strategies that will impact positively on my team,
+                    organization and society at large.
+                </p>
+                <button id="btn_resume" class="glow-border" data-aos="flip-left">
+                    <a href="./my_resume.pdf">View my Resume</a>
+                </button>
+            </section>
+            <section class="languages" data-aos="fade-left">
+                <div>
+                    <h2>Tools</h2>
                     <ul>
                         <li>
-                            <a href="#about" class="nav-link scroll-link">ABOUT ME</a>
+                            <button class="glow-border">
+                                <img width="50px" id="skill_logo" src="./img/html_logo.png" alt="">
+                                <span>HTML</span>
+                            </button>
                         </li>
                         <li>
-                            <a href="#projects" class="nav-link scroll-link">PROJECTS</a>
+                            <button class="glow-border">
+                                <img width="45px" id="skill_logo" src="./img/css_logo.png" alt="">
+                                <span>CSS</span>
+                            </button>
                         </li>
                         <li>
-                            <a href="#contact_me" class="nav-link scroll-link">CONTACT ME</a>
+                            <button class="glow-border">
+                                <img id="lang_1" width="35px" id="skill_logo" src="./img/js_logo.png" alt="">
+                                <span>JAVASCRIPT</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="glow-border">
+                                <img id="lang_2" width="40px" id="skill_logo" src="./svg/React-logo.svg" alt="">
+                                <span>REACT</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="glow-border">
+                                <img width="40px" id="skill_logo" src="./img/github_logo.png" alt="">
+                                <span>GITHUB</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="glow-border">
+                                <img width="40px" id="skill_logo" src="./svg/Bootstrap_logo.svg" alt="">
+                                <span>BOOTSTRAP</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="glow-border">
+                                <img width="80px" id="git_logo" src="./svg/Git-logo.svg" alt="">
+                            </button>
+                        </li>
+                        <li>
+                            <button class="glow-border">
+                                <img width="60px" id="skill_logo" src="./svg/Sass_Logo_Color.svg" alt="">
+                            </button>
                         </li>
                     </ul>
                 </div>
-                <button class="glow-border">
-                    <a href="./my_resume.pdf" class="nav-link scroll-link">
-                        <i class="fa-solid fa-download fa fa-beat" style="color: #e2e5e9"></i>RESUME
-                    </a>
-                </button>
-            </nav>
-        </header>
-        <!-- main -->
-        <main>
-            <!-- hero section -->
-            <div class="hero_section">
-                <div class="hero_section_content">
-                    <h1>I'm
-                        <b id="output-text"></b>
-                    </h1>
-                    <p>
-                        <span style="color: var(--yellow);">FRONTEND</span>
-                        <br>
-                        <span>DEVELOPER</span>
-                    </p>
-                </div>
-                <div class="hero_section_image">
-                    <p>
-                        <img src="./img/my-pics.png" width="350px" alt="">
-                    </p>
-                </div>
-            </div>
-            <!-- About section -->
-            <h3 id="about">ABOUT ME</h3>
-            <hr>
-            <div class="about-me page">
-                <section class="info" data-aos="fade-right">
-                    <p>
-                        I'm a Professional Frontend Developer specializing in the design and
-          development of the user interface (UI) and user experience (UX) of
-          websites and web applications,
-                        <br>
-                        I also work to optimize the performance and accessibility of
-          websites and web applications and to ensure compatibility across
-          different devices and browsers.
-                        <br>
-                        I am a Self-motivated individual with great passion for integrity,
-          and excellence, my aim is to proffer solution driven and result
-          oriented strategies that will impact positively on my team,
-          organization and society at large.
-                    </p>
-                    <button id="btn_resume" class="glow-border" data-aos="flip-left">
-                        <a href="./my_resume.pdf">View my Resume</a>
-                    </button>
-                </section>
-                <section class="languages" data-aos="fade-left">
-                    <div>
-                        <h2>Tools</h2>
+            </section>
+        </div>
+        <!-- Projects  -->
+        <h3 id="projects">PROJECTS</h3>
+        <hr>
+        <div class="projects page">
+            <p>
+                Here is a small gallery of some things i've
+                built with my Tools...
+                <br> Click each project to view.
+            </p>
+            <div class="project_cards">
+                <figure class="project_card glow-border" data-aos="flip-left">
+                    <div class="image_project">
+                        <img src="./img/huddle.png" alt="">
+                    </div>
+                    <figcaption>
+                        <h1>HUDDLE</h1>
+                        <p>
+                            Designed for remote team management platform to streamline workflow,
+                            communication, and collaboration.
+                        </p>
+                    </figcaption>
+                    <div class="huddle">
                         <ul>
                             <li>
-                                <button class="glow-border">
-                                    <img
-                                        width="50px"
-                                        id="skill_logo"
-                                        src="./img/html_logo.png"
-                                        alt=""
-                                    >
-                                    <span>HTML</span>
+                                <button class="huddle_btn">
+                                    <img width="30px" id="skill_logo" src="./img/html_logo.png" alt="">
+
                                 </button>
                             </li>
                             <li>
-                                <button class="glow-border">
-                                    <img
-                                        width="45px"
-                                        id="skill_logo"
-                                        src="./img/css_logo.png"
-                                        alt=""
-                                    >
-                                    <span>CSS</span>
+                                <button class="huddle_btn">
+                                    <img width="20px" id="skill_logo" src="./img/css_logo.png" alt="">
                                 </button>
                             </li>
                             <li>
-                                <button class="glow-border">
-                                    <img
-                                        id="lang_1"
-                                        width="35px"
-                                        id="skill_logo"
-                                        src="./img/js_logo.png"
-                                        alt=""
-                                    >
-                                    <span>JAVASCRIPT</span>
-                                </button>
-                            </li>
-                            <li>
-                                <button class="glow-border">
-                                    <img
-                                        id="lang_2"
-                                        width="40px"
-                                        id="skill_logo"
-                                        src="./svg/React-logo.svg"
-                                        alt=""
-                                    >
-                                    <span>REACT</span>
-                                </button>
-                            </li>
-                            <li>
-                                <button class="glow-border">
-                                    <img
-                                        width="40px"
-                                        id="skill_logo"
-                                        src="./img/github_logo.png"
-                                        alt=""
-                                    >
-                                    <span>GITHUB</span>
-                                </button>
-                            </li>
-                            <li>
-                                <button class="glow-border">
-                                    <img
-                                        width="40px"
-                                        id="skill_logo"
-                                        src="./svg/Bootstrap_logo.svg"
-                                        alt=""
-                                    >
-                                    <span>BOOTSTRAP</span>
-                                </button>
-                            </li>
-                            <li>
-                                <button class="glow-border">
-                                    <img
-                                        width="80px"
-                                        id="git_logo"
-                                        src="./svg/Git-logo.svg"
-                                        alt=""
-                                    >
-                                </button>
-                            </li>
-                            <li>
-                                <button class="glow-border">
-                                    <img
-                                        width="60px"
-                                        id="skill_logo"
-                                        src="./svg/Sass_Logo_Color.svg"
-                                        alt=""
-                                    >
+                                <button class="huddle_btn">
+                                    <img id="lang_1" width="20px" id="skill_logo" src="./img/js_logo.png" alt="">
+
                                 </button>
                             </li>
                         </ul>
                     </div>
-                </section>
-            </div>
-            <!-- Projects  -->
-            <h3 id="projects">PROJECTS</h3>
-            <hr>
-            <div class="projects page">
-                <p>
-                    Here is a small gallery of some things i've
-        built with my Tools...
-                    <br> Click each project to view.
-                </p>
-                <div class="project_cards">
-                    <figure class="project_card glow-border" data-aos="flip-left">
-                        <div class="image_project">
-                            <img src="./img/huddle.png" alt="">
-                        </div>
-                        <figcaption>
-                            <h1>HUDDLE</h1>
-                            <p>
-                                Designed for remote team management platform to streamline workflow,
-              communication, and collaboration.
-                            </p>
-                        </figcaption>
-                        <div class="huddle">
-                            <ul>
-                                <li>
-                                    <button class="huddle_btn">
-                                        <img
-                                            width="30px"
-                                            id="skill_logo"
-                                            src="./img/html_logo.png"
-                                            alt=""
-                                        >
-                                    
-                                    </button>
-                                </li>
-                                <li>
-                                    <button class="huddle_btn">
-                                        <img
-                                            width="20px"
-                                            id="skill_logo"
-                                            src="./img/css_logo.png"
-                                            alt=""
-                                        >
-                                    </button>
-                                </li>
-                                <li>
-                                    <button class="huddle_btn">
-                                        <img
-                                            id="lang_1"
-                                            width="20px"
-                                            id="skill_logo"
-                                            src="./img/js_logo.png"
-                                            alt=""
-                                        >
-                                   
-                                    </button>
-                                </li>
-                                </ul>
-                        </div>
-                        <div class="buttons btn_1">
-                            <p>
-                                <button><a href="https://huddle-landing-page-kobiowuquadri.vercel.app/" target="_blank">View Live</a></button>
-                            </p>
-                            <p>
-                                <button><a href="https://github.com/kobiowuquadri/Huddle-Landing-Page" target="_blank">View Codes</a></button>
-                            </p>
-                        </div>
-                    </figure>
-                    <figure class="project_card glow-border" data-aos="flip-right">
-                        <img src="./img/fylo.png" alt="">
-                        <figcaption>
-                            <h1>FLYO STORE</h1>
-                            <p>
-                                Fylo stores your most important files in one secure location. Access
-              them wherever you need, share and collabrate with friends, family and
-              co-workers.
-                            </p>
-                        </figcaption>
-                        <div class="huddle">
-                            <ul>
-                                <li>
-                                    <button class="huddle_btn">
-                                        <img
-                                            width="30px"
-                                            id="skill_logo"
-                                            src="./img/html_logo.png"
-                                            alt=""
-                                        >
-                                    
-                                    </button>
-                                </li>
-                                <li>
-                                    <button class="huddle_btn">
-                                        <img
-                                            width="20px"
-                                            id="skill_logo"
-                                            src="./img/css_logo.png"
-                                            alt=""
-                                        >
-                                    </button>
-                                </li>
-                                <li>
-                                    <button class="huddle_btn">
-                                        <img
-                                            id="lang_1"
-                                            width="20px"
-                                            id="skill_logo"
-                                            src="./img/js_logo.png"
-                                            alt=""
-                                        >
-                                   
-                                    </button>
-                                </li>
-                                </ul>
-                        </div>
-                        <div class="buttons btn_1">
-                            <p>
-                                <button><a href="https://fylo-store-website-kobiowuquadri.vercel.app/" target="_blank">View Live</a></button>
-                            </p>
-                            <p>
-                                <button><a href="https://github.com/kobiowuquadri/fylo-store-website" target="_blank">View Codes</a></button>
-                            </p>
-                        </div>
-                    </figure>
-                    <figure class="project_card glow-border" data-aos="flip-left">
-                        <img src="./img/netflix.png" alt="">
-                        <figcaption>
-                            <h1>NEFLIX</h1>
-                            <p>
-                                Neflix Landing Page <br>
-                                Unlimited movies, TV shows, and more, Watch anywhere, Cancel anytime.
-                            </figcaption>
-                             <div class="huddle">
-                            <ul>
-                                <li>
-                                    <button class="huddle_btn">
-                                        <img
-                                            width="30px"
-                                            id="skill_logo"
-                                            src="./img/html_logo.png"
-                                            alt=""
-                                        >
-                                    
-                                    </button>
-                                </li>
-                                <li>
-                                    <button class="huddle_btn">
-                                        <img
-                                            width="20px"
-                                            id="skill_logo"
-                                            src="./img/css_logo.png"
-                                            alt=""
-                                        >
-                                    </button>
-                                </li>
-                                <li>
-                                    <button class="huddle_btn">
-                                        <img
-                                            id="lang_1"
-                                            width="20px"
-                                            id="skill_logo"
-                                            src="./img/js_logo.png"
-                                            alt=""
-                                        >
-                                   
-                                    </button>
-                                </li>
-                                </ul>
-                        </div>
-                            <div class="buttons btn_2">
-                                <p>
-                                    <button><a href="https://kobiowuquadri.github.io/Netflix-Page/" target="_blank">View Live</a></button>
-                                </p>
-                                <p>
-                                    <button><a href="https://github.com/kobiowuquadri/Netflix-Page" target="_blank">View Codes</a></button>
-                                </p>
-                            </div>
-                        </figure>
+                    <div class="buttons btn_1">
+                        <p>
+                            <button><a href="https://huddle-landing-page-kobiowuquadri.vercel.app/" target="_blank">View
+                                    Live</a></button>
+                        </p>
+                        <p>
+                            <button><a href="https://github.com/kobiowuquadri/Huddle-Landing-Page" target="_blank">View
+                                    Codes</a></button>
+                        </p>
                     </div>
-                </div>
-                <h3 id="contact_me">CONTACT ME</h3>
-                <hr>
-                <div class="contact_me">
-                    <h1 style="color: var(--yellow);">
-                        Get in touch
-                        <span id="output"></span>
-                    </h1>
-                    <p>
-                        I'm always open to new opportunities, let's build something! From simple landing pages to huge projects,
-        freelance jobs, etc...
-                        <br>
-                        slide in!
-                    </p>
-                    <button><a href="mailto:kobiowuq@gmail.com">Send Message 😍</a></button>
-                </div>
-            </main>
-            <footer>
-               <div class="media_links">
-                <ul>
-                    <li>
-                        <a href="https://github.com/kobiowuquadri" target="_blank" id="circle">
-                          <i class="fa-brands fa fa-github"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.linkedin.com/in/quadri-kobiowu-955313233/" target="_blank" id="circle">
-                            <i class="fa-brands fa fa-linkedin"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://twitter.com/QuadriKobiowu" target="_blank" id="circle">
-                          <i class="fa-brands fa fa-twitter"></i>
-                        </a>
-                      </li>
-                    <li>
-                      <a href="https://web.facebook.com/abudulquadri.kobiowu" target="_blank" id="circle">
-                        <i class="fa-brands fa fa-facebook-f"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://www.instagram.com/qkobiowu/" target="_blank" id="circle">
-                        <i class="fa-brands fa fa-instagram"></i>
-                      </a>
-                    </li>
-                    <li>
-                        <a href="https://wa.me/2349157750858" target="_blank" id="circle">
-                            <i class="fa-brands fa fa-whatsapp"></i>
-                        </a>
-                    </li>
-                  </ul>
-               </div>
-               
-               <div class="intro">
-                <p>
-                    Designed and built by Quadri Kobiowu.
-                </p>
-                <p style="color: var(--yellow);">
-                    &copy;2023
-                </p>
-               </div>
+                </figure>
+                <figure class="project_card glow-border" data-aos="flip-right">
+                    <img src="./img/fylo.png" alt="">
+                    <figcaption>
+                        <h1>FLYO STORE</h1>
+                        <p>
+                            Fylo stores your most important files in one secure location. Access
+                            them wherever you need, share and collabrate with friends, family and
+                            co-workers.
+                        </p>
+                    </figcaption>
+                    <div class="huddle">
+                        <ul>
+                            <li>
+                                <button class="huddle_btn">
+                                    <img width="30px" id="skill_logo" src="./img/html_logo.png" alt="">
 
-            </footer>
-            <script src="./js/script.js"></script>
-            <script>
-    AOS.init();
-            </script>
-        </body>
-    </html>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="huddle_btn">
+                                    <img width="20px" id="skill_logo" src="./img/css_logo.png" alt="">
+                                </button>
+                            </li>
+                            <li>
+                                <button class="huddle_btn">
+                                    <img id="lang_1" width="20px" id="skill_logo" src="./img/js_logo.png" alt="">
+
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="buttons btn_1">
+                        <p>
+                            <button><a href="https://fylo-store-website-kobiowuquadri.vercel.app/" target="_blank">View
+                                    Live</a></button>
+                        </p>
+                        <p>
+                            <button><a href="https://github.com/kobiowuquadri/fylo-store-website" target="_blank">View
+                                    Codes</a></button>
+                        </p>
+                    </div>
+                </figure>
+                <figure class="project_card glow-border" data-aos="flip-left">
+                    <img src="./img/netflix.png" alt="">
+                    <figcaption>
+                        <h1>NEFLIX</h1>
+                        <p>
+                            Neflix Landing Page <br>
+                            Unlimited movies, TV shows, and more, Watch anywhere, Cancel anytime.
+                    </figcaption>
+                    <div class="huddle">
+                        <ul>
+                            <li>
+                                <button class="huddle_btn">
+                                    <img width="30px" id="skill_logo" src="./img/html_logo.png" alt="">
+
+                                </button>
+                            </li>
+                            <li>
+                                <button class="huddle_btn">
+                                    <img width="20px" id="skill_logo" src="./img/css_logo.png" alt="">
+                                </button>
+                            </li>
+                            <li>
+                                <button class="huddle_btn">
+                                    <img id="lang_1" width="20px" id="skill_logo" src="./img/js_logo.png" alt="">
+
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="buttons btn_2">
+                        <p>
+                            <button><a href="https://kobiowuquadri.github.io/Netflix-Page/" target="_blank">View
+                                    Live</a></button>
+                        </p>
+                        <p>
+                            <button><a href="https://github.com/kobiowuquadri/Netflix-Page" target="_blank">View
+                                    Codes</a></button>
+                        </p>
+                    </div>
+                </figure>
+            </div>
+        </div>
+        <h3 id="contact_me">CONTACT ME</h3>
+        <hr>
+        <div class="contact_me">
+            <h1 style="color: var(--yellow);">
+                Get in touch
+                <span id="output"></span>
+            </h1>
+            <p data-aos="fade-up-right">
+                I'm always open to new opportunities, let's build something! From simple landing pages to huge projects,
+                freelance jobs, etc...
+                <br>
+                slide in!
+            </p>
+            <button data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500"><a
+                    href="mailto:kobiowuq@gmail.com">Send Message 😍</a></button>
+        </div>
+    </main>
+    <footer>
+        <div class="media_links">
+            <ul>
+                <li data-aos="zoom-in">
+                    <a href="https://github.com/kobiowuquadri" target="_blank" id="circle">
+                        <i class="fa-brands fa fa-github"></i>
+                    </a>
+                </li>
+                <li data-aos="zoom-in">
+                    <a href="https://www.linkedin.com/in/quadri-kobiowu-955313233/" target="_blank" id="circle">
+                        <i class="fa-brands fa fa-linkedin"></i>
+                    </a>
+                </li>
+                <li data-aos="zoom-in">
+                    <a href="https://twitter.com/QuadriKobiowu" target="_blank" id="circle">
+                        <i class="fa-brands fa fa-twitter"></i>
+                    </a>
+                </li>
+                <li data-aos="zoom-in">
+                    <a href="https://web.facebook.com/abudulquadri.kobiowu" target="_blank" id="circle">
+                        <i class="fa-brands fa fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li data-aos="zoom-in">
+                    <a href="https://www.instagram.com/qkobiowu/" target="_blank" id="circle">
+                        <i class="fa-brands fa fa-instagram"></i>
+                    </a>
+                </li>
+                <li data-aos="fade-left">
+                    <a href="https://wa.me/2349157750858" target="_blank" id="circle">
+                        <i class="fa-brands fa fa-whatsapp"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="intro">
+            <p>
+                Designed and built by Quadri Kobiowu.
+            </p>
+            <p style="color: var(--yellow);">
+                &copy;2023
+            </p>
+        </div>
+
+    </footer>
+    <script src="./js/script.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
