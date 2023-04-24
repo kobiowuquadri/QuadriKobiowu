@@ -185,6 +185,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding:100px 50px 50px 50px;
+  flex-wrap: wrap;
 }
 
 .hero_section_content > h1 {
@@ -329,8 +330,8 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 30px;
-  height: 100%;
+  gap: 20px;
+  height: 500px;
   width: 400px;
   border-radius: 10px;
   background-color: var(--dark);
@@ -386,6 +387,13 @@ figcaption h1 {
 .buttons button:hover {
   transition: 1s ease-in-out;
   background-color: var(--dark);
+}
+
+.buttons a {
+  color: var(--dark);
+}
+
+.buttons a:hover {
   color: var(--white);
   box-shadow: 0px 0px 3px;
 }
@@ -420,7 +428,6 @@ figcaption h1 {
   text-align: center;
   align-items: center;
   padding: 70px 30px 30px 30px;
-  /* width: 100%; */
 }
 
 .contact_me > h1{
@@ -443,20 +450,22 @@ figcaption h1 {
   font-size: 1.2rem;
 }
 
-
-
-
-
-
-
-
-
+.contact_me button:hover{
+  background-color: rgba(183, 202, 10, 0.8);
+  transition: 1s ease-in-out;
+  color: var(--dark);
+}
 
 /* footer section */
 footer {
   height: 500px;
   background-color: var(--dark);
 }
+
+
+
+
+
 
 @media (max-width: 763px) {
   .nav-links,
@@ -510,7 +519,7 @@ footer {
 
   .info p {
     font-size: 1.5rem;
-    text-align: center;
+    text-align: left;
     padding-top: 10px;
   }
   .glow-border {
@@ -553,7 +562,8 @@ footer {
   }
 
   .huddle ul{
-    width: 80%;
+    width: 60%;
+    padding: 5px;
   }
 
   .contact_me{
