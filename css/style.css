@@ -552,6 +552,10 @@ footer {
     object-fit: contain;
   }
 
+  .huddle ul{
+    width: 80%;
+  }
+
   .contact_me{
     padding: 20px;
   }
