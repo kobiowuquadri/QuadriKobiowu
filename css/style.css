@@ -367,6 +367,10 @@ figcaption h1 {
   padding-top: 15px;
 }
 
+figcaption p {
+  font-size: 1.2rem;
+}
+
 .buttons {
   display: flex;
   gap: 30px;
@@ -405,12 +409,12 @@ figcaption h1 {
 .huddle ul{
   display: flex;
   justify-content: center;
-  gap: 20px;
-  background-color: var(--yellow);
+  gap: 10px;
+  background-color: var(--white);
   align-items: center;
-  padding: 10px;
+  padding: 5px;
   border-radius: 20px;
-  width: 50%;
+  width: 40%;
   text-align: center;
 }
 .huddle_btn{
@@ -418,17 +422,25 @@ figcaption h1 {
   border: none;
 }
 
+
+/* Contact me Section */
+
+#contact_me {
+  background-color: var(--dark);
+  color: var(--yellow);
+}
 .contact_me {
   background-color: var(--dark);
   color: var(--white);
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 80px;
   justify-content: center;
   text-align: center;
   align-items: center;
   padding: 70px 30px 30px 30px;
 }
+
 
 .contact_me > h1{
   font-size: 3rem;
@@ -436,14 +448,13 @@ figcaption h1 {
 
 .contact_me > p {
   display: flex;
-  width: 70%;
+  width: 50%;
   justify-content: center;
   font-size: 1.5rem;
 }
 
 .contact_me button {
   background-color: transparent;
-  color: var(--yellow);
   padding: 17px 35px;
   border: 3px solid var(--yellow);
   cursor: pointer;
@@ -456,11 +467,72 @@ figcaption h1 {
   color: var(--dark);
 }
 
+.contact_me button > a {
+  color: var(--yellow);
+}
+
+.contact_me button > a:hover {
+  color: var(--dark);
+}
 /* footer section */
 footer {
-  height: 500px;
+  height: 100%;
   background-color: var(--dark);
+  position: relative;
 }
+
+.media_links {
+  padding: 100px 50px 50px 50px;
+}
+
+.media_links ul{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  text-align: center;
+  font-size: 2rem;
+  flex-wrap: wrap;
+}
+
+.media_links a {
+  color: var(--yellow);
+}
+
+.media_links a:hover {
+  transition: 1s ease-in-out;
+  color: var(--white);
+}
+
+.media_links li {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 10px #fff;
+  background-color: var(--dark);
+  border-radius: 5px;
+
+}
+
+/* .media_links li:hover {
+  background-color: rgb(34, 34, 122);
+} */
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  color: var(--white);
+  text-align: center;
+  justify-content: center;
+  justify-self: center;
+  padding: 50px 50px 30px 50px;
+}
+
+
 
 
 
@@ -519,7 +591,7 @@ footer {
 
   .info p {
     font-size: 1.5rem;
-    text-align: left;
+    text-align: center;
     padding-top: 10px;
   }
   .glow-border {
@@ -567,11 +639,11 @@ footer {
   }
 
   .contact_me{
-    padding: 20px;
+    padding: 15px;
   }
 
   .contact_me > h1{
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .contact_me > p {
