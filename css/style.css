@@ -179,6 +179,7 @@ nav {
 .hero_section {
   background-color: var(--dark);
   height: 100%;
+  width: 100%;
   color: var(--white);
   display: flex;
   justify-content: space-around;
