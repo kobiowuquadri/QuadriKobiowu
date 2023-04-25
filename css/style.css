@@ -587,6 +587,10 @@ footer {
     padding: 5px 10px;
   }
 
+  #btn_resume{
+    margin: 0 auto;
+  }
+
   .languages ul {
     justify-content: space-around;
   }
