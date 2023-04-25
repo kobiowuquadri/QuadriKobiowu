@@ -194,12 +194,12 @@ nav {
 }
 
 .hero_section_content span {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 8rem;
 }
 
 .hero_section_image {
-  box-shadow:0px 0px 10px;
+  box-shadow: 0px 0px 10px;
   border: 30px solid var(--dark);
   border-radius: 15px;
   background-color: var(--yellow);
@@ -321,7 +321,7 @@ nav {
 
 .project_cards {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   gap: 20px;
   padding: 20px;
   flex-wrap: wrap;
@@ -341,7 +341,7 @@ nav {
   border-radius: 10px;
 }
 
-.image_project{
+.image_project {
   width: 100%;
   height: 100%;
   display: flex;
@@ -407,7 +407,7 @@ figcaption p {
   display: flex;
   justify-content: center;
 }
-.huddle ul{
+.huddle ul {
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -418,11 +418,10 @@ figcaption p {
   width: 40%;
   text-align: center;
 }
-.huddle_btn{
+.huddle_btn {
   background-color: transparent;
   border: none;
 }
-
 
 /* Contact me Section */
 
@@ -442,8 +441,7 @@ figcaption p {
   padding: 70px 30px 30px 30px;
 }
 
-
-.contact_me > h1{
+.contact_me > h1 {
   font-size: 3rem;
 }
 
@@ -462,7 +460,7 @@ figcaption p {
   font-size: 1.2rem;
 }
 
-.contact_me button:hover{
+.contact_me button:hover {
   background-color: rgba(183, 202, 10, 0.8);
   transition: 1s ease-in-out;
   color: var(--dark);
@@ -486,7 +484,7 @@ footer {
   padding: 100px 50px 50px 50px;
 }
 
-.media_links ul{
+.media_links ul {
   display: flex;
   justify-content: center;
   gap: 30px;
@@ -514,9 +512,7 @@ footer {
   box-shadow: 0px 0px 10px #fff;
   background-color: var(--dark);
   border-radius: 5px;
-
 }
-
 
 .intro {
   display: flex;
@@ -552,17 +548,17 @@ footer {
     text-align: center;
     flex-direction: column-reverse;
     justify-content: center;
-   }
+  }
 
-  .hero_section_image img{
+  .hero_section_image img {
     width: 200px;
   }
-   
-  .hero_section_content > h1{
+
+  .hero_section_content > h1 {
     font-size: 1.2rem;
   }
 
-  .hero_section_content span{
+  .hero_section_content span {
     text-align: center;
     font-size: 3rem;
   }
@@ -577,7 +573,7 @@ footer {
   }
 
   .info {
-    padding:10px;
+    padding: 10px;
   }
 
   .info p {
@@ -590,8 +586,6 @@ footer {
     height: 100px;
     padding: 5px 10px;
   }
-    
-  
 
   .languages ul {
     justify-content: space-around;
@@ -614,31 +608,30 @@ footer {
     width: 100%;
     padding: 20px;
   }
-   
-  .buttons button{
+
+  .buttons button {
     width: 100px;
     font-size: 1rem;
   }
 
-  figure img{
+  figure img {
     object-fit: contain;
   }
 
-  .huddle ul{
+  .huddle ul {
     width: 60%;
     padding: 5px;
   }
 
-  .contact_me{
+  .contact_me {
     padding: 15px;
   }
 
-  .contact_me > h1{
+  .contact_me > h1 {
     font-size: 2rem;
   }
 
   .contact_me > p {
     width: 100%;
   }
- 
 }

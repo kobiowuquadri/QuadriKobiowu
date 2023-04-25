@@ -85,9 +85,7 @@ var typed = new Typed('#output-text', {
 })
 
 var typed_2 = new Typed('#output', {
-  strings: [
-    '...'
-  ],
+  strings: ['...'],
   typeSpeed: 100,
   loop: true
 })
