@@ -185,7 +185,7 @@ nav {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  padding-top: 100px;
+  padding-top: 150px;
   padding-bottom: 50px;
 }
 
@@ -195,7 +195,7 @@ nav {
 
 .hero_section_content span {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 7rem;
+  font-size: 5rem;
 }
 
 .hero_section_image {
