@@ -19,9 +19,7 @@ html {
 :root {
   --bg: rgba(8, 8, 112, 0.9);
   --white: rgba(255, 255, 255, 0.79);
-  --yellow:#0096FF;
-  --dropdown-bg: rgba(10, 10, 82, 0.9);
-  --lightblue: rgb(29, 29, 146);
+  --yellow: #0096ff;
   --black: rgba(0, 0, 0, 0.8);
   --dark: rgb(0, 0, 0);
   --headings_font: "Open Sans", sans-serif;
@@ -589,7 +587,7 @@ footer {
     padding: 5px 10px;
   }
 
-  #btn_resume{
+  #btn_resume {
     margin: 0 auto;
   }
 
