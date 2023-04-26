@@ -52,7 +52,7 @@ body {
 }
 
 #logo-img {
-  width: 50px;
+  width: 35px;
 }
 
 td {
@@ -185,7 +185,7 @@ nav {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  padding-top: 150px;
+  padding-top: 100px;
   padding-bottom: 50px;
 }
 
@@ -195,7 +195,7 @@ nav {
 
 .hero_section_content span {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 5rem;
+  font-size: 6rem;
 }
 
 .hero_section_image {
@@ -214,7 +214,7 @@ nav {
 .hero_section ~ h3 {
   padding: 10px;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 #about {
@@ -264,7 +264,7 @@ nav {
 
 .info {
   text-align: justify;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding: 60px 20px 10px 20px;
   display: flex;
   flex-direction: column;
@@ -274,7 +274,7 @@ nav {
 .languages h2 {
   text-align: center;
   padding: 5px;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--yellow);
 }
 
@@ -314,7 +314,7 @@ nav {
 }
 
 .projects > p {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   text-align: center;
   padding: 20px;
 }
@@ -442,14 +442,14 @@ figcaption p {
 }
 
 .contact_me > h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .contact_me > p {
   display: flex;
   width: 50%;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .contact_me button {
@@ -577,7 +577,7 @@ footer {
   }
 
   .info p {
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-align: center;
     padding-top: 10px;
   }
@@ -637,5 +637,6 @@ footer {
 
   .contact_me > p {
     width: 100%;
+    font-size: 1rem;
   }
 }
