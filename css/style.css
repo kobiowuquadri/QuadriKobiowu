@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap");
 
 * {
   padding: 0;
@@ -7,7 +6,7 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style-type: none;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
 }
 
 /* html */
@@ -20,11 +19,13 @@ html {
 :root {
   --bg: rgba(8, 8, 112, 0.9);
   --white: rgba(255, 255, 255, 0.79);
-  --yellow: rgb(218, 218, 11);
+  --yellow:#0096FF;
   --dropdown-bg: rgba(10, 10, 82, 0.9);
   --lightblue: rgb(29, 29, 146);
   --black: rgba(0, 0, 0, 0.8);
   --dark: rgb(0, 0, 0);
+  --headings_font: "Open Sans", sans-serif;
+  --body_font: "Poppins", sans-serif;
 }
 
 html,
@@ -43,6 +44,7 @@ body {
   /* Internet Explorer/Edge */
   user-select: none;
   /* Non-prefixed version, supported by Chrome and Opera */
+  font-family: var(--body_font);
 }
 
 /* navbar section */
@@ -331,8 +333,8 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
-  height: 500px;
+  gap: 15px;
+  height: 520px;
   width: 400px;
   border-radius: 10px;
   background-color: var(--dark);
@@ -358,7 +360,7 @@ nav {
 figcaption {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
   text-align: center;
 }
 
@@ -461,7 +463,7 @@ figcaption p {
 }
 
 .contact_me button:hover {
-  background-color: rgba(183, 202, 10, 0.8);
+  background-color: var(--yellow);
   transition: 1s ease-in-out;
   color: var(--dark);
 }
