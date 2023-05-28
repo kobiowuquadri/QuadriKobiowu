@@ -12,6 +12,7 @@ hambrger_menu.addEventListener('click', () => {
 
 close_menu.addEventListener('click', () => {
   dropdown.classList.remove('display')
+  close_menu.classList.add('rotate');
 })
 
 // scrolling effect function

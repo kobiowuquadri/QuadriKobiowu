@@ -130,6 +130,7 @@ nav {
 
 /* Menu bars */
 #hamburger-menu {
+  cursor: pointer;
   display: none;
 }
 #hamburger-menu:checked {
@@ -138,22 +139,28 @@ nav {
 
 #close-bar {
   position: absolute;
-  right: 0;
-  top: 10px;
+  right: 10px;
+  top: 22px;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
 }
 
 /* Navcard */
 .nav-card {
   height: 100vh;
   width: 10rem;
-  background-color: var(--dark);
   position: fixed;
+  right: -100vw;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav-card.display {
+  background-color: var(--dark);
+  display: flex;
   right: 0;
   top: 0;
-  z-index: 2;
-  display: none;
-  transition: all 0.3s ease-in-out;
-  /* transition: transform 1.5s ease-in-out; */
 }
 
 .nav-card li {
@@ -170,8 +177,8 @@ nav {
   transition: all 2s ease-in-out;
 }
 
-.display {
-  display: flex;
+.rotate{
+  transform: rotate(135deg);
 }
 
 /* Main */
