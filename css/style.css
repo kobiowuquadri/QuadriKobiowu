@@ -26,14 +26,12 @@ html {
   --body_font: "Poppins", sans-serif;
 }
 
-html,
-body {
+html, body{
   max-width: 100%;
-  overflow-x: hidden;
 }
 
 body {
-  overflow-y: hidden;
+  overflow: hidden;
   -webkit-user-select: none;
   /* Safari */
   -moz-user-select: none;
@@ -43,7 +41,6 @@ body {
   user-select: none;
   /* Non-prefixed version, supported by Chrome and Opera */
   font-family: var(--body_font);
-  max-width: 100%;
 }
 
 /* navbar section */
