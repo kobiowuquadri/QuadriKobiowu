@@ -43,6 +43,7 @@ body {
   user-select: none;
   /* Non-prefixed version, supported by Chrome and Opera */
   font-family: var(--body_font);
+  max-width: 100%;
 }
 
 /* navbar section */
@@ -372,7 +373,7 @@ nav {
 }
 
 #github_link, #live_link {
-  background-color: var(--yellow);
+  background-color: var(--bg);
   padding: .5rem 1rem;
   border: none;
   cursor: pointer;
@@ -380,122 +381,13 @@ nav {
 }
 
 #github_link a, #live_link a{
-  color: var(--white);
+  color: var(--yellow);
   font-size: 1.2rem;
 }
 
 #github_link:hover, #live_link:hover {
   opacity: 0.8;
 }
-
-
-
-
-
-/*
-.project_cards {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 20px;
-  flex-wrap: wrap;
-}
-
-.project_card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 15px;
-  height: 520px;
-  width: 400px;
-  border-radius: 10px;
-  background-color: var(--dark);
-  box-shadow: 2px 6px 30px rgba(0, 0, 0, 0.16);
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.image_project {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.image_project img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
-}
-
-figcaption {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  text-align: center;
-}
-
-figcaption h1 {
-  color: var(--yellow);
-  font-size: 1.5rem;
-  padding-top: 15px;
-}
-
-figcaption p {
-  font-size: 1.2rem;
-}
-
-.buttons {
-  display: flex;
-  gap: 30px;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-}
-
-.buttons button {
-  width: 150px;
-  height: 30px;
-  font-size: 1.1rem;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
-}
-
-.buttons button:hover {
-  transition: 1s ease-in-out;
-  background-color: var(--dark);
-}
-
-.buttons a {
-  color: var(--dark);
-}
-
-.buttons a:hover {
-  color: var(--white);
-  box-shadow: 0px 0px 3px;
-}
-
-.huddle {
-  display: flex;
-  justify-content: center;
-}
-.huddle ul {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  background-color: var(--white);
-  align-items: center;
-  padding: 5px;
-  border-radius: 20px;
-  width: 40%;
-  text-align: center;
-}
-.huddle_btn {
-  background-color: transparent;
-  border: none;
-} */
 
 /* Contact me Section */
 
