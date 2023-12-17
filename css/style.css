@@ -73,7 +73,7 @@ nav {
   align-items: center;
   background: var(--dark);
   color: var(--white);
-  padding: 0.5rem 5rem 0.5rem 2rem;
+  padding: 0.5rem 10rem 0.5rem 10rem;
   position: fixed;
   z-index: 1;
   width: 100%;
@@ -181,6 +181,11 @@ nav {
 
 /* Main */
 
+main{
+  background-color: var(--dark);
+  padding: 0.5rem 10rem 0.5rem 10rem;
+}
+
 .hero_section {
   background-color: var(--dark);
   height: 100%;
@@ -192,6 +197,7 @@ nav {
   flex-wrap: wrap;
   padding-top: 100px;
   padding-bottom: 50px;
+  
 }
 
 .hero_section_content > h1 {
@@ -241,11 +247,11 @@ nav {
 }
 
 .info {
-  width: 50%;
+  width: 100%;
 }
 
 .languages {
-  width: 50%;
+  width: 100%;
 }
 
 .languages ul {
@@ -491,8 +497,12 @@ footer {
 
 @media (max-width: 763px) {
   .nav-links,
-  .nav-links + button {
+  .nav-links + button, .nav-resume {
     display: none;
+  }
+
+  main {
+    padding: 10px;
   }
 
   #hamburger-menu {
