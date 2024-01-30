@@ -32,13 +32,13 @@ html, body{
 
 body {
   overflow: hidden;
-  -webkit-user-select: none;
+  /* -webkit-user-select: none; */
   /* Safari */
-  -moz-user-select: none;
+  /* -moz-user-select: none; */
   /* Firefox */
-  -ms-user-select: none;
+  /* -ms-user-select: none; */
   /* Internet Explorer/Edge */
-  user-select: none;
+  /* user-select: none; */
   /* Non-prefixed version, supported by Chrome and Opera */
   font-family: var(--body_font);
 }
@@ -50,7 +50,7 @@ body {
 }
 
 #logo-img {
-  width: 35px;
+  width: 30px;
 }
 
 td {
@@ -101,7 +101,7 @@ nav {
   color: var(--white);
   width: 200px;
   height: 50px;
-  border-radius: 10px;
+  border-radius: 50px;
   border: 2px solid var(--white);
 }
 
