@@ -21,7 +21,7 @@ html {
   --white: rgba(255, 255, 255, 0.79);
   --yellow: #0096ff;
   --black: rgba(0, 0, 0, 0.8);
-  --dark: rgb(0, 0, 0);
+  --dark: rgb(20, 5, 67);
   --headings_font: "Open Sans", sans-serif;
   --body_font: "Poppins", sans-serif;
 }
