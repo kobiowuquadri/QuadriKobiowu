@@ -21,4 +21,4 @@ To view the website locally, follow these steps:
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/kobiowuquadri/QuadriKobiowu.git]```
+   git clone [https://github.com/kobiowuquadri/QuadriKobiowu.git]
