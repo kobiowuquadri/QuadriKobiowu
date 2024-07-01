@@ -9,7 +9,7 @@ const Header = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <header className="bg-white text-black shadow-md fixed w-full z-10 font-sans">
+    <header className="bg-white text-black shadow-md fixed w-full z-20 font-sans">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <div className="flex items-center">
           <img 
