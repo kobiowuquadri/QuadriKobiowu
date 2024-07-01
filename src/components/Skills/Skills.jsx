@@ -6,12 +6,12 @@ const skillCategories = [
   {
     title: "Frontend",
     icon: FaReact,
-    skills: ["React", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Redux"]
+    skills: ["React", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Redux", "Bootstrap"]
   },
   {
     title: "Backend",
     icon: FaNodeJs,
-    skills: ["Node.js", "Express", "Python", "Django", "RESTful APIs"]
+    skills: ["Node.js", "Express", "RESTful APIs"]
   },
   {
     title: "Databases",
@@ -31,7 +31,7 @@ const skillCategories = [
   {
     title: "Other",
     icon: FaCode,
-    skills: ["TypeScript", "GraphQL", "Agile Methodologies", "UI/UX Design"]
+    skills: [ "Agile Methodologies", "Problem Solving" ]
   }
 ];
 
