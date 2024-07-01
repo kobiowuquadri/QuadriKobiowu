@@ -94,19 +94,19 @@ const Contact = () => {
                 <ul className="space-y-2">
                   <li className="flex items-center font-poppins">
                     <FaEnvelope className="mr-2" />
-                    <a href="mailto:your.email@example.com" className="hover:underline">your.email@example.com</a>
+                    <a href="mailto:kobiowuq@gmail.com" className="hover:underline">kobiowuq@gmail.com</a>
                   </li>
                   <li className="flex items-center font-poppins">
                     <FaLinkedin className="mr-2" />
-                    <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="hover:underline">LinkedIn Profile</a>
+                    <a href="https://linkedin.com/in/quadri-kobiowu-955313233" target="_blank" rel="noopener noreferrer" className="hover:underline">LinkedIn Profile</a>
                   </li>
                   <li className="flex items-center font-poppins">
                     <FaGithub className="mr-2" />
-                    <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="hover:underline">GitHub Profile</a>
+                    <a href="https://github.com/kobiowuquadri" target="_blank" rel="noopener noreferrer" className="hover:underline">GitHub Profile</a>
                   </li>
                   <li className="flex items-center font-poppins">
                     <FaTwitter className="mr-2" />
-                    <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" className="hover:underline">Twitter Profile</a>
+                    <a href="https://x.com/quadrikobiowu" target="_blank" rel="noopener noreferrer" className="hover:underline">Twitter Profile</a>
                   </li>
                 </ul>
               </div>
