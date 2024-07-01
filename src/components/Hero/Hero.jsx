@@ -26,7 +26,7 @@ const Hero = () => {
   });
 
   return (
-    <section className="bg-black text-white min-h-screen flex items-center relative overflow-hidden">
+    <section className="bg-black text-white min-h-screen flex items-center relative overflow-hidden pt-14">
       <div className="container mx-auto px-4 py-20 sm:py-24 md:py-28 lg:py-32 z-10">
         <div className="flex flex-col lg:flex-row gap-8 items-center">
           <motion.div
@@ -56,11 +56,11 @@ const Hero = () => {
                 whileTap={{ scale: 0.95 }}
                 className="bg-white text-black font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-full inline-flex items-center font-poppins transition-colors duration-300 text-sm sm:text-base"
               >
-                View My Work
+                <a href="#projects">View My Work</a>
                 <FaArrowRight className="ml-2" />
               </motion.button>
               <motion.a
-                href="https://github.com/yourusername"
+                href="https://github.com/kobiowuquadri"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}
@@ -70,7 +70,7 @@ const Hero = () => {
                 <FaGithub size={20} />
               </motion.a>
               <motion.a
-                href="https://linkedin.com/in/yourusername"
+                href="https://www.linkedin.com/in/quadri-kobiowu-955313233"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}
@@ -100,7 +100,7 @@ const Hero = () => {
               whileTap={{ scale: 0.95 }}
               className="mt-6 bg-gray-700 text-white font-bold py-2 px-4 rounded-full inline-flex items-center font-poppins transition-colors duration-300 text-sm sm:text-base"
             >
-              Let's Collaborate
+              <a href="#contact">Let's Collaborate</a>
               <FaArrowRight className="ml-2" />
             </motion.button>
           </motion.div>
