@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaCode, FaLaptopCode, FaUserGraduate } from 'react-icons/fa';
-import profileImg from '../../assets/my_pics2.jpg'
+import profileImg from '../../assets/20240613_105504.jpg'
 
 
 const AboutMe = () => {
@@ -23,7 +23,7 @@ const AboutMe = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <img 
-              src="https://via.placeholder.com/400" // Replace with your actual image
+              src={profileImg}
               alt="Your Name"
               className="rounded-lg shadow-lg w-full"
             />
@@ -34,10 +34,10 @@ const AboutMe = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <p className="text-lg mb-6 font-poppins">
-              Hello! I am [Your Name], a passionate fullstack developer with a keen interest in creating efficient, scalable, and user-friendly web applications. With [X] years of experience in the field, I have had the opportunity to work on a diverse range of projects, from small business websites to complex enterprise applications.
+              Hello! I am Quadri Kobiowu, a passionate fullstack developer with a keen interest in creating efficient, scalable, and user-friendly web applications. With 3 years of experience in the field, I have had the opportunity to work on a diverse range of projects, from small business websites to complex enterprise applications.
             </p>
             <p className="text-lg mb-6 font-poppins">
-              My journey in tech began [brief background]. Since then, I have been constantly learning and adapting to new technologies and methodologies in the ever-evolving world of web development.
+              My journey in tech began 2020. Since then, I have been constantly learning and adapting to new technologies and methodologies in the ever-evolving world of web development.
             </p>
             <div className="grid grid-cols-3 gap-4 mb-6">
               {[
