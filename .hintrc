@@ -1,8 +1,0 @@
-{
-  "extends": [
-    "development"
-  ],
-  "hints": {
-    "leading-dot-classlist": "off"
-  }
-}
