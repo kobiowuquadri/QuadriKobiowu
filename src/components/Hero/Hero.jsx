@@ -45,7 +45,7 @@ const Hero = () => {
               I create elegant solutions to complex problems, bringing ideas to life through code.
             </p>
             <p className="text-base sm:text-lg mb-4 font-poppins text-gray-400">
-              Specializing in: React, Node.js, Python, and Cloud Technologies
+              Specializing in: NodeJS, ExpressJS, MongoDB and Cloud Technologies
             </p>
             <p className="text-base sm:text-lg mb-8 font-poppins text-gray-400">
               Hobby: Watching Movies and Exploring New Technologies
