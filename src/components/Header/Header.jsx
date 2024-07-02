@@ -12,16 +12,8 @@ const Header = () => {
     <header className="bg-white text-black shadow-md fixed w-full z-20 font-sans">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <div className="flex items-center">
-          <img 
-            src={headerImg}
-            alt="Quadri Kobiowu" 
-            className="w-12 h-12 rounded-full mr-3 grayscale"
-          />
-          <div>
-            <h1 className="text-xl font-bold font-poppins">Quadri Kobiowu</h1>
-            <p className="text-sm text-gray-600 font-poppins">Fullstack Developer</p>
-          </div>
-        </div>
+        <h1 className="text-xl font-bold font-poppins">DevQuat</h1>
+      </div>
 
         {/* Hamburger menu icon with animation */}
         <motion.button 
