@@ -1,31 +1,52 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import estatengImg from '../../assets/estateng.png'
+import danritImg from '../../assets/danrit2.png'
+import expressStarterImg from '../../assets/expressStarterFile.png'
+
+// const projects = [
+//   {
+//     title: "MyEstate",
+//     description: "A comprehensive real estate platform for property listings, management, and transactions in Nigeria.",
+//     iframeSrc: "https://myestate.ng/",
+//     technologies: ["React", "Node.js", "MongoDB", "Express"],
+//     githubLink: "",
+//     liveLink: "https://myestate.ng/"
+//   },
+//   {
+//     title: "Express MVC Starter",
+//     description: "A boilerplate for quickly setting up a Node.js web application using Express framework with MVC architecture.",
+//     iframeSrc: "https://github.com/kobiowuquadri/express-mvc-starter",
+//     technologies: ["Node.js", "Express", "MVC", "MongoDB"],
+//     githubLink: "https://github.com/kobiowuquadri/express-mvc-starter",
+//     liveLink: ""
+//   }
+// ];
 
 const projects = [
   {
-    title: "Project 1",
-    description: "A brief description of Project 1. This could be a web app, mobile app, or any other significant project you've worked on.",
-    image: "https://via.placeholder.com/300",
-    technologies: ["React", "Node.js", "MongoDB"],
-    githubLink: "https://github.com/yourusername/project1",
-    liveLink: "https://project1.com"
+    title: "DanRit Beauty Salon",
+    description: "DanRit Beauty Salon is a family-owned business in the United State, dedicated to exceptional beauty services. Our trained beauticians provide bespoke treatments that leave every customer who visits us satisfied and happy.",
+    image: danritImg,
+    technologies: ["React.js", "SASS", "Module CSS", "TailwindCSS"],
+    liveLink: "https://danritbeautysalon.com",
+    role: "Frontend Developer"
   },
   {
-    title: "Project 2",
-    description: "Description of Project 2. Highlight the problem it solves and your role in its development.",
-    image: "https://via.placeholder.com/300",
-    technologies: ["Vue.js", "Express", "PostgreSQL"],
-    githubLink: "https://github.com/yourusername/project2",
-    liveLink: "https://project2.com"
+    title: "EstateNG",
+    description: "MyEstate is a comprehensive real estate platform designed for property listings, management, and transactions in Nigeria. User-friendly features and robust functionalities revolutionize the real estate market in Nigeria.",
+    image: estatengImg,
+    technologies: ["Node.js", "Express.js", "MongoDB"],
+    liveLink: "https://myestate.ng",
+    role: "Backend Engineer"
   },
   {
-    title: "Project 3",
-    description: "Details about Project 3. Mention any unique challenges you overcame or innovative features you implemented.",
-    image: "https://via.placeholder.com/300",
-    technologies: ["React Native", "Firebase"],
-    githubLink: "https://github.com/yourusername/project3",
-    liveLink: "https://project3.com"
+    title: "Express MVC Starter",
+    description: "A boilerplate for quickly setting up a Node.js web application using Express framework with MVC architecture.",
+    image: expressStarterImg,
+    technologies: ["Node.js", "Express", "MVC", "MongoDB"],
+    githubLink: "https://github.com/kobiowuquadri/express-mvc-starter",
   }
 ];
 
@@ -59,7 +80,7 @@ const ProjectCard = ({ project, index }) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
-      <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
+      <img src={project.image} alt={project.title} className="w-full h-100 object-cover" />
       <div className="p-6">
         <h3 className="text-xl font-bold mb-2 font-poppins">{project.title}</h3>
         <p className="text-gray-600 mb-4 font-poppins">{project.description}</p>
