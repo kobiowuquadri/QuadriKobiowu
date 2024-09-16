@@ -24,6 +24,7 @@ const AboutMe = () => {
           >
             <img 
               src={profileImg}
+              data-aos="zoom-in-right"
               alt="Quadri Kobiowu"
               className="rounded-lg shadow-lg w-full"
             />
@@ -72,7 +73,7 @@ const AboutMe = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default AboutMe;
+export default AboutMe

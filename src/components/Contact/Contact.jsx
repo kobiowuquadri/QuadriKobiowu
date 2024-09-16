@@ -3,22 +3,11 @@ import { motion } from 'framer-motion';
 import { FaEnvelope, FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
 
 const Contact = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+   const [name, setName] = useState('')
+   const [email, setEmail] = useState('')
+   const [message, setMessage] = useState('')
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Here you would typically handle the form submission,
-    // such as sending the data to a server or an email service
-    console.log('Form submitted:', { name, email, message });
-    // Reset form fields
-    setName('');
-    setEmail('');
-    setMessage('');
-  };
-
-  return (
+   return (
     <section id="contact" className="bg-black text-white py-20">
       <div className="container mx-auto px-4">
         <motion.h2 
@@ -31,18 +20,23 @@ const Contact = () => {
         </motion.h2>
         <div className="flex flex-wrap -mx-4">
           <div className="w-full lg:w-1/2 px-4 mb-8 lg:mb-0">
-            <motion.form 
-              onSubmit={handleSubmit}
+             <motion.form 
+              action="https://formsubmit.co/kobiowuq@gmail.com"
+              method="POST"
               className="bg-white text-black rounded-lg p-8 shadow-lg"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
             >
+              <input type="hidden" name="_subject" value="New Contact Form Submission" />
+              <input type="hidden" name="_captcha" value="false" />
+
               <div className="mb-4">
                 <label htmlFor="name" className="block text-sm font-bold mb-2 font-poppins">Name</label>
                 <input
                   type="text"
                   id="name"
+                  name="Name" 
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black font-poppins"
@@ -54,6 +48,7 @@ const Contact = () => {
                 <input
                   type="email"
                   id="email"
+                  name="Email" 
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black font-poppins"
@@ -64,6 +59,7 @@ const Contact = () => {
                 <label htmlFor="message" className="block text-sm font-bold mb-2 font-poppins">Message</label>
                 <textarea
                   id="message"
+                  name="Message" 
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   rows="4"
@@ -116,7 +112,7 @@ const Contact = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
 export default Contact;

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope, FaBars, FaTimes } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 import headerImg from '../../assets/my_pics2-modified.png'
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,10 +13,9 @@ const Header = () => {
     <header className="bg-white text-black shadow-md fixed w-full z-20 font-sans">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <div className="flex items-center">
-        <h1 className="text-xl font-bold font-poppins">DevQuat</h1>
+        <Link to={'/'} className="text-xl font-bold font-poppins">DevQuat</Link>
       </div>
 
-        {/* Hamburger menu icon with animation */}
         <motion.button 
           onClick={toggleMenu} 
           className="md:hidden text-black focus:outline-none"
@@ -46,14 +46,14 @@ const Header = () => {
           </AnimatePresence>
         </motion.button>
 
-        {/* Navigation and social icons for larger screens */}
+       
         <nav className="hidden md:flex items-center space-x-6">
           <NavLinks />
           <SocialIcons />
         </nav>
       </div>
 
-      {/* Mobile menu with animation */}
+    
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div 
