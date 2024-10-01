@@ -13,8 +13,8 @@ const Header = () => {
     <header className="bg-white text-black shadow-md fixed w-full z-20 font-sans">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <div className="flex items-center">
-        <Link to={'/'} className="text-xl font-bold font-poppins">DevQuat</Link>
-      </div>
+          <Link to={'/'} className="text-2xl font-bold font-poppins">DevQuat</Link>
+        </div>
 
         <motion.button 
           onClick={toggleMenu} 
@@ -46,21 +46,19 @@ const Header = () => {
           </AnimatePresence>
         </motion.button>
 
-       
         <nav className="hidden md:flex items-center space-x-6">
           <NavLinks />
           <SocialIcons />
         </nav>
       </div>
 
-    
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div 
-            className="md:hidden bg-white py-2"
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+            className="fixed top-0 left-0 bg-white shadow-md p-4 w-64 h-screen z-10"
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -100 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
           >
             <nav className="flex flex-col items-center">
@@ -70,6 +68,17 @@ const Header = () => {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {isMenuOpen && (
+        <motion.div 
+          className="fixed top-0 left-0 w-full h-screen bg-gray-900 opacity-50 z-5"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3, ease: 'easeInOut' }}
+          onClick={toggleMenu}
+        />
+      )}
     </header>
   );
 };
@@ -88,7 +97,7 @@ const NavLinks = ({ mobile, setIsMenuOpen }) => (
       </motion.li>
     ))}
   </ul>
-);
+)
 
 const SocialIcons = ({ mobile }) => (
   <div className={`flex ${mobile ? 'mt-4 space-x-6' : 'space-x-4'}`}>
@@ -110,6 +119,6 @@ const SocialIcons = ({ mobile }) => (
       </motion.a>
     ))}
   </div>
-);
+)
 
 export default Header;
