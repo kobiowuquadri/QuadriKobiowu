@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaCode, FaLaptopCode, FaUserGraduate } from 'react-icons/fa';
-import profileImg from '../../assets/20240613_105504.jpg'
+import profileImg from '../../assets/Remove-bg.ai_1727789628937.png'
 import myCV from '../../assets/QUADRI_ KOBIOWU_ CV.pdf'
 
 const AboutMe = () => {
