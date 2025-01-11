@@ -1,32 +1,56 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { FaArrowRight, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Hero = () => {
-  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
-  const bubbles = Array.from({ length: 20 }, (_, i) => i);
-
-  useEffect(() => {
-    const updateDimensions = () => {
-      setDimensions({
-        width: window.innerWidth,
-        height: window.innerHeight
-      });
-    };
-
-    updateDimensions();
-    window.addEventListener('resize', updateDimensions);
-
-    return () => window.removeEventListener('resize', updateDimensions);
-  }, []);
-
-  const getRandomPosition = () => ({
-    x: Math.random() * dimensions.width,
-    y: Math.random() * dimensions.height,
-  });
-
   return (
-    <section className="bg-black text-white min-h-screen flex items-center relative overflow-hidden pt-14">
+    <section className="bg-[#0A192F] text-[#CCD6F6] min-h-screen flex items-center relative overflow-hidden pt-14">
+      {/* Animated Background Grid */}
+      <div className="absolute inset-0 grid grid-cols-8 grid-rows-8 gap-1 opacity-20">
+        {Array.from({ length: 64 }).map((_, index) => (
+          <motion.div
+            key={index}
+            className="bg-[#64FFDA] rounded-sm"
+            initial={{ opacity: 0 }}
+            animate={{ 
+              opacity: [0, 0.5, 0],
+              scale: [1, 1.2, 1],
+            }}
+            transition={{
+              duration: Math.random() * 3 + 2,
+              repeat: Infinity,
+              repeatType: "reverse",
+              delay: Math.random() * 2,
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Floating Tech Keywords */}
+      <div className="absolute inset-0 overflow-hidden opacity-10">
+        {['JavaScript', 'React', 'Node.js', 'AWS', 'Architecture', 'Leadership', 'Innovation', 'Strategy'].map((word, index) => (
+          <motion.div
+            key={index}
+            className="absolute text-[#64FFDA] font-mono whitespace-nowrap"
+            initial={{ 
+              x: Math.random() * window.innerWidth,
+              y: Math.random() * window.innerHeight,
+            }}
+            animate={{
+              x: [null, Math.random() * window.innerWidth],
+              y: [null, Math.random() * window.innerHeight],
+            }}
+            transition={{
+              duration: Math.random() * 20 + 20,
+              repeat: Infinity,
+              repeatType: "reverse",
+            }}
+          >
+            {word}
+          </motion.div>
+        ))}
+      </div>
+
       <div className="container mx-auto px-4 py-20 sm:py-24 md:py-28 lg:py-32 z-10">
         <div className="flex flex-col lg:flex-row gap-8 items-center">
           <motion.div
@@ -35,105 +59,85 @@ const Hero = () => {
             transition={{ duration: 0.5 }}
             className="w-full lg:w-1/2"
           >
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 font-poppins">
-              Hi, I am <span className="text-gray-400">Quadri Kobiowu</span>
+            <span className="text-[#64FFDA] font-mono mb-4 block">Hi, my name is</span>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 font-poppins">
+              Quadri Kobiowu
             </h1>
-            <h2 className="text-xl sm:text-2xl lg:text-3xl mb-6 font-poppins text-gray-300">
-              Fullstack Developer | Backend Engineer & Problem Solver
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-6 font-poppins text-[#8892B0]">
+              Chief Technical Officer at Nagida
             </h2>
-            <p className="text-base sm:text-lg mb-4 font-poppins text-gray-400">
-              I create elegant solutions to complex problems, bringing ideas to life through code.
-            </p>
-            <p className="text-base sm:text-lg mb-4 font-poppins text-gray-400">
-              Specializing in: NodeJS, ExpressJS, MongoDB and Cloud Technologies
-            </p>
-            <p className="text-base sm:text-lg mb-8 font-poppins text-gray-400">
-              Hobby: Watching Movies and Exploring New Technologies
+            <p className="text-lg sm:text-xl mb-6 font-poppins text-[#8892B0] max-w-2xl">
+              I'm a technical leader specializing in building exceptional digital experiences and scaling engineering teams. Currently, I'm leading technology strategy and innovation at {' '}
+              <a 
+                href="https://nagidafoods.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-[#64FFDA] hover:underline"
+              >
+                Nagida Foods
+              </a>.
             </p>
             <div className="flex flex-wrap gap-4 mb-8">
               <motion.button
-                whileHover={{ scale: 1.05, backgroundColor: '#333' }}
+                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white text-black font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-full inline-flex items-center font-poppins transition-colors duration-300 text-sm sm:text-base"
+                className="border border-[#64FFDA] text-[#64FFDA] font-mono py-3 px-6 rounded hover:bg-[#64FFDA]/10 transition-colors duration-300"
               >
                 <a href="#projects">View My Work</a>
-                <FaArrowRight className="ml-2" />
               </motion.button>
-              <motion.a
-                href="https://github.com/kobiowuquadri"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gray-800 text-white p-2 sm:p-3 rounded-full"
-              >
-                <FaGithub size={20} />
-              </motion.a>
-              <motion.a
-                href="https://www.linkedin.com/in/quadri-kobiowu-955313233"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gray-800 text-white p-2 sm:p-3 rounded-full"
-              >
-                <FaLinkedin size={20} />
-              </motion.a>
+              <div className="flex space-x-4">
+                <motion.a 
+                  href="https://github.com/kobiowuquadri"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#CCD6F6] hover:text-[#64FFDA] transition-colors duration-300"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <FaGithub size={24} />
+                </motion.a>
+                <motion.a 
+                  href="https://www.linkedin.com/in/quadri-kobiowu-955313233"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#CCD6F6] hover:text-[#64FFDA] transition-colors duration-300"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <FaLinkedin size={24} />
+                </motion.a>
+              </div>
             </div>
           </motion.div>
+          
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="w-full lg:w-1/2 bg-gray-900 p-6 rounded-lg shadow-lg"
+            className="w-full lg:w-1/2 bg-[#112240] p-8 rounded-lg shadow-xl"
           >
-            <h3 className="text-xl sm:text-2xl font-bold mb-4 font-poppins">What I Offer</h3>
-            <ul className="list-disc list-inside text-gray-300 space-y-2 font-poppins text-sm sm:text-base">
-              <li>Fullstack web application development</li>
-              <li>Scalable backend solutions</li>
-              <li>API design and integration</li>
-              <li>Database optimization</li>
-              <li>Cloud deployment and DevOps</li>
+            <h3 className="text-2xl font-bold mb-6 font-poppins text-[#64FFDA]">Leadership & Expertise</h3>
+            <ul className="space-y-4 text-[#8892B0]">
+              <li className="flex items-center space-x-3">
+                <span className="text-[#64FFDA]">▹</span>
+                <span>Technical Strategy & Vision</span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <span className="text-[#64FFDA]">▹</span>
+                <span>Team Leadership & Mentorship</span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <span className="text-[#64FFDA]">▹</span>
+                <span>Architecture & System Design</span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <span className="text-[#64FFDA]">▹</span>
+                <span>Innovation & Digital Transformation</span>
+              </li>
             </ul>
-            <motion.button
-              whileHover={{ scale: 1.05, backgroundColor: '#4a5568' }}
-              whileTap={{ scale: 0.95 }}
-              className="mt-6 bg-gray-700 text-white font-bold py-2 px-4 rounded-full inline-flex items-center font-poppins transition-colors duration-300 text-sm sm:text-base"
-            >
-              <a href="#contact">Let's Collaborate</a>
-              <FaArrowRight className="ml-2" />
-            </motion.button>
           </motion.div>
         </div>
       </div>
-
-      {bubbles.map((_, index) => {
-        const initialPosition = getRandomPosition();
-        return (
-          <motion.div
-            key={index}
-            className="absolute rounded-full bg-gray-700 opacity-20"
-            initial={{
-              ...initialPosition,
-              scale: Math.random() * 0.5 + 0.5,
-            }}
-            animate={{
-              x: [initialPosition.x, getRandomPosition().x, getRandomPosition().x, initialPosition.x],
-              y: [initialPosition.y, getRandomPosition().y, getRandomPosition().y, initialPosition.y],
-              transition: {
-                duration: Math.random() * 20 + 30,
-                repeat: Infinity,
-                repeatType: 'loop',
-                ease: "linear"
-              },
-            }}
-            style={{
-              width: `${Math.random() * 100 + 50}px`,
-              height: `${Math.random() * 100 + 50}px`,
-            }}
-          />
-        );
-      })}
     </section>
   );
 };

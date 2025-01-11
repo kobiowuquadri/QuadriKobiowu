@@ -23,7 +23,7 @@ const Contact = () => {
              <motion.form 
               action="https://formsubmit.co/kobiowuq@gmail.com"
               method="POST"
-              className="bg-white text-black rounded-lg p-8 shadow-lg"
+              className="bg-[#112240] text-[#CCD6F6] rounded-lg p-8 shadow-lg"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
@@ -39,7 +39,7 @@ const Contact = () => {
                   name="Name" 
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black font-poppins"
+                  className="w-full px-3 py-2 bg-[#0A192F] border border-[#233554] rounded-md focus:outline-none focus:ring-2 focus:ring-[#64FFDA] font-poppins"
                   required
                 />
               </div>
@@ -51,7 +51,7 @@ const Contact = () => {
                   name="Email" 
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black font-poppins"
+                  className="w-full px-3 py-2 bg-[#0A192F] border border-[#233554] rounded-md focus:outline-none focus:ring-2 focus:ring-[#64FFDA] font-poppins"
                   required
                 />
               </div>
@@ -63,15 +63,15 @@ const Contact = () => {
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   rows="4"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black font-poppins"
+                  className="w-full px-3 py-2 bg-[#0A192F] border border-[#233554] rounded-md focus:outline-none focus:ring-2 focus:ring-[#64FFDA] font-poppins"
                   required
                 ></textarea>
               </div>
               <motion.button
                 type="submit"
-                className="w-full bg-black text-white py-2 px-4 rounded-md hover:bg-gray-800 transition duration-300 font-poppins"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                className="w-full bg-[#64FFDA] text-[#0A192F] py-2 px-4 rounded-md hover:bg-[#64FFDA]/90 transition duration-300 font-bold font-poppins"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
               >
                 Send Message
               </motion.button>
@@ -79,34 +79,34 @@ const Contact = () => {
           </div>
           <div className="w-full lg:w-1/2 px-4">
             <motion.div
-              className="bg-white text-black rounded-lg p-8 shadow-lg h-full flex flex-col justify-between"
+              className="bg-[#112240] text-[#CCD6F6] rounded-lg p-8 shadow-lg h-full flex flex-col justify-between"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
             >
               <div>
-                <h3 className="text-2xl font-bold mb-4 font-poppins">Contact Information</h3>
+                <h3 className="text-2xl font-bold mb-4 font-poppins text-[#64FFDA]">Contact Information</h3>
                 <p className="mb-4 font-poppins">Feel free to reach out to me through any of the following channels:</p>
-                <ul className="space-y-2">
+                <ul className="space-y-4">
                   <li className="flex items-center font-poppins">
-                    <FaEnvelope className="mr-2" />
-                    <a href="mailto:kobiowuq@gmail.com" className="hover:underline">kobiowuq@gmail.com</a>
+                    <FaEnvelope className="mr-2 text-[#64FFDA]" />
+                    <a href="mailto:kobiowuq@gmail.com" className="hover:text-[#64FFDA] transition-colors duration-300">kobiowuq@gmail.com</a>
                   </li>
                   <li className="flex items-center font-poppins">
-                    <FaLinkedin className="mr-2" />
-                    <a href="https://linkedin.com/in/quadri-kobiowu-955313233" target="_blank" rel="noopener noreferrer" className="hover:underline">LinkedIn Profile</a>
+                    <FaLinkedin className="mr-2 text-[#64FFDA]" />
+                    <a href="https://linkedin.com/in/quadri-kobiowu-955313233" target="_blank" rel="noopener noreferrer" className="hover:text-[#64FFDA] transition-colors duration-300">LinkedIn Profile</a>
                   </li>
                   <li className="flex items-center font-poppins">
-                    <FaGithub className="mr-2" />
-                    <a href="https://github.com/kobiowuquadri" target="_blank" rel="noopener noreferrer" className="hover:underline">GitHub Profile</a>
+                    <FaGithub className="mr-2 text-[#64FFDA]" />
+                    <a href="https://github.com/kobiowuquadri" target="_blank" rel="noopener noreferrer" className="hover:text-[#64FFDA] transition-colors duration-300">GitHub Profile</a>
                   </li>
                   <li className="flex items-center font-poppins">
-                    <FaTwitter className="mr-2" />
-                    <a href="https://x.com/quadrikobiowu" target="_blank" rel="noopener noreferrer" className="hover:underline">Twitter Profile</a>
+                    <FaTwitter className="mr-2 text-[#64FFDA]" />
+                    <a href="https://x.com/quadrikobiowu" target="_blank" rel="noopener noreferrer" className="hover:text-[#64FFDA] transition-colors duration-300">Twitter Profile</a>
                   </li>
                 </ul>
               </div>
-              <p className="mt-8 text-sm text-gray-600 font-poppins">I am always open to new opportunities and collaborations. Do not hesitate to get in touch!</p>
+              <p className="mt-8 text-sm text-[#8892B0] font-poppins">I am always open to new opportunities and collaborations. Do not hesitate to get in touch!</p>
             </motion.div>
           </div>
         </div>
