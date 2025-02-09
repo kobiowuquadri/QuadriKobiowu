@@ -5,6 +5,7 @@ import estatengImg from '../../assets/estateng.png'
 import danritImg from '../../assets/danrit2.png'
 import expressStarterImg from '../../assets/Screenshot 2025-02-09 at 11.59.12.png'
 import codeVortexImg from '../../assets/Screenshot 2025-02-09 at 11.58.06.png'
+import docifyImg from '../../assets/Screenshot 2025-02-09 at 12.30.48.png'
 
 const projects = [
   {
@@ -14,6 +15,14 @@ const projects = [
     technologies: ["React.js", "TailwindCSS"],
     liveLink: "https://codevortexacademy.vercel.app/",
     role: "Founder & Lead Developer"
+  },
+  {
+    title: "Docify Health",
+    description: "Developed the backend infrastructure for an AI-powered health companion platform. Implemented real-time health monitoring, personalized recommendations, and secure data handling using Node.js and MongoDB. Integrated DeepseekAI for intelligent health insights.",
+    image: docifyImg,
+    technologies: ["Node.js", "Express.js", "MongoDB", "DeepseekAI"],
+    liveLink: "https://docify-health.vercel.app/",
+    role: "Backend Engineer"
   },
   {
     title: "DanRit Beauty Salon",
