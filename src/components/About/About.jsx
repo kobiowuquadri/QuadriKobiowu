@@ -25,47 +25,47 @@ const AboutMe = () => {
             className="space-y-6"
           >
             <p className="text-[#8892B0] font-poppins leading-relaxed">
-              As the Chief Technical Officer at <a href="https://nagidafoods.com" target="_blank" rel="noopener noreferrer" className="text-[#64FFDA] hover:underline">Nagida Foods</a>, I lead technology strategy and innovation while fostering a culture of engineering excellence.
+              Coming from a humble background in Nigeria, I refused to let financial constraints define my future. Despite the challenges, I held onto a burning desire to create a better life for myself and my family through technology.
             </p>
             <p className="text-[#8892B0] font-poppins leading-relaxed">
-              My journey in technology has evolved from hands-on development to technical leadership, where I now focus on architecting scalable solutions and mentoring engineering teams. I specialize in building robust distributed systems and implementing effective technical processes.
+              My breakthrough came when I was accepted into <a href="https://capacitybay.org/" target="_blank" rel="noopener noreferrer" className="text-[#64FFDA] hover:text-[#CCD6F6] transition-colors duration-300">CapacityBay's training program</a>. This opportunity wasn't just about learning to code – it was about transforming my life. Through countless late nights of studying and practicing, I turned my dreams of becoming a software engineer into reality.
             </p>
             <p className="text-[#8892B0] font-poppins leading-relaxed">
-              Beyond technical leadership, I'm passionate about driving digital transformation and creating innovative solutions that deliver real business value. I believe in leading by example and maintaining a strong connection to practical engineering while steering high-level technical strategy.
+              Today, I'm proud to lead the technical team at <a href="https://nagidafoods.com" target="_blank" rel="noopener noreferrer" className="text-[#64FFDA] hover:text-[#CCD6F6] transition-colors duration-300">Nagida Foods</a>, proving that your background doesn't determine your future. My journey from struggling to make ends meet to becoming a software engineer drives me to mentor others from similar backgrounds, showing them that with determination and the right support, anything is possible.
             </p>
 
             <div className="grid grid-cols-2 gap-4 pt-4">
               <div className="space-y-2">
-                <h3 className="text-[#64FFDA] font-mono text-sm">Core Technologies</h3>
+                <h3 className="text-[#64FFDA] font-mono text-sm">Frontend</h3>
                 <ul className="space-y-2 text-[#8892B0]">
                   <li className="flex items-center space-x-2">
                     <span className="text-[#64FFDA]">▹</span>
-                    <span>JavaScript (Node.js)</span>
+                    <span>React.js</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <span className="text-[#64FFDA]">▹</span>
-                    <span>React Ecosystem</span>
+                    <span>TailwindCSS</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <span className="text-[#64FFDA]">▹</span>
-                    <span>Cloud Architecture</span>
+                    <span>JavaScript/TypeScript</span>
                   </li>
                 </ul>
               </div>
               <div className="space-y-2">
-                <h3 className="text-[#64FFDA] font-mono text-sm">Leadership</h3>
+                <h3 className="text-[#64FFDA] font-mono text-sm">Backend</h3>
                 <ul className="space-y-2 text-[#8892B0]">
                   <li className="flex items-center space-x-2">
                     <span className="text-[#64FFDA]">▹</span>
-                    <span>Team Management</span>
+                    <span>Node.js/Express</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <span className="text-[#64FFDA]">▹</span>
-                    <span>Tech Strategy</span>
+                    <span>MongoDB</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <span className="text-[#64FFDA]">▹</span>
-                    <span>Agile Practices</span>
+                    <span>RESTful APIs</span>
                   </li>
                 </ul>
               </div>

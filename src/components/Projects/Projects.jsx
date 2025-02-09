@@ -3,32 +3,41 @@ import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import estatengImg from '../../assets/estateng.png'
 import danritImg from '../../assets/danrit2.png'
-import expressStarterImg from '../../assets/expressStarterFile.png'
+import expressStarterImg from '../../assets/Screenshot 2025-02-09 at 11.59.12.png'
+import codeVortexImg from '../../assets/Screenshot 2025-02-09 at 11.58.06.png'
 
 const projects = [
   {
+    title: "Code Vortex Academy",
+    description: "Built an educational platform that empowers aspiring developers. Features include course management, interactive learning modules, and a responsive design. The platform has helped numerous students transition into tech careers.",
+    image: codeVortexImg,
+    technologies: ["React.js", "TailwindCSS"],
+    liveLink: "https://codevortexacademy.vercel.app/",
+    role: "Founder & Lead Developer"
+  },
+  {
     title: "DanRit Beauty Salon",
-    description: "Led the development of a modern, responsive web platform for DanRit Beauty Salon, implementing sophisticated UI/UX design patterns and ensuring optimal performance across all devices.",
+    description: "Built a modern, responsive website for DanRit Beauty Salon using React.js and TailwindCSS. Implemented user-friendly booking features and a dynamic service catalog that helped increase their online presence.",
     image: danritImg,
-    technologies: ["React.js", "SASS", "Module CSS", "TailwindCSS"],
+    technologies: ["React.js", "TailwindCSS", "SASS", "MODULE CSS", "JavaScript", "Responsive Design"],
     liveLink: "https://danritbeautysalon.com",
-    role: "Technical Lead"
+    role: "Frontend Developer"
   },
   {
     title: "EstateNG",
-    description: "Architected and implemented a scalable real estate platform, featuring robust property management systems, secure payment integration, and advanced search functionality. Significantly improved market reach and operational efficiency.",
+    description: "Developed a real estate platform that helps connect property buyers with sellers. Built the backend with Node.js and Express, implemented secure user authentication, and created a responsive frontend with React.",
     image: estatengImg,
-    technologies: ["Node.js", "Express.js", "MongoDB", "AWS"],
+    technologies: ["Node.js", "Express.js", "MongoDB"],
     liveLink: "https://myestate.ng",
-    role: "System Architect"
+    role: "Backend Engineer"
   },
   {
-    title: "Express MVC Starter",
-    description: "Developed an enterprise-grade Node.js boilerplate implementing best practices, design patterns, and security measures. Accelerates development workflow while maintaining code quality and consistency.",
+    title: "QuickServe",
+    description: "Created a robust Node.js starter template with advanced features including JWT authentication, Cloudinary integration, email services, and Swagger documentation. Built to help developers quickly bootstrap production-ready backend applications.",
     image: expressStarterImg,
-    technologies: ["Node.js", "Express", "MVC", "MongoDB"],
-    githubLink: "https://github.com/kobiowuquadri/express-mvc-starter",
-    role: "Lead Developer"
+    technologies: ["Node.js", "Express", "MongoDB", "JWT", "Swagger"],
+    githubLink: "https://github.com/kobiowuquadri/quick-serve",
+    role: "Developer & Maintainer"
   }
 ];
 
@@ -42,7 +51,7 @@ const Projects = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <span className="text-[#64FFDA] font-mono">03.</span>
+          <span className="text-[#64FFDA] font-mono">02.</span>
           <h2 className="text-3xl md:text-4xl font-bold font-poppins">Notable Projects</h2>
           <div className="h-[1px] bg-[#233554] flex-grow ml-4"></div>
         </motion.div>

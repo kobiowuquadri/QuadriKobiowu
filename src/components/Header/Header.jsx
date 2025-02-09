@@ -68,12 +68,13 @@ const Header = () => {
 };
 
 const NavLinks = ({ mobile, setIsMenuOpen }) => (
-  <ul className={`flex ${mobile ? 'flex-col items-center space-y-6' : 'space-x-8'}`}>
+  <ul className={`flex ${mobile ? 'flex-col space-y-4' : 'space-x-8'} items-center`}>
     {[
       { name: 'About', number: '01' },
-      { name: 'Skills', number: '02' },
-      { name: 'Projects', number: '03' },
-      { name: 'Contact', number: '04' }
+      { name: 'Projects', number: '02' },
+      { name: 'Skills', number: '03' },
+      { name: 'Mentorship', number: '04' },
+      { name: 'Contact', number: '05' }
     ].map(({ name, number }) => (
       <motion.li 
         key={name}

@@ -10,14 +10,16 @@ const Contact = () => {
    return (
     <section id="contact" className="bg-black text-white py-20">
       <div className="container mx-auto px-4">
-        <motion.h2 
-          className="text-3xl md:text-4xl font-bold mb-12 text-center font-poppins"
+        <motion.div 
+          className="flex items-center gap-2 mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Get In Touch
-        </motion.h2>
+          <span className="text-[#64FFDA] font-mono">05.</span>
+          <h2 className="text-3xl md:text-4xl font-bold font-poppins">Get In Touch</h2>
+          <div className="h-[1px] bg-[#233554] flex-grow ml-4"></div>
+        </motion.div>
         <div className="flex flex-wrap -mx-4">
           <div className="w-full lg:w-1/2 px-4 mb-8 lg:mb-0">
              <motion.form 

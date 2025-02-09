@@ -74,7 +74,7 @@ const Footer = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
           >
-            Chief Technical Officer at{' '}
+            Software Engineer at{' '}
             <a 
               href="https://nagidafoods.com" 
               target="_blank" 

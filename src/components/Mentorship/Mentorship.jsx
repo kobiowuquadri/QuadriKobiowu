@@ -8,23 +8,23 @@ const Mentorship = () => {
   const mentorshipAreas = [
     {
       icon: FaLightbulb,
-      title: "Technical Leadership",
-      description: "Learn how to transition from a developer to a technical leader."
+      title: "Career Transition",
+      description: "Learn how to break into tech from any background, just like I did."
     },
     {
       icon: FaRocket,
-      title: "Career Growth",
-      description: "Navigate your career path in tech with strategic guidance."
+      title: "Full Stack Development",
+      description: "Practical guidance on both frontend and backend technologies."
     },
     {
       icon: FaUsers,
-      title: "Team Management",
-      description: "Develop skills to lead and inspire engineering teams."
+      title: "Project Building",
+      description: "Learn to build real-world projects from start to finish."
     },
     {
       icon: FaChalkboardTeacher,
-      title: "Technical Skills",
-      description: "Enhance your technical knowledge and best practices."
+      title: "Best Practices",
+      description: "Develop good coding habits and engineering practices."
     }
   ];
 
@@ -36,7 +36,7 @@ const Mentorship = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          <span className="text-[#64FFDA] font-mono">07.</span>
+          <span className="text-[#64FFDA] font-mono">04.</span>
           <h2 className="text-3xl md:text-4xl font-bold text-[#CCD6F6] font-poppins">Mentorship Program</h2>
           <div className="h-[1px] bg-[#233554] flex-grow ml-4"></div>
         </motion.div>
@@ -50,8 +50,9 @@ const Mentorship = () => {
           >
             <h3 className="text-[#64FFDA] text-xl font-bold mb-6 font-poppins">Why Join My Mentorship Program?</h3>
             <p className="text-[#8892B0] mb-8 font-poppins">
-              As a CTO and technical leader, I'm passionate about helping the next generation of tech leaders grow. 
-              My mentorship program is designed to provide personalized guidance based on real-world experience.
+              Having started from scratch and successfully transitioned into tech through CapacityBay's program, 
+              I'm passionate about helping others achieve the same transformation. My mentorship focuses on practical, 
+              real-world skills that helped me succeed.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">

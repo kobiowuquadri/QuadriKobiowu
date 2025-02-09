@@ -64,10 +64,10 @@ const Hero = () => {
               Quadri Kobiowu
             </h1>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-6 font-poppins text-[#8892B0]">
-              Chief Technical Officer at Nagida
+              Software Engineer at Nagida
             </h2>
             <p className="text-lg sm:text-xl mb-6 font-poppins text-[#8892B0] max-w-2xl">
-              I'm a technical leader specializing in building exceptional digital experiences and scaling engineering teams. Currently, I'm leading technology strategy and innovation at {' '}
+              I'm a passionate software engineer who started from humble beginnings and found my path through CapacityBay's training program. Currently, I'm leading development projects and building impactful solutions at {' '}
               <a 
                 href="https://nagidafoods.com" 
                 target="_blank" 
