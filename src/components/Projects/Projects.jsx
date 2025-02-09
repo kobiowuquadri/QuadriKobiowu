@@ -6,13 +6,14 @@ import danritImg from '../../assets/danrit2.png'
 import expressStarterImg from '../../assets/Screenshot 2025-02-09 at 11.59.12.png'
 import codeVortexImg from '../../assets/Screenshot 2025-02-09 at 11.58.06.png'
 import docifyImg from '../../assets/Screenshot 2025-02-09 at 12.30.48.png'
+import brainwaveImg from '../../assets/Screenshot 2025-02-09 at 12.36.49.png'
 
 const projects = [
   {
     title: "Code Vortex Academy",
     description: "Built an educational platform that empowers aspiring developers. Features include course management, interactive learning modules, and a responsive design. The platform has helped numerous students transition into tech careers.",
     image: codeVortexImg,
-    technologies: ["React.js", "TailwindCSS"],
+    technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
     liveLink: "https://codevortexacademy.vercel.app/",
     role: "Founder & Lead Developer"
   },
@@ -39,6 +40,14 @@ const projects = [
     technologies: ["Node.js", "Express.js", "MongoDB"],
     liveLink: "https://myestate.ng",
     role: "Backend Engineer"
+  },
+  {
+    title: "Brainwave Consultancy",
+    description: "Developed a full-stack website for an AI consultancy firm that offers custom AI training and hackathons. Built with modern technologies to showcase their services, facilitate workshop bookings, and demonstrate AI capabilities. The platform helps organizations prepare for future digital challenges.",
+    image: brainwaveImg,
+    technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+    liveLink: "https://brainwaveconsultancy.vercel.app/",
+    role: "Full Stack Developer"
   },
   {
     title: "QuickServe",
