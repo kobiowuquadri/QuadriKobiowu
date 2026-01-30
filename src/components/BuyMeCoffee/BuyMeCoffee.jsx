@@ -80,7 +80,7 @@ const BuyMeCoffee = () => {
           <AnimatePresence>
             {isHovered && (
               <motion.div
-                className="bg-[#0A192F] text-[#64FFDA] px-4 py-2 rounded-lg mb-2 text-sm font-mono shadow-lg"
+                className="bg-primary-bg text-accent px-4 py-2 rounded-lg mb-2 text-sm font-mono shadow-lg"
                 variants={textVariants}
                 initial="initial"
                 animate="animate"

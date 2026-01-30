@@ -6,7 +6,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#0A192F] text-[#8892B0] py-12 border-t border-[#233554]">
+    <footer className="bg-primary-bg text-secondary-text py-12 border-t border-border-color">
       <div className="container mx-auto px-4">
         <motion.div 
           className="flex flex-col items-center"
@@ -15,7 +15,7 @@ const Footer = () => {
           transition={{ duration: 0.5 }}
         >
           <div className="mb-8">
-            <h3 className="text-center text-[#64FFDA] font-mono text-sm mb-2">
+            <h3 className="text-center text-accent font-mono text-sm mb-2">
               Let's Connect
             </h3>
             <div className="flex space-x-6">
@@ -31,7 +31,7 @@ const Footer = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#CCD6F6] hover:text-[#64FFDA] transition-colors duration-300"
+                  className="text-primary-text hover:text-accent transition-colors duration-300"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   aria-label={social.label}
@@ -79,7 +79,7 @@ const Footer = () => {
               href="https://nagidafoods.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-[#64FFDA] hover:underline"
+              className="text-accent hover:underline"
             >
               Nagida Foods
             </a>

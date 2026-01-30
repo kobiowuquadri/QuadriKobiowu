@@ -1,10 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import myCV from '../../assets/QUADRI_ KOBIOWU_ CV.pdf';
+import profileImage from '../../assets/quadri_kobiowu_profile.png';
 
 const AboutMe = () => {
   return (
-    <section id="about" className="bg-[#112240] text-[#CCD6F6] py-20">
+    <section id="about" className="bg-secondary-bg text-primary-text py-20">
       <div className="container mx-auto px-4">
         <motion.div 
           className="flex items-center gap-2 mb-8"
@@ -12,9 +13,9 @@ const AboutMe = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <span className="text-[#64FFDA] font-mono">01.</span>
+          <span className="text-accent font-mono">01.</span>
           <h2 className="text-3xl md:text-4xl font-bold font-poppins">About Me</h2>
-          <div className="h-[1px] bg-[#233554] flex-grow ml-4"></div>
+          <div className="h-[1px] bg-border-color flex-grow ml-4"></div>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -24,47 +25,47 @@ const AboutMe = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="space-y-6"
           >
-            <p className="text-[#8892B0] font-poppins leading-relaxed">
-              Coming from a humble background in Nigeria, I refused to let financial constraints define my future. Despite the challenges, I held onto a burning desire to create a better life for myself and my family through technology.
+            <p className="text-secondary-text font-poppins leading-relaxed">
+              I&apos;m a passionate Frontend Engineer currently contributing to production systems at <a href="http://masteringbackend.com/" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-primary-text transition-colors duration-300">Mastering Backend</a>. My journey in software engineering has been driven by a commitment to building exceptional user experiences and scalable applications.
             </p>
-            <p className="text-[#8892B0] font-poppins leading-relaxed">
-              My breakthrough came when I was accepted into <a href="https://capacitybay.org/" target="_blank" rel="noopener noreferrer" className="text-[#64FFDA] hover:text-[#CCD6F6] transition-colors duration-300">CapacityBay's training program</a>. This opportunity wasn't just about learning to code – it was about transforming my life. Through countless late nights of studying and practicing, I turned my dreams of becoming a software engineer into reality.
+            <p className="text-secondary-text font-poppins leading-relaxed">
+              I specialize in implementing application features and business logic, integrating frontend applications with backend APIs, and optimizing performance to deliver clean, maintainable code. My work focuses on creating production-ready solutions that meet real-world business needs.
             </p>
-            <p className="text-[#8892B0] font-poppins leading-relaxed">
-              Today, I'm proud to lead the technical team at <a href="https://nagidafoods.com" target="_blank" rel="noopener noreferrer" className="text-[#64FFDA] hover:text-[#CCD6F6] transition-colors duration-300">Nagida Foods</a>, proving that your background doesn't determine your future. My journey from struggling to make ends meet to becoming a software engineer drives me to mentor others from similar backgrounds, showing them that with determination and the right support, anything is possible.
+            <p className="text-secondary-text font-poppins leading-relaxed">
+              With expertise in modern frontend technologies and a strong foundation in full-stack development, I collaborate with engineering teams to deliver scalable solutions. I&apos;m dedicated to writing well-documented code and following best practices to ensure long-term maintainability.
             </p>
 
             <div className="grid grid-cols-2 gap-4 pt-4">
               <div className="space-y-2">
-                <h3 className="text-[#64FFDA] font-mono text-sm">Frontend</h3>
-                <ul className="space-y-2 text-[#8892B0]">
+                <h3 className="text-accent font-mono text-sm">Frontend</h3>
+                <ul className="space-y-2 text-secondary-text">
                   <li className="flex items-center space-x-2">
-                    <span className="text-[#64FFDA]">▹</span>
+                    <span className="text-accent">▹</span>
                     <span>React.js</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <span className="text-[#64FFDA]">▹</span>
+                    <span className="text-accent">▹</span>
                     <span>TailwindCSS</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <span className="text-[#64FFDA]">▹</span>
+                    <span className="text-accent">▹</span>
                     <span>JavaScript/TypeScript</span>
                   </li>
                 </ul>
               </div>
               <div className="space-y-2">
-                <h3 className="text-[#64FFDA] font-mono text-sm">Backend</h3>
-                <ul className="space-y-2 text-[#8892B0]">
+                <h3 className="text-accent font-mono text-sm">Backend</h3>
+                <ul className="space-y-2 text-secondary-text">
                   <li className="flex items-center space-x-2">
-                    <span className="text-[#64FFDA]">▹</span>
+                    <span className="text-accent">▹</span>
                     <span>Node.js/Express</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <span className="text-[#64FFDA]">▹</span>
+                    <span className="text-accent">▹</span>
                     <span>MongoDB</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <span className="text-[#64FFDA]">▹</span>
+                    <span className="text-accent">▹</span>
                     <span>RESTful APIs</span>
                   </li>
                 </ul>
@@ -74,7 +75,7 @@ const AboutMe = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="border border-[#64FFDA] text-[#64FFDA] px-6 py-3 rounded font-mono mt-6 hover:bg-[#64FFDA]/10 transition-colors duration-300"
+              className="border border-accent text-accent px-6 py-3 rounded font-mono mt-6 hover:bg-accent/10 transition-colors duration-300"
             >
               <a href={myCV} target="_blank" rel="noopener noreferrer">View Resume</a>
             </motion.button>
@@ -86,38 +87,55 @@ const AboutMe = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="relative group"
           >
-            <div className="bg-[#0A192F] rounded-lg p-8 relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#64FFDA]/10 to-transparent"></div>
-              <div className="relative z-10">
-                <div className="grid grid-cols-3 gap-4">
-                  {Array.from({ length: 9 }).map((_, index) => (
-                    <motion.div
-                      key={index}
-                      className="aspect-square bg-[#233554] rounded-lg hover:bg-[#64FFDA]/20 cursor-pointer"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ 
-                        duration: 0.3, 
-                        delay: index * 0.1,
-                        type: "spring",
-                        stiffness: 200
-                      }}
-                    />
-                  ))}
+            {/* Decorative corner elements */}
+            <div className="absolute -top-4 -left-4 w-20 h-20 border-t-4 border-l-4 border-accent rounded-tl-lg opacity-50"></div>
+            <div className="absolute -bottom-4 -right-4 w-20 h-20 border-b-4 border-r-4 border-accent rounded-br-lg opacity-50"></div>
+            
+            {/* Animated background gradient */}
+            <div className="absolute -inset-1 bg-gradient-to-r from-accent via-accent/50 to-accent rounded-lg blur opacity-20 group-hover:opacity-40 transition duration-1000 animate-pulse"></div>
+            
+            {/* Geometric pattern overlay */}
+            <div className="absolute inset-0 opacity-5">
+              <div className="absolute top-0 left-0 w-full h-full" style={{
+                backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 10px, currentColor 10px, currentColor 11px)`,
+                color: '#3B82F6'
+              }}></div>
+            </div>
+            
+            {/* Main image container */}
+            <div className="relative bg-secondary-bg rounded-lg p-4 border-2 border-border-color group-hover:border-accent transition-colors duration-500">
+              {/* Inner glow effect */}
+              <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-accent/5 to-transparent"></div>
+              
+              {/* Image wrapper with clip path effect */}
+              <div className="relative overflow-hidden rounded-lg">
+                <img 
+                  src={profileImage} 
+                  alt="Quadri Kobiowu" 
+                  className="w-full h-auto max-h-[500px] object-contain transform group-hover:scale-105 transition-transform duration-700 ease-out"
+                />
+                
+                {/* Overlay with scan line effect */}
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                {/* Corner accent dots */}
+                <div className="absolute top-2 left-2 w-2 h-2 bg-accent rounded-full"></div>
+                <div className="absolute top-2 right-2 w-2 h-2 bg-accent rounded-full"></div>
+                <div className="absolute bottom-2 left-2 w-2 h-2 bg-accent rounded-full"></div>
+                <div className="absolute bottom-2 right-2 w-2 h-2 bg-accent rounded-full"></div>
+              </div>
+              
+              {/* Tech-inspired bottom bar */}
+              <div className="mt-4 flex items-center justify-between text-xs font-mono text-secondary-text">
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
+                  <span>Software Engineer</span>
                 </div>
-                <motion.div 
-                  className="mt-8 text-center font-mono text-sm text-[#64FFDA]"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 1 }}
-                >
-                  <span className="block mb-2">Technical Leadership</span>
-                  <span className="text-[#8892B0] text-xs">
-                    Building the future of technology, one team at a time
-                  </span>
-                </motion.div>
+                <div className="flex space-x-1">
+                  <div className="w-8 h-1 bg-border-color rounded"></div>
+                  <div className="w-12 h-1 bg-accent/50 rounded"></div>
+                  <div className="w-6 h-1 bg-border-color rounded"></div>
+                </div>
               </div>
             </div>
           </motion.div>

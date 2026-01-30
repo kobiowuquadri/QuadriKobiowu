@@ -7,15 +7,15 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-[#0A192F]/90 backdrop-blur-sm text-[#CCD6F6] fixed w-full z-20 font-sans">
+    <header className="bg-primary-bg/90 backdrop-blur-sm text-primary-text fixed w-full z-20 font-sans">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <Link to={'/'} className="text-2xl font-bold font-mono text-[#64FFDA]">
+        <Link to={'/'} className="text-2xl font-bold font-mono text-accent">
           QK.
         </Link>
 
         <motion.button 
           onClick={() => setIsMenuOpen(!isMenuOpen)} 
-          className="md:hidden text-[#64FFDA] focus:outline-none"
+          className="md:hidden text-accent focus:outline-none"
           whileTap={{ scale: 0.95 }}
         >
           <AnimatePresence mode="wait" initial={false}>
@@ -32,7 +32,7 @@ const Header = () => {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div 
-            className="fixed top-0 right-0 bg-[#112240] p-8 w-[min(75vw,400px)] h-screen z-50"
+            className="fixed top-0 right-0 bg-secondary-bg p-8 w-[min(75vw,400px)] h-screen z-50"
             initial={{ x: 100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: 100, opacity: 0 }}
@@ -43,7 +43,7 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
                 whileTap={{ scale: 0.95 }}
               >
-                <FaTimes size={24} className="text-[#64FFDA]" />
+                <FaTimes size={24} className="text-accent" />
               </motion.button>
             </div>
             <nav className="flex flex-col items-center space-y-8">
@@ -86,8 +86,8 @@ const NavLinks = ({ mobile, setIsMenuOpen }) => (
           className="group flex items-center space-x-2 font-mono text-sm"
           onClick={() => mobile && setIsMenuOpen(false)}
         >
-          <span className="text-[#64FFDA]">{number}.</span>
-          <span className="text-[#CCD6F6] hover:text-[#64FFDA] transition-colors duration-300">
+          <span className="text-accent">{number}.</span>
+          <span className="text-primary-text hover:text-accent transition-colors duration-300">
             {name}
           </span>
         </a>
@@ -100,7 +100,7 @@ const NavLinks = ({ mobile, setIsMenuOpen }) => (
       <a 
         href="/resume.pdf"
         target="_blank"
-        className="border border-[#64FFDA] text-[#64FFDA] px-4 py-2 rounded hover:bg-[#64FFDA]/10 transition-colors duration-300"
+        className="border border-accent text-accent px-4 py-2 rounded hover:bg-accent/10 transition-colors duration-300"
       >
         Resume
       </a>
@@ -120,7 +120,7 @@ const SocialIcons = ({ mobile }) => (
         href={href} 
         target="_blank" 
         rel="noopener noreferrer" 
-        className="text-[#CCD6F6] hover:text-[#64FFDA] transition-colors duration-300"
+        className="text-primary-text hover:text-accent transition-colors duration-300"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
       >

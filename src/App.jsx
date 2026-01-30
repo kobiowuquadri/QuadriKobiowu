@@ -8,6 +8,8 @@ import 'aos/dist/aos.css';
 import BuyMeCoffee from './components/BuyMeCoffee/BuyMeCoffee'
 
 
+import ProjectDetails from './pages/ProjectDetails/ProjectDetails'
+
 function App() {
   useEffect(() => {
     AOS.init({
@@ -18,9 +20,10 @@ function App() {
   }, [])
 
   return (
-    <div className="bg-[#0A192F] min-h-screen">
+    <div className="bg-primary-bg min-h-screen">
       <Routes>
         <Route index element={<Home />} />
+        <Route path='/project/:id' element={<ProjectDetails />} />
         <Route path='/success' element={<Success />} />
       </Routes>
       <BuyMeCoffee />

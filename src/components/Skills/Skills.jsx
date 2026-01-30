@@ -102,7 +102,7 @@ const techCategories = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="bg-[#112240] text-[#CCD6F6] py-20">
+    <section id="skills" className="bg-secondary-bg text-primary-text py-20">
       <div className="container mx-auto px-4">
         <motion.div 
           className="flex items-center gap-2 mb-12"
@@ -110,28 +110,28 @@ const Skills = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <span className="text-[#64FFDA] font-mono">03.</span>
+          <span className="text-accent font-mono">03.</span>
           <h2 className="text-3xl md:text-4xl font-bold font-poppins">Tools & Technologies</h2>
-          <div className="h-[1px] bg-[#233554] flex-grow ml-4"></div>
+          <div className="h-[1px] bg-border-color flex-grow ml-4"></div>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {techCategories.map((category, categoryIndex) => (
             <motion.div 
               key={categoryIndex}
-              className="bg-[#0A192F] rounded-lg p-6 shadow-lg"
+              className="bg-primary-bg rounded-lg p-6 shadow-lg"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: categoryIndex * 0.1 }}
             >
-              <h3 className="text-xl font-bold mb-4 text-[#64FFDA] font-poppins">
+              <h3 className="text-xl font-bold mb-4 text-accent font-poppins">
                 {category.title}
               </h3>
               <div className="grid grid-cols-2 gap-4">
                 {category.tools.map((tool, toolIndex) => (
                   <motion.div
                     key={toolIndex}
-                    className="flex items-center gap-2 text-[#8892B0] hover:text-[#64FFDA] transition-colors duration-300"
+                    className="flex items-center gap-2 text-secondary-text hover:text-accent transition-colors duration-300"
                     whileHover={{ scale: 1.05 }}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
