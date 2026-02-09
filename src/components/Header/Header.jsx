@@ -13,8 +13,8 @@ const Header = () => {
           QK.
         </Link>
 
-        <motion.button 
-          onClick={() => setIsMenuOpen(!isMenuOpen)} 
+        <motion.button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="md:hidden text-accent focus:outline-none"
           whileTap={{ scale: 0.95 }}
         >
@@ -31,7 +31,7 @@ const Header = () => {
 
       <AnimatePresence>
         {isMenuOpen && (
-          <motion.div 
+          <motion.div
             className="fixed top-0 right-0 bg-secondary-bg p-8 w-[min(75vw,400px)] h-screen z-50"
             initial={{ x: 100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -55,7 +55,7 @@ const Header = () => {
       </AnimatePresence>
 
       {isMenuOpen && (
-        <motion.div 
+        <motion.div
           className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -72,17 +72,18 @@ const NavLinks = ({ mobile, setIsMenuOpen }) => (
     {[
       { name: 'About', number: '01' },
       { name: 'Projects', number: '02' },
-      { name: 'Skills', number: '03' },
-      { name: 'Mentorship', number: '04' },
-      { name: 'Contact', number: '05' }
+      { name: 'Experience', number: '03' },
+      { name: 'Skills', number: '04' },
+      { name: 'Mentorship', number: '05' },
+      { name: 'Contact', number: '06' }
     ].map(({ name, number }) => (
-      <motion.li 
+      <motion.li
         key={name}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
-        <a 
-          href={`#${name.toLowerCase()}`} 
+        <a
+          href={`#${name.toLowerCase()}`}
           className="group flex items-center space-x-2 font-mono text-sm"
           onClick={() => mobile && setIsMenuOpen(false)}
         >
@@ -97,7 +98,7 @@ const NavLinks = ({ mobile, setIsMenuOpen }) => (
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
     >
-      <a 
+      <a
         href="/resume.pdf"
         target="_blank"
         className="border border-accent text-accent px-4 py-2 rounded hover:bg-accent/10 transition-colors duration-300"
@@ -115,11 +116,11 @@ const SocialIcons = ({ mobile }) => (
       { icon: FaLinkedin, href: "https://www.linkedin.com/in/quadri-kobiowu-955313233" },
       { icon: FaEnvelope, href: "mailto:kobiowuq@gmail.com" }
     ].map(({ icon: Icon, href }, index) => (
-      <motion.a 
+      <motion.a
         key={index}
-        href={href} 
-        target="_blank" 
-        rel="noopener noreferrer" 
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
         className="text-primary-text hover:text-accent transition-colors duration-300"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
