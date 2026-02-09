@@ -9,8 +9,29 @@ import trakApp4 from '../assets/trakapp4.png';
 import safenaijaImg from '../assets/safanaija.png';
 import safenaijaApp1 from '../assets/safenaijapp1.png';
 import safenaijaApp2 from '../assets/safenaijaapp2.jpg';
+import kodeliftImg from '../assets/kodelift.png';
 
 export const projects = [
+    {
+        id: "kodelift",
+        title: "Kodelift",
+        shortDescription: "Code. Grow. Lead. A grassroots tech empowerment initiative designed to equip young minds with future-ready skills.",
+        fullDescription: "KODELIFT is a grassroots tech empowerment initiative designed to equip young minds with the skills to build their future. Through 6 weeks of intensive structured training, mentorship, and real-world projects, we empower students in Ibadan, Nigeria to become the next generation of tech leaders.\n\nFor the maiden edition in 2025, the program focuses on secondary schools within the City of Ibadan, selecting nominees based on aptitude and interest in technology.",
+        image: kodeliftImg,
+        gallery: [kodeliftImg],
+        liveLink: "https://kodelift.ng/",
+        technologies: ["Tech Education", "Mentorship", "Community Building", "Software Development Training"],
+        role: "Lead Software Engineer Instructor",
+        features: [
+            "6 Weeks Intensive Training",
+            "Structured Curriculum & Mentorship",
+            "Real-world Project Experience",
+            "Secondary Schools Focus (Ibadan)",
+            "Aptitude-based Selection Process",
+            "Full Sponsorship for Qualified Students"
+        ],
+        highlight: "Equipping young minds with the skills to build their future."
+    },
     {
         id: "safenaija",
         title: "SafeNaija",
