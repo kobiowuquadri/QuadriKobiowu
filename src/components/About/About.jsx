@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import myCV from '../../assets/Quadri_Kobiowu_CV.pdf';
-import profileImage from '../../assets/quadri_kobiowu_profile.png';
+import profileImage from '../../assets/profile1.jpeg';
 
 const AboutMe = () => {
   return (
