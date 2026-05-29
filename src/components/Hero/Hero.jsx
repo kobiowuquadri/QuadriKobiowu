@@ -1,60 +1,97 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaArrowDown } from 'react-icons/fa';
+import { FaArrowDown, FaBriefcase, FaHandshake, FaRocket } from 'react-icons/fa';
 
 const Hero = () => {
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section className="bg-[#050505] min-h-screen flex flex-col justify-center items-center relative overflow-hidden px-4">
-      {/* Background Ambience */}
-      <div className="absolute inset-0 bg-radial-gradient from-[#1a1a1a] to-[#050505] opacity-50"></div>
+    <section className="bg-primary-bg min-h-screen flex items-center relative overflow-hidden px-4 pt-24 pb-16">
+      <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(230,213,184,0.08)_0%,rgba(5,5,5,0)_42%),linear-gradient(315deg,rgba(45,212,191,0.09)_0%,rgba(5,5,5,0)_38%)]"></div>
+      <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent"></div>
 
-      <div className="z-10 text-center max-w-5xl mx-auto space-y-6">
+      <div className="z-10 container mx-auto">
+        <div className="mx-auto max-w-5xl text-center space-y-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className="inline-flex items-center gap-3 rounded-full border border-accent/20 bg-white/[0.03] px-4 py-2 text-sm text-secondary-text"
+          >
+            <span className="h-2 w-2 rounded-full bg-[#2DD4BF]"></span>
+            Independent Software Engineer available for work
+          </motion.div>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-5xl sm:text-6xl md:text-8xl font-poppins font-light text-[#E6D5B8] tracking-tight leading-tight"
-        >
-          Hi, I&apos;m <span className="font-semibold block md:inline">QUADRI KOBIOWU</span>
-        </motion.h1>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
+            className="space-y-5"
+          >
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-poppins font-bold text-primary-text tracking-normal leading-tight">
+              Quadri Kobiowu
+            </h1>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-light text-white/85 leading-relaxed">
+              Software Engineer | Full-Stack Developer | Mobile App Engineer
+            </h2>
+          </motion.div>
 
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="text-3xl sm:text-5xl md:text-7xl font-light text-[#E6D5B8] opacity-90"
-        >
-          Software Engineer <span className="hidden md:inline text-secondary-text opacity-40">|</span> <span className="block md:inline mt-2 md:mt-0 opacity-80 decoration-[#E6D5B8] underline-offset-8">Mobile Developer</span>
-        </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.25 }}
+            className="text-secondary-text text-lg md:text-xl max-w-3xl mx-auto font-poppins leading-relaxed"
+          >
+            I build scalable web applications, mobile applications, backend systems, APIs,
+            business platforms, and digital products that solve real-world problems.
+            From startups to enterprise solutions, I help businesses transform ideas into
+            reliable and impactful software.
+          </motion.p>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-[#E6D5B8] text-lg sm:text-xl md:text-2xl mt-8 max-w-2xl mx-auto font-light opacity-80 leading-relaxed"
-        >
-          Premium Web & Mobile Apps developed for your needs.
-        </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="flex flex-col sm:flex-row justify-center gap-4"
+          >
+            <button
+              onClick={() => scrollToSection('projects')}
+              className="inline-flex items-center justify-center gap-3 rounded-lg bg-accent px-6 py-3 font-semibold text-primary-bg hover:bg-white transition-colors duration-300"
+            >
+              <FaRocket /> View Projects
+            </button>
+            <button
+              onClick={() => scrollToSection('collaboration')}
+              className="inline-flex items-center justify-center gap-3 rounded-lg border border-[#2DD4BF]/50 px-6 py-3 font-semibold text-[#A7F3D0] hover:bg-[#2DD4BF]/10 transition-colors duration-300"
+            >
+              <FaHandshake /> Let&apos;s Collaborate
+            </button>
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="inline-flex items-center justify-center gap-3 rounded-lg border border-accent/40 px-6 py-3 font-semibold text-primary-text hover:bg-accent/10 transition-colors duration-300"
+            >
+              <FaBriefcase /> Hire Me
+            </button>
+          </motion.div>
+        </div>
       </div>
 
-      {/* Scroll Indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 1 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 cursor-pointer group"
-        onClick={() => {
-          const projectsSection = document.getElementById('projects');
-          if (projectsSection) {
-            projectsSection.scrollIntoView({ behavior: 'smooth' });
-          }
-        }}
+        onClick={() => scrollToSection('about')}
       >
         <div className="w-12 h-12 rounded-full border border-[#E6D5B8]/30 flex items-center justify-center group-hover:border-[#E6D5B8] transition-colors duration-300">
           <FaArrowDown className="text-[#E6D5B8] text-sm animate-bounce" />
         </div>
-        <span className="text-[#E6D5B8] text-xs tracking-[0.2em] font-mono uppercase opacity-70 group-hover:opacity-100 transition-opacity">My Projects</span>
+        <span className="text-[#E6D5B8] text-xs tracking-[0.2em] font-mono uppercase opacity-70 group-hover:opacity-100 transition-opacity">About Me</span>
       </motion.div>
     </section>
   );

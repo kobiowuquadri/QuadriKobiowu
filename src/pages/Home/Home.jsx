@@ -5,9 +5,10 @@ import AboutMe from '../../components/About/About'
 import Projects from '../../components/Projects/Projects'
 import Experience from '../../components/Experience/Experience'
 import Skills from '../../components/Skills/Skills'
+import Services from '../../components/Services/Services'
+import Collaboration from '../../components/Collaboration/Collaboration'
 import Contact from '../../components/Contact/Contact'
 import Footer from '../../components/Footer/Footer'
-import Mentorship from '../../components/Mentorship/Mentorship'
 import ScrollToTop from '../../components/ScrollToTop/ScrollToTop'
 
 function Home() {
@@ -18,8 +19,9 @@ function Home() {
       <AboutMe />
       <Projects />
       <Experience />
+      <Services />
       <Skills />
-      <Mentorship />
+      <Collaboration />
       <Contact />
       <Footer />
       <ScrollToTop />

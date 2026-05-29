@@ -15,7 +15,7 @@ const Projects = () => {
           transition={{ duration: 0.5 }}
         >
           <span className="text-accent font-mono">02.</span>
-          <h2 className="text-3xl md:text-4xl font-bold font-poppins">Notable Projects</h2>
+          <h2 className="text-3xl md:text-4xl font-bold font-poppins">Featured Projects</h2>
           <div className="h-[1px] bg-border-color flex-grow ml-4"></div>
         </motion.div>
 
@@ -32,17 +32,41 @@ const Projects = () => {
 const ProjectCard = ({ project, index }) => {
   return (
     <motion.div
-      className="bg-secondary-bg rounded-xl overflow-hidden shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col h-full"
+      className="bg-secondary-bg rounded-lg overflow-hidden shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col h-full border border-border-color hover:border-accent"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
       <div className="relative group overflow-hidden h-72 md:h-80">
-        <img
-          src={project.image}
-          alt={project.title}
-          className="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-500"
-        />
+        {project.image ? (
+          <img
+            src={project.image}
+            alt={project.title}
+            className="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-500"
+            loading="lazy"
+          />
+        ) : (
+          <div className="flex h-full w-full items-center justify-center bg-primary-bg p-8">
+            <div className="w-full rounded-lg border border-white/10 bg-secondary-bg p-6" style={{ boxShadow: `0 0 0 1px ${project.accent || '#E6D5B8'}22` }}>
+              <div className="mb-8 flex items-center justify-between">
+                <div className="h-3 w-24 rounded-full" style={{ backgroundColor: project.accent || '#E6D5B8' }}></div>
+                <div className="h-8 w-8 rounded-lg border border-white/10"></div>
+              </div>
+              <div className="space-y-4">
+                <div className="h-4 w-3/4 rounded-full bg-white/15"></div>
+                <div className="h-4 w-1/2 rounded-full bg-white/10"></div>
+                <div className="grid grid-cols-3 gap-3 pt-5">
+                  <div className="h-16 rounded-lg bg-white/[0.06]"></div>
+                  <div className="h-16 rounded-lg bg-white/[0.08]"></div>
+                  <div className="h-16 rounded-lg bg-white/[0.06]"></div>
+                </div>
+              </div>
+              <p className="mt-8 font-mono text-sm uppercase tracking-widest" style={{ color: project.accent || '#E6D5B8' }}>
+                {project.visualLabel}
+              </p>
+            </div>
+          </div>
+        )}
         <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300"></div>
 
         {/* Overlay Action */}
@@ -114,6 +138,13 @@ const ProjectCard = ({ project, index }) => {
         <p className="text-secondary-text mb-6 font-poppins text-base leading-relaxed flex-grow whitespace-pre-line line-clamp-3">
           {project.shortDescription}
         </p>
+
+        {project.problem && (
+          <div className="mb-6 rounded-lg border border-border-color bg-primary-bg/60 p-4">
+            <p className="mb-2 text-xs font-mono uppercase tracking-widest text-accent">Problem solved</p>
+            <p className="text-sm leading-relaxed text-secondary-text line-clamp-3">{project.problem}</p>
+          </div>
+        )}
 
         <div className="space-y-6 mt-auto">
           <div className="flex flex-wrap gap-2">

@@ -1,6 +1,3 @@
-import sirajImg from '../assets/siraj.png';
-import sirajApp1 from '../assets/sirajapp1.png';
-import sirajApp2 from '../assets/sirajapp2.png';
 import trakImg from '../assets/trak1.png';
 import trakApp1 from '../assets/trakapp1.png';
 import trakApp2 from '../assets/trakapp2.png';
@@ -10,101 +7,98 @@ import safenaijaImg from '../assets/safanaija.png';
 import safenaijaApp1 from '../assets/safenaijapp1.png';
 import safenaijaApp2 from '../assets/safenaijaapp2.jpg';
 import kodeliftImg from '../assets/kodelift.png';
+import sirajImg from '../assets/siraj.png';
+import sirajApp1 from '../assets/sirajapp1.png';
+import sirajApp2 from '../assets/sirajapp2.png';
 
 export const projects = [
     {
-        id: "kodelift",
-        title: "Kodelift",
-        shortDescription: "Code. Grow. Lead. A grassroots tech empowerment initiative designed to equip young minds with future-ready skills.",
-        fullDescription: "KODELIFT is a grassroots tech empowerment initiative designed to equip young minds with the skills to build their future. Through 6 weeks of intensive structured training, mentorship, and real-world projects, we empower students in Ibadan, Nigeria to become the next generation of tech leaders.\n\nFor the maiden edition in 2025, the program focuses on secondary schools within the City of Ibadan, selecting nominees based on aptitude and interest in technology.",
-        image: kodeliftImg,
-        gallery: [kodeliftImg],
-        liveLink: "https://kodelift.ng/",
-        technologies: ["Tech Education", "Mentorship", "Community Building", "Software Development Training"],
-        role: "Lead Software Engineer Instructor",
-        features: [
-            "6 Weeks Intensive Training",
-            "Structured Curriculum & Mentorship",
-            "Real-world Project Experience",
-            "Secondary Schools Focus (Ibadan)",
-            "Aptitude-based Selection Process",
-            "Full Sponsorship for Qualified Students"
-        ],
-        highlight: "Equipping young minds with the skills to build their future."
-    },
-    {
         id: "safenaija",
         title: "SafeNaija",
-        shortDescription: "Your Safety, Our Alert. Instantly alert your trusted emergency contacts when you’re in danger.",
-        fullDescription: "SafeNaija helps you quickly alert your trusted contacts when you are in danger or need urgent assistance.\n\nWith just one tap, the app sends a clear emergency message along with your location and time to your emergency contacts for situations like kidnappings, robberies, accidents, health emergencies, and missing persons — so help can reach you faster.",
+        shortDescription: "Emergency response and personal safety platform for fast alerts, location sharing, and trusted contact coordination.",
+        fullDescription: "SafeNaija helps people quickly alert trusted contacts when they are in danger or need urgent assistance. The platform supports emergency messaging, location context, and safety workflows for high-pressure situations where speed and clarity matter.",
+        problem: "People need a faster way to notify trusted contacts during emergencies such as accidents, health incidents, robberies, kidnappings, and missing-person situations.",
+        impact: "Reduces friction during emergencies by making alerts, location details, and contact coordination available in one practical mobile-first workflow.",
         image: safenaijaImg,
         gallery: [safenaijaApp1, safenaijaApp2],
-        technologies: ["React Native", "Expo", "React.js", "TailwindCSS", "Express.js", "MySQL", "TypeScript", "Firebase"],
+        technologies: ["React Native", "Expo", "React", "TailwindCSS", "Express.js", "MySQL", "TypeScript", "Firebase"],
         liveLink: "https://safenaija.com/",
         appStoreLink: "https://apps.apple.com/us/app/safenaija/id6755318110",
         playStoreLink: "https://play.google.com/store/apps/details?id=com.safenaija.mobile",
         role: "Software Engineer",
         features: [
-            "Emergency Alert System (Kidnapping, Robbery, Accidents)",
-            "Real-time Location Sharing",
-            "Health & Medical Emergency Alerts",
-            "Missing Person Broadcasts",
-            "Live Chat Box",
-            "QR-Code Scanning"
+            "Emergency alert workflows",
+            "Real-time location sharing",
+            "Trusted contact management",
+            "Health and personal safety alerts",
+            "Mobile-first user experience",
+            "QR-code scanning"
         ],
-        highlight: "With a single tap, alerts are sent instantly so help can reach you when it matters most."
+        highlight: "A practical safety product designed to help people act quickly when every second matters."
     },
     {
-        id: "trak",
-        title: "Trak",
-        shortDescription: "An architectural project management platform that provides real-time tracking and transparency for construction projects.",
-        fullDescription: "TRAK is an architectural project management platform that provides real-time tracking and transparency for your construction projects. You can monitor progress, access documents, receive notifications, and communicate with your project team all in one place.\n\nTRAK is designed for all types of architectural projects including residential homes, commercial buildings, renovations, and new constructions. Our platform scales to fit projects of any size.",
+        id: "kodelift",
+        title: "Kodelift",
+        shortDescription: "Grassroots technology empowerment initiative helping young learners build practical software skills.",
+        fullDescription: "Kodelift is a grassroots technology empowerment initiative designed to equip young minds with practical software development skills, mentorship, and real-world project experience. The program focuses on structured learning, community support, and early exposure to technology careers.",
+        problem: "Many young learners need accessible, practical, and guided pathways into technology beyond theory-heavy learning.",
+        impact: "Creates early access to software development education through structured training, mentorship, and project-based learning for students.",
+        image: kodeliftImg,
+        gallery: [kodeliftImg],
+        technologies: ["Tech Education", "Mentorship", "Community Building", "Software Development Training"],
+        liveLink: "https://kodelift.ng/",
+        role: "Program Coordinator & Instructor",
+        features: [
+            "Structured software development training",
+            "Mentorship for young learners",
+            "Project-based learning",
+            "Community technology empowerment",
+            "Secondary school outreach",
+            "Career readiness guidance"
+        ],
+        highlight: "Equipping young minds with practical technology skills and the confidence to build."
+    },
+    {
+        id: "imprexitrak",
+        title: "ImprexiTrak",
+        shortDescription: "Project tracking and workflow management platform for transparent execution, team coordination, and delivery visibility.",
+        fullDescription: "ImprexiTrak helps teams track projects, tasks, documents, conversations, and delivery progress in one operational platform. It is designed for teams that need clearer visibility, better accountability, and smoother communication across project stages.",
+        problem: "Teams managing active projects need a single source of truth for progress, documents, tasks, updates, and communication.",
+        impact: "Improves execution visibility by centralizing project tracking, team collaboration, notifications, and workflow management.",
         image: trakImg,
         gallery: [trakApp1, trakApp4, trakApp2, trakApp3],
-        technologies: ["React.js", "TailwindCSS", "Zustand", "Express.js", "MySQL", "Socket.io", "Firebase", "PWA"],
+        technologies: ["React", "TailwindCSS", "Zustand", "Express.js", "MySQL", "Socket.io", "Firebase", "PWA"],
         liveLink: "https://trak.com.ng/",
         role: "Software Engineer",
         features: [
-            "Real-time Project Tracking",
-            "Task Management & Automation",
-            "Team Chat & Communication",
-            "Notification System",
-            "Document Management"
+            "Real-time project tracking",
+            "Task management and workflow updates",
+            "Team chat and communication",
+            "Notification system",
+            "Document management",
+            "Progress visibility dashboards"
         ],
-        highlight: "Your construction projects, transparent and on track."
+        highlight: "A workflow platform built to keep teams, documents, and decisions moving together."
     },
     {
         id: "siraj",
-        title: "Sirāj",
-        shortDescription: "سِرَاجٌ مُنِيرٌ\n\nA light for every day of Ramadan. Find guidance, reflection, and clarity in the Holy Qur’an with a companion designed for your heart.",
-        fullDescription: "Ramadan is not just about fasting; it is about reconnecting with the Divine speech. The Qur'an was sent down as a guidance for mankind. Sirāj helps you honor this connection by making daily reading and reflection effortless and beautiful.\n\nThis is a solution I'm developing for myself to ensure a meaningful observance of Ramadan.",
+        title: "Siraj",
+        shortDescription: "Ramadan reading, reflection, and journaling companion designed to support consistent Qur'an engagement.",
+        fullDescription: "Siraj is a Ramadan companion app for structured Qur'an reading, daily reflection, and private spiritual journaling. It helps users keep a meaningful routine by breaking the month into guided daily sessions.",
+        problem: "Many people want a consistent Ramadan reading and reflection habit but need a simple structure that keeps daily progress, reflection, and journaling in one place.",
+        impact: "Encourages consistent daily engagement through guided reading sessions, reflection prompts, and a calm mobile experience.",
         image: sirajImg,
         gallery: [sirajApp1, sirajApp2],
         technologies: ["React Native", "Expo", "TypeScript", "Express.js", "MySQL", "Firebase"],
         liveLink: "https://siraj-delta.vercel.app/",
         role: "Software Engineer",
         features: [
-            "Complete the Qur’an in 29 or 30 days",
-            "Deep daily reflections",
-            "Private spiritual journaling"
+            "Daily Ramadan reading sessions",
+            "Qur'an completion planning",
+            "Reflection prompts",
+            "Private spiritual journaling",
+            "Mobile-first experience"
         ],
-        workflow: [
-            {
-                step: "01",
-                title: "Read & Recite",
-                description: "Read your assigned Juz’ or portion with focus and clarity."
-            },
-            {
-                step: "02",
-                title: "Reflect Deeply",
-                description: "Ponder on a selected Ayah and its meaning for your life."
-            },
-            {
-                step: "03",
-                title: "Journal & Grow",
-                description: "Capture your thoughts and spiritual state in your private log."
-            }
-        ],
-        highlight: "Unlock Your Day: Each day opens a new guided session perfectly timed for Ramadan."
+        highlight: "A focused companion for building a steadier Ramadan reading and reflection routine."
     }
 ];

@@ -5,32 +5,36 @@ import {
   FaNodeJs,
   FaGitAlt,
   FaDocker,
-  FaFigma,
-  FaPython,
-  FaJava,
   FaMobileAlt,
   FaDatabase,
   FaCode,
-  FaTools
+  FaServer,
+  FaLinux,
+  FaGithub,
+  FaAws
 } from 'react-icons/fa';
 import {
   SiJavascript,
   SiTypescript,
-  SiMongodb,
   SiExpress,
   SiTailwindcss,
-  SiRedux,
-  SiPostman,
-  SiVercel,
   SiMysql,
-  SiFirebase,
   SiNextdotjs,
   SiPostgresql,
   SiExpo,
+  SiNestjs,
+  SiRedis,
+  SiNginx,
+  SiPm2,
+  SiRedux,
+  SiVite,
+  SiMongodb,
+  SiFirebase,
   SiSupabase,
-  SiGraphql,
   SiPrisma,
-  SiNestjs
+  SiGraphql,
+  SiPostman,
+  SiVercel
 } from 'react-icons/si';
 
 const SkillCard = ({ title, icon: Icon, skills, delay }) => {
@@ -40,7 +44,7 @@ const SkillCard = ({ title, icon: Icon, skills, delay }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay }}
-      className="bg-secondary-bg p-6 rounded-xl border border-border-color hover:border-accent transition-colors duration-300 h-full"
+      className="bg-secondary-bg p-6 rounded-lg border border-border-color hover:border-accent transition-colors duration-300 h-full"
     >
       <div className="flex items-center gap-3 mb-6">
         <div className="p-3 bg-primary-bg rounded-lg text-accent">
@@ -50,9 +54,9 @@ const SkillCard = ({ title, icon: Icon, skills, delay }) => {
       </div>
 
       <div className="flex flex-wrap gap-3">
-        {skills.map((skill, index) => (
+        {skills.map((skill) => (
           <div
-            key={index}
+            key={skill.name}
             className="flex items-center gap-2 bg-primary-bg px-3 py-2 rounded-lg text-secondary-text hover:text-accent hover:bg-accent/5 transition-all duration-300 cursor-default"
           >
             <skill.icon size={16} />
@@ -67,75 +71,75 @@ const SkillCard = ({ title, icon: Icon, skills, delay }) => {
 const Skills = () => {
   const skillCategories = [
     {
+      title: "Frontend Engineering",
+      icon: FaCode,
+      skills: [
+        { name: "React", icon: FaReact },
+        { name: "Next.js", icon: SiNextdotjs },
+        { name: "JavaScript", icon: SiJavascript },
+        { name: "TypeScript", icon: SiTypescript },
+        { name: "TailwindCSS", icon: SiTailwindcss },
+        { name: "Redux", icon: SiRedux },
+        { name: "Zustand", icon: FaCode },
+        { name: "Vite", icon: SiVite }
+      ]
+    },
+    {
       title: "Mobile Development",
       icon: FaMobileAlt,
       skills: [
         { name: "React Native", icon: FaReact },
         { name: "Expo", icon: SiExpo },
         { name: "NativeWind", icon: SiTailwindcss },
-        { name: "iOS & Android", icon: FaMobileAlt }
+        { name: "EAS Build", icon: FaMobileAlt }
       ]
     },
     {
-      title: "Frontend Development",
-      icon: FaCode,
-      skills: [
-        { name: "React.js", icon: FaReact },
-        { name: "Next.js", icon: SiNextdotjs },
-        { name: "TypeScript", icon: SiTypescript },
-        { name: "Tailwind CSS", icon: SiTailwindcss },
-        { name: "Redux", icon: SiRedux }
-      ]
-    },
-    {
-      title: "Backend Development",
-      icon: FaDatabase,
+      title: "Backend Engineering",
+      icon: FaServer,
       skills: [
         { name: "Node.js", icon: FaNodeJs },
-        { name: "Express.js", icon: SiExpress },
         { name: "NestJS", icon: SiNestjs },
+        { name: "Express.js", icon: SiExpress },
+        { name: "REST APIs", icon: FaServer },
         { name: "GraphQL", icon: SiGraphql },
-        { name: "Prisma", icon: SiPrisma }
+        { name: "Prisma", icon: SiPrisma },
+        { name: "JWT/Auth", icon: FaServer }
       ]
     },
     {
-      title: "Database & Cloud",
+      title: "Databases",
       icon: FaDatabase,
       skills: [
         { name: "PostgreSQL", icon: SiPostgresql },
         { name: "MySQL", icon: SiMysql },
+        { name: "Redis", icon: SiRedis },
         { name: "MongoDB", icon: SiMongodb },
         { name: "Firebase", icon: SiFirebase },
-        { name: "Supabase", icon: SiSupabase },
-        { name: "Vercel", icon: SiVercel }
+        { name: "Supabase", icon: SiSupabase }
       ]
     },
     {
-      title: "Programming Languages",
-      icon: FaCode,
+      title: "Cloud & DevOps",
+      icon: FaServer,
       skills: [
-        { name: "JavaScript", icon: SiJavascript },
-        { name: "TypeScript", icon: SiTypescript },
-        { name: "Python", icon: FaPython },
-        { name: "Java", icon: FaJava }
-      ]
-    },
-    {
-      title: "DevOps & Tools",
-      icon: FaTools,
-      skills: [
-        { name: "Git", icon: FaGitAlt },
+        { name: "Linux", icon: FaLinux },
+        { name: "Nginx", icon: SiNginx },
+        { name: "PM2", icon: SiPm2 },
         { name: "Docker", icon: FaDocker },
-        { name: "Postman", icon: SiPostman },
-        { name: "Figma", icon: FaFigma }
+        { name: "AWS", icon: FaAws },
+        { name: "VPS", icon: FaServer },
+        { name: "Vercel", icon: SiVercel },
+        { name: "Git", icon: FaGitAlt },
+        { name: "GitHub", icon: FaGithub },
+        { name: "Postman", icon: SiPostman }
       ]
     }
   ];
 
   return (
     <section id="skills" className="bg-primary-bg text-primary-text py-20 relative overflow-hidden">
-      {/* Background Decoration */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#2DD4BF]/30 to-transparent"></div>
 
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
@@ -145,15 +149,15 @@ const Skills = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <span className="text-accent font-mono">04.</span>
-          <h2 className="text-3xl md:text-4xl font-bold font-poppins">Technical Arsenal</h2>
+          <span className="text-accent font-mono">05.</span>
+          <h2 className="text-3xl md:text-4xl font-bold font-poppins">Skills</h2>
           <div className="h-[1px] bg-border-color flex-grow ml-4"></div>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillCategories.map((category, index) => (
             <SkillCard
-              key={index}
+              key={category.title}
               {...category}
               delay={index * 0.1}
             />

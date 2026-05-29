@@ -2,7 +2,28 @@ import React, { useState } from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope, FaBars, FaTimes } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import myCV from '../../assets/Quadri_Kobiowu_CV.pdf';
+import myCV from '../../assets/QUADRI_ KOBIOWU_ CV.pdf';
+
+const scrollToSection = (sectionId, onComplete) => {
+  const section = document.getElementById(sectionId);
+
+  if (!section) {
+    return;
+  }
+
+  const headerOffset = 88;
+  const sectionTop = section.getBoundingClientRect().top + window.scrollY - headerOffset;
+
+  window.history.pushState(null, '', `#${sectionId}`);
+  window.scrollTo({
+    top: sectionTop,
+    behavior: 'smooth'
+  });
+
+  if (onComplete) {
+    onComplete();
+  }
+};
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,14 +31,17 @@ const Header = () => {
   return (
     <header className="bg-primary-bg/80 backdrop-blur-md text-primary-text fixed w-full z-50 font-sans border-b border-white/5 transition-all duration-300">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <Link to={'/'} className="text-2xl font-bold font-mono text-transparent bg-clip-text bg-gradient-to-r from-accent to-white">
-          QK.
+        <Link to={'/'} className="flex items-center gap-3">
+          <span className="text-xl font-bold font-mono text-transparent bg-clip-text bg-gradient-to-r from-accent to-white">
+            QK.
+          </span>
         </Link>
 
         <motion.button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="md:hidden text-accent focus:outline-none p-2 rounded-md hover:bg-white/5 transition-colors"
           whileTap={{ scale: 0.95 }}
+          aria-label="Toggle navigation menu"
         >
           <AnimatePresence mode="wait" initial={false}>
             {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
@@ -44,6 +68,7 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
                 whileTap={{ scale: 0.95 }}
                 className="p-2 rounded-full hover:bg-white/5 transition-colors"
+                aria-label="Close navigation menu"
               >
                 <FaTimes size={24} className="text-accent" />
               </motion.button>
@@ -77,9 +102,10 @@ const NavLinks = ({ mobile, setIsMenuOpen }) => (
       { name: 'About', number: '01' },
       { name: 'Projects', number: '02' },
       { name: 'Experience', number: '03' },
-      { name: 'Skills', number: '04' },
-      { name: 'Mentorship', number: '05' },
-      { name: 'Contact', number: '06' }
+      { name: 'Services', number: '04' },
+      { name: 'Skills', number: '05' },
+      { name: 'Collaboration', number: '06' },
+      { name: 'Contact', number: '07' }
     ].map(({ name, number }) => (
       <motion.li
         key={name}
@@ -90,7 +116,10 @@ const NavLinks = ({ mobile, setIsMenuOpen }) => (
         <a
           href={`#${name.toLowerCase()}`}
           className={`group flex items-center ${mobile ? 'justify-center text-lg py-2' : 'space-x-1 text-sm'} font-mono`}
-          onClick={() => mobile && setIsMenuOpen(false)}
+          onClick={(event) => {
+            event.preventDefault();
+            scrollToSection(name.toLowerCase(), () => mobile && setIsMenuOpen(false));
+          }}
         >
           <span className="text-accent opacity-80 group-hover:opacity-100 transition-opacity">{number}.</span>
           <span className="text-primary-text group-hover:text-accent transition-colors duration-300 ml-2">

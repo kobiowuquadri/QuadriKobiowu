@@ -1,7 +1,40 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import myCV from '../../assets/Quadri_Kobiowu_CV.pdf';
-import profileImage from '../../assets/profile1.jpeg';
+import { FaCheckCircle } from 'react-icons/fa';
+import myCV from '../../assets/QUADRI_ KOBIOWU_ CV.pdf';
+import profileImage from '../../assets/devquat-profile.jpg';
+
+const strengths = [
+  "Software engineering and product development",
+  "Full-stack web application delivery",
+  "Mobile development with React Native and Expo",
+  "Backend architecture, APIs, and database design",
+  "System design, deployment, and infrastructure planning",
+  "Team leadership, developer mentoring, and technical direction"
+];
+
+const technologyGroups = [
+  {
+    title: "Frontend",
+    items: ["React", "Next.js", "TypeScript", "JavaScript", "TailwindCSS", "Redux", "Zustand", "Vite"]
+  },
+  {
+    title: "Mobile",
+    items: ["React Native", "Expo", "NativeWind", "EAS"]
+  },
+  {
+    title: "Backend",
+    items: ["Node.js", "NestJS", "Express.js", "REST APIs", "GraphQL", "Prisma", "JWT/Auth"]
+  },
+  {
+    title: "Databases",
+    items: ["PostgreSQL", "MySQL", "Redis", "MongoDB", "Firebase", "Supabase"]
+  },
+  {
+    title: "Cloud & DevOps",
+    items: ["VPS", "Linux", "Nginx", "PM2", "Docker", "AWS", "Vercel", "Git", "GitHub", "Postman"]
+  }
+];
 
 const AboutMe = () => {
   return (
@@ -19,7 +52,7 @@ const AboutMe = () => {
           <div className="h-[1px] bg-border-color flex-grow ml-4"></div>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -28,50 +61,41 @@ const AboutMe = () => {
             className="space-y-6"
           >
             <p className="text-secondary-text font-poppins leading-relaxed text-lg">
-              I am a results-driven Software Engineer with extensive experience in building scalable web and mobile applications. Currently working as a Software Engineer at <a href="http://masteringbackend.com/" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-primary-text transition-colors duration-300 font-semibold">Mastering Backend</a>, I specialize in creating robust production systems.
+              I am an independent Software Engineer based in Nigeria, building reliable
+              web, mobile, and backend systems for startups, businesses, NGOs,
+              educational organizations, and technology teams.
             </p>
             <p className="text-secondary-text font-poppins leading-relaxed text-lg">
-              My expertise spans across the full development lifecycle—from architectural design to deployment. I excel at integrating complex frontend interfaces with powerful backend APIs, debugging intricate issues, and optimizing application performance for speed and efficiency.
+              My work spans the full product lifecycle: understanding the problem,
+              designing the system, building the interface, engineering the API,
+              shaping the database, deploying the product, and improving it with real
+              user feedback.
             </p>
             <p className="text-secondary-text font-poppins leading-relaxed text-lg">
-              Previously, as a Technical Team Lead at <span className="text-accent">NAGIDA</span>, I shaped technology strategies and led engineering teams to deliver high-impact solutions. My background also includes contributing to innovative projects at E-AMBITION (France) and zealight Innovation Labs, where I focused on enhancing system scalability and security.
+              I bring a practical blend of engineering depth, product thinking, team
+              leadership, and developer mentoring. I enjoy turning early ideas into
+              useful software, improving existing systems, and helping teams make better
+              technical decisions.
             </p>
 
-            <div className="grid grid-cols-2 gap-4 pt-4">
-              <div className="space-y-2">
-                <h3 className="text-accent font-mono text-sm tracking-widest uppercase">Mobile & Web</h3>
-                <ul className="space-y-2 text-secondary-text font-mono text-sm">
-                  <li className="flex items-center space-x-2">
-                    <span className="text-accent">▹</span>
-                    <span>React Native / Expo</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <span className="text-accent">▹</span>
-                    <span>React.js / Next.js</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <span className="text-accent">▹</span>
-                    <span>TypeScript</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="space-y-2">
-                <h3 className="text-accent font-mono text-sm tracking-widest uppercase">Backend & Cloud</h3>
-                <ul className="space-y-2 text-secondary-text font-mono text-sm">
-                  <li className="flex items-center space-x-2">
-                    <span className="text-accent">▹</span>
-                    <span>Node.js / Express</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <span className="text-accent">▹</span>
-                    <span>PostgreSQL / MongoDB</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <span className="text-accent">▹</span>
-                    <span>AWS / Firebase</span>
-                  </li>
-                </ul>
-              </div>
+            <div className="grid sm:grid-cols-2 gap-3 pt-2">
+              {strengths.map((strength) => (
+                <div key={strength} className="flex items-start gap-3 rounded-lg border border-border-color bg-primary-bg/60 p-3">
+                  <FaCheckCircle className="mt-1 flex-shrink-0 text-[#2DD4BF]" />
+                  <span className="text-sm leading-relaxed text-secondary-text">{strength}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-4 pt-4">
+              {technologyGroups.map((group) => (
+                <div key={group.title} className="rounded-lg border border-border-color bg-primary-bg/60 p-4">
+                  <h3 className="text-accent font-mono text-xs tracking-widest uppercase">{group.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-secondary-text">
+                    {group.items.join(" / ")}
+                  </p>
+                </div>
+              ))}
             </div>
 
             <motion.a
@@ -93,22 +117,19 @@ const AboutMe = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="relative group max-w-md mx-auto"
           >
-            {/* Decorative corner elements */}
             <div className="absolute -top-4 -left-4 w-20 h-20 border-t-2 border-l-2 border-accent rounded-tl-lg opacity-60"></div>
             <div className="absolute -bottom-4 -right-4 w-20 h-20 border-b-2 border-r-2 border-accent rounded-br-lg opacity-60"></div>
 
-            {/* Main image container */}
             <div className="relative bg-secondary-bg rounded-lg p-2 border border-border-color group-hover:border-accent transition-colors duration-500 shadow-2xl">
-
-              {/* Image wrapper */}
               <div className="relative overflow-hidden rounded-lg bg-primary-bg/50">
                 <img
                   src={profileImage}
                   alt="Quadri Kobiowu"
-                  className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out filter grayscale hover:grayscale-0"
+                  className="aspect-square w-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
+                  width="720"
+                  height="720"
+                  loading="lazy"
                 />
-
-                {/* Overlay with subtle tint */}
                 <div className="absolute inset-0 bg-accent/10 pointer-events-none group-hover:opacity-0 transition-opacity duration-500"></div>
               </div>
             </div>

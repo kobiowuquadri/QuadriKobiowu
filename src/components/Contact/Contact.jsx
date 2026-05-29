@@ -6,12 +6,21 @@ const Contact = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
+  const contactEmail = 'kobiowuq@gmail.com'
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+
+    const subject = encodeURIComponent(`Portfolio inquiry from ${name}`)
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+    )
+
+    window.location.href = `mailto:${contactEmail}?subject=${subject}&body=${body}`
+  }
 
   return (
     <section id="contact" className="bg-primary-bg text-primary-text py-20 relative overflow-hidden">
-      {/* Background Decoration */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/5 rounded-full blur-3xl pointer-events-none"></div>
-
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           className="flex items-center gap-2 mb-12"
@@ -20,8 +29,8 @@ const Contact = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <span className="text-accent font-mono">06.</span>
-          <h2 className="text-3xl md:text-4xl font-bold font-poppins">Get In Touch</h2>
+          <span className="text-accent font-mono">07.</span>
+          <h2 className="text-3xl md:text-4xl font-bold font-poppins">Let&apos;s Build Something Great Together</h2>
           <div className="h-[1px] bg-border-color flex-grow ml-4"></div>
         </motion.div>
 
@@ -35,22 +44,18 @@ const Contact = () => {
             className="bg-secondary-bg p-8 md:p-10 rounded-2xl border border-border-color shadow-2xl order-2 lg:order-1"
           >
             <h3 className="text-accent text-2xl font-bold mb-2 font-poppins">Send a Message</h3>
-            <p className="text-secondary-text mb-8 font-poppins text-sm">Have a project in mind or just want to say hi?</p>
+            <p className="text-secondary-text mb-8 font-poppins text-sm">Have a project, role, or technical challenge in mind?</p>
 
             <form
-              action="https://formsubmit.co/kobiowuq@gmail.com"
-              method="POST"
+              onSubmit={handleSubmit}
               className="space-y-6"
             >
-              <input type="hidden" name="_subject" value="New Contact Form Submission" />
-              <input type="hidden" name="_captcha" value="false" />
-
               <div>
                 <label htmlFor="name" className="block text-primary-text mb-2 font-poppins text-sm font-semibold">Name</label>
                 <input
                   type="text"
                   id="name"
-                  name="Name"
+                name="Name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   className="w-full px-4 py-3 bg-primary-bg border border-border-color rounded-lg focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent text-primary-text font-poppins transition-all duration-300"
@@ -93,7 +98,7 @@ const Contact = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                Send Message
+                Send Email
               </motion.button>
             </form>
           </motion.div>
@@ -108,12 +113,11 @@ const Contact = () => {
           >
             <div>
               <h3 className="text-3xl md:text-4xl font-bold mb-6 font-poppins text-primary-text leading-tight">
-                Let's Build Something <span className="text-accent">Amazing</span> Together
+                Software work deserves a partner who can think, build, and ship.
               </h3>
               <p className="text-secondary-text text-lg leading-relaxed font-poppins">
-                I'm currently available for freelance work and open to full-time opportunities.
-                If you have a project that needs some creative touch, or just want to discuss technology,
-                my inbox is always open.
+                Whether you need a software engineer for your next project, a technical
+                consultant, or a development partner, I&apos;d love to hear from you.
               </p>
             </div>
 
