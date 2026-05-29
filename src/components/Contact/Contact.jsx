@@ -20,17 +20,17 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="bg-primary-bg text-primary-text py-20 relative overflow-hidden">
+    <section id="contact" className="bg-primary-bg text-primary-text py-16 md:py-20 relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
-          className="flex items-center gap-2 mb-12"
+          className="flex items-center gap-2 mb-10 md:mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
           <span className="text-accent font-mono">07.</span>
-          <h2 className="text-3xl md:text-4xl font-bold font-poppins">Let&apos;s Build Something Great Together</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-poppins leading-tight">Let&apos;s Build Something Great Together</h2>
           <div className="h-[1px] bg-border-color flex-grow ml-4"></div>
         </motion.div>
 
@@ -41,7 +41,7 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="bg-secondary-bg p-8 md:p-10 rounded-2xl border border-border-color shadow-2xl order-2 lg:order-1"
+            className="bg-secondary-bg p-5 sm:p-8 md:p-10 rounded-2xl border border-border-color shadow-2xl order-2 lg:order-1"
           >
             <h3 className="text-accent text-2xl font-bold mb-2 font-poppins">Send a Message</h3>
             <p className="text-secondary-text mb-8 font-poppins text-sm">Have a project, role, or technical challenge in mind?</p>
@@ -55,7 +55,7 @@ const Contact = () => {
                 <input
                   type="text"
                   id="name"
-                name="Name"
+                  name="Name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   className="w-full px-4 py-3 bg-primary-bg border border-border-color rounded-lg focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent text-primary-text font-poppins transition-all duration-300"
@@ -112,16 +112,16 @@ const Contact = () => {
             className="space-y-8 order-1 lg:order-2"
           >
             <div>
-              <h3 className="text-3xl md:text-4xl font-bold mb-6 font-poppins text-primary-text leading-tight">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-5 md:mb-6 font-poppins text-primary-text leading-tight">
                 Software work deserves a partner who can think, build, and ship.
               </h3>
-              <p className="text-secondary-text text-lg leading-relaxed font-poppins">
+              <p className="text-secondary-text text-base sm:text-lg leading-relaxed font-poppins">
                 Whether you need a software engineer for your next project, a technical
                 consultant, or a development partner, I&apos;d love to hear from you.
               </p>
             </div>
 
-            <div className="bg-secondary-bg p-8 rounded-2xl border border-border-color">
+            <div className="bg-secondary-bg p-5 sm:p-8 rounded-2xl border border-border-color">
               <h4 className="text-xl font-bold mb-6 font-poppins text-accent">Connect with me</h4>
               <div className="space-y-6">
                 <a href="mailto:kobiowuq@gmail.com" className="flex items-center group">

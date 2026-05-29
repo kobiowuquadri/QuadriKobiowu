@@ -11,41 +11,36 @@ const Hero = () => {
   };
 
   return (
-    <section className="bg-primary-bg min-h-screen flex items-center relative overflow-hidden px-4 pt-24 pb-16">
+    <section className="bg-primary-bg min-h-screen flex items-center justify-center relative overflow-hidden px-4 pt-28 pb-32">
       <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(230,213,184,0.08)_0%,rgba(5,5,5,0)_42%),linear-gradient(315deg,rgba(45,212,191,0.09)_0%,rgba(5,5,5,0)_38%)]"></div>
       <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent"></div>
 
       <div className="z-10 container mx-auto">
-        <div className="mx-auto max-w-5xl text-center space-y-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
-            className="inline-flex items-center gap-3 rounded-full border border-accent/20 bg-white/[0.03] px-4 py-2 text-sm text-secondary-text"
-          >
-            <span className="h-2 w-2 rounded-full bg-[#2DD4BF]"></span>
-            Independent Software Engineer available for work
-          </motion.div>
-
+        <div className="mx-auto max-w-6xl text-center space-y-7 sm:space-y-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
-            className="space-y-5"
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="space-y-5 sm:space-y-6"
           >
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-poppins font-bold text-primary-text tracking-normal leading-tight">
+            <h1 className="text-5xl sm:text-6xl md:text-8xl font-poppins font-light text-primary-text tracking-normal leading-tight">
               Quadri Kobiowu
             </h1>
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-light text-white/85 leading-relaxed">
-              Software Engineer | Full-Stack Developer | Mobile App Engineer
+            <h2 className="text-2xl sm:text-4xl md:text-6xl font-light text-primary-text/90 leading-tight">
+              Software Engineer
+              <span className="hidden md:inline text-secondary-text/40"> | </span>
+              <span className="block md:inline text-primary-text/75">Full-Stack Developer</span>
             </h2>
+            <p className="text-lg sm:text-xl md:text-2xl font-light text-[#A7F3D0]">
+              Mobile App Engineer
+            </p>
           </motion.div>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.25 }}
-            className="text-secondary-text text-lg md:text-xl max-w-3xl mx-auto font-poppins leading-relaxed"
+            className="text-secondary-text text-base sm:text-lg md:text-xl max-w-3xl mx-auto font-poppins leading-relaxed"
           >
             I build scalable web applications, mobile applications, backend systems, APIs,
             business platforms, and digital products that solve real-world problems.
@@ -57,7 +52,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col sm:flex-row justify-center gap-4"
+            className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4"
           >
             <button
               onClick={() => scrollToSection('projects')}

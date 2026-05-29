@@ -37,12 +37,12 @@ const ProjectCard = ({ project, index }) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
-      <div className="relative group overflow-hidden h-72 md:h-80">
+      <div className="relative group overflow-hidden aspect-[4/3] bg-primary-bg sm:aspect-auto sm:h-72 md:h-80">
         {project.image ? (
           <img
             src={project.image}
             alt={project.title}
-            className="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-500"
+            className="w-full h-full object-contain sm:object-cover object-top transform group-hover:scale-105 sm:group-hover:scale-110 transition-transform duration-500"
             loading="lazy"
           />
         ) : (

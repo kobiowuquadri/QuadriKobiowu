@@ -32,17 +32,17 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="bg-secondary-bg text-primary-text py-20">
+    <section id="services" className="bg-secondary-bg text-primary-text py-16 md:py-20">
       <div className="container mx-auto px-4">
         <motion.div
-          className="flex items-center gap-2 mb-16"
+          className="flex items-center gap-2 mb-10 md:mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
           <span className="text-accent font-mono">04.</span>
-          <h2 className="text-3xl md:text-4xl font-bold font-poppins">Services</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-poppins">Services</h2>
           <div className="h-[1px] bg-border-color flex-grow ml-4"></div>
         </motion.div>
 
@@ -54,13 +54,13 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.08 }}
-              className="h-full rounded-lg border border-border-color bg-primary-bg/70 p-6 transition-colors duration-300 hover:border-accent"
+              className="h-full rounded-lg border border-border-color bg-primary-bg/70 p-5 sm:p-6 transition-colors duration-300 hover:border-accent"
             >
-              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10 text-accent">
+              <div className="mb-5 sm:mb-6 flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-lg bg-accent/10 text-accent">
                 <service.icon size={22} />
               </div>
-              <h3 className="mb-3 text-xl font-bold font-poppins text-primary-text">{service.title}</h3>
-              <p className="text-secondary-text leading-relaxed">{service.description}</p>
+              <h3 className="mb-3 text-lg sm:text-xl font-bold font-poppins text-primary-text">{service.title}</h3>
+              <p className="text-sm sm:text-base text-secondary-text leading-relaxed">{service.description}</p>
             </motion.article>
           ))}
         </div>
