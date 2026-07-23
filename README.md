@@ -26,7 +26,7 @@ Current homepage project flow:
 Pagia -> Rekrutklin Mobile App -> SafeNaija -> ImprexiTrak -> GFB Strategic Consulting Limited Website -> Kodelift
 ```
 
-Siraj remains in the project data and appears on the `/projects` page even though it is outside the 6-card homepage limit.
+Code Vortex Academy and Siraj remain in the project data and appear on the `/projects` page even though they are outside the 6-card homepage limit.
 
 ## Tech Stack
 

@@ -19,6 +19,9 @@ import rekrutklinVideoSessionImg from '../assets/rekrutklin-video-session.png';
 import gfbHeroDesktopImg from '../assets/gfb-website-hero-desktop.png';
 import gfbAboutDesktopImg from '../assets/gfb-website-about-desktop.png';
 import gfbMobileImg from '../assets/gfb-website-mobile.png';
+import codeVortexDesktopImg from '../assets/codevortex-website-desktop.png';
+import codeVortexTabletImg from '../assets/codevortex-website-tablet.png';
+import codeVortexMobileImg from '../assets/codevortex-website-mobile.png';
 import sirajImg from '../assets/siraj.png';
 import sirajApp1 from '../assets/sirajapp1.png';
 import sirajApp2 from '../assets/sirajapp2.png';
@@ -275,6 +278,46 @@ export const projects = [
             "Career readiness guidance"
         ],
         highlight: "Equipping young minds with practical technology skills and the confidence to build."
+    },
+    {
+        id: "code-vortex-academy",
+        title: "Code Vortex Academy",
+        shortDescription: "A responsive coding academy website for kids, teens, and beginners learning tech skills through practical project-based classes.",
+        fullDescription: "I built the Code Vortex Academy website for my coding academy, creating a polished digital presence for live coding classes, course discovery, enrollment, contact, and brand storytelling.\n\nThe website presents Code Vortex Academy as a practical coding school in Ibadan for kids, teens, and beginners who want to learn tech skills by building real projects. It was designed to communicate the academy's offer clearly across desktop, tablet, and mobile.",
+        problem: "Code Vortex Academy needed a professional website that could explain its coding programs, build trust with parents and learners, and make course discovery and enrollment easy.",
+        impact: "The website gives the academy a credible online presence, improves how courses and enrollment are presented, and makes it easier for prospective students and parents to understand the learning experience.",
+        image: codeVortexDesktopImg,
+        gallery: [codeVortexDesktopImg, codeVortexTabletImg, codeVortexMobileImg],
+        liveLink: "https://codevortexacademy.com/",
+        technologies: [
+            "React",
+            "JavaScript",
+            "TailwindCSS",
+            "Responsive Web Design",
+            "SEO Metadata",
+            "Website Deployment"
+        ],
+        role: "Founder & Website Developer",
+        features: [
+            "Modern academy landing page",
+            "Responsive desktop, tablet, and mobile layouts",
+            "Course discovery sections",
+            "Enrollment-focused calls to action",
+            "Kids, teens, and beginner-friendly messaging",
+            "Contact and inquiry flows",
+            "Branded visuals and academy identity",
+            "SEO-friendly page structure"
+        ],
+        contributionsTitle: "My Responsibilities",
+        contributions: [
+            "Built the academy website from scratch",
+            "Designed the user interface, responsive layout, and brand presentation",
+            "Created the homepage sections for courses, enrollment, academy positioning, and contact",
+            "Structured the website content to communicate the academy's value to parents, students, and beginners",
+            "Optimized the experience for desktop, tablet, and mobile users",
+            "Deployed the website and connected it to the academy's public domain"
+        ],
+        highlight: "A from-scratch coding academy website built to help learners discover practical tech classes and enroll with confidence."
     },
     {
         id: "siraj",
