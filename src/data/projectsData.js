@@ -7,16 +7,81 @@ import safenaijaImg from '../assets/safanaija.png';
 import safenaijaApp1 from '../assets/safenaijapp1.png';
 import safenaijaApp2 from '../assets/safenaijaapp2.jpg';
 import kodeliftImg from '../assets/kodelift.png';
+import pagiaCardImg from '../assets/pagia.png';
+import pagiaImg from '../assets/pagia-project.jpg';
+import pagiaMobileLibrary from '../assets/pagia-mobile-library.png';
+import pagiaMobileDetail from '../assets/pagia-mobile-detail.png';
 import sirajImg from '../assets/siraj.png';
 import sirajApp1 from '../assets/sirajapp1.png';
 import sirajApp2 from '../assets/sirajapp2.png';
 
 export const projects = [
     {
+        id: "pagia",
+        title: "Pagia",
+        shortDescription: "Scalable backend for digital publishing, book commerce, ads, subscriptions, payouts, KYC, messaging, and revenue tracking.",
+        fullDescription: "I built the entire backend system for Pagia, a digital publishing and e-commerce platform that enables authors and bookstores to publish, sell, advertise, and monetize books while giving readers access to a searchable book marketplace and reading experience.\n\nThe backend is built with Node.js, Express.js, TypeScript, Sequelize, MySQL, Socket.IO, Cloudinary, JWT authentication, cron jobs, and payment integrations. It includes role-based flows for readers, authors, bookstores, and administrators.",
+        problem: "Pagia needed a structured backend that could support a multi-role publishing marketplace with book sales, reader access, author monetization, bookstore inventory, ads, subscriptions, KYC, messaging, and admin operations.",
+        impact: "This backend supports a multi-role digital publishing marketplace with real-time communication, monetization, subscriptions, advertising, secure content access, and automated revenue operations.",
+        image: pagiaCardImg,
+        gallery: [pagiaMobileLibrary, pagiaMobileDetail, pagiaImg],
+        liveLink: "https://www.pagia.io/",
+        technologies: [
+            "Node.js",
+            "Express.js",
+            "TypeScript",
+            "MySQL",
+            "Sequelize ORM",
+            "Socket.IO",
+            "JWT",
+            "Passport.js",
+            "Cloudinary",
+            "Nodemailer",
+            "Brevo",
+            "node-cron",
+            "Winston",
+            "Multer",
+            "Express Validator"
+        ],
+        role: "Backend Engineer",
+        features: [
+            "JWT authentication with refresh tokens, Google login, and Apple login",
+            "Reader, author, bookstore, and admin role management",
+            "Author book creation with chapters, genres, keywords, pricing, cover uploads, and encrypted written content",
+            "Bookstore inventory, pricing, stock, metadata, and sales tracking",
+            "Public book discovery APIs with UUID-based book identifiers",
+            "Secure reader library, cart, checkout, order, and reading progress systems",
+            "Admin-managed subscription plans with monthly and yearly billing support",
+            "Payment initialization and verification through external provider integration",
+            "Ads campaign system with wallet funding, targeting, status management, and analytics",
+            "Monthly revenue settlement flow for authors and bookstores",
+            "Real-time reader-author chat using Socket.IO",
+            "Notification system with scheduled notifications, email templates, and retry-aware jobs",
+            "Admin APIs for users, KYC, subscriptions, books, ads, reports, support, and payouts",
+            "Cloudinary integration for cover images and book assets",
+            "MySQL migrations for evolving schema safely"
+        ],
+        contributions: [
+            "Built the entire backend system powering Pagia's publishing, commerce, ads, subscriptions, messaging, KYC, and revenue workflows",
+            "Designed and improved backend APIs for readers, authors, bookstores, and admins",
+            "Implemented UUID-based public book identity to prevent ID conflicts between author books and bookstore books",
+            "Improved subscription lifecycle so admins can create and manage plans dynamically",
+            "Refactored ads status and campaign flows",
+            "Added automated revenue and payout settlement logic",
+            "Built reader-author chat infrastructure with real-time socket support",
+            "Improved book creation and editing flows for author and bookstore books",
+            "Added encryption and decryption support for written book chapters",
+            "Improved background job handling for external services like emails",
+            "Fixed onboarding and KYC status sync issues",
+            "Improved API response consistency for frontend performance and usability"
+        ],
+        highlight: "A scalable backend designed to handle complex publishing, commerce, monetization, and admin workflows cleanly."
+    },
+    {
         id: "safenaija",
         title: "SafeNaija",
         shortDescription: "Emergency response and personal safety platform for fast alerts, location sharing, and trusted contact coordination.",
-        fullDescription: "SafeNaija helps people quickly alert trusted contacts when they are in danger or need urgent assistance. The platform supports emergency messaging, location context, and safety workflows for high-pressure situations where speed and clarity matter.",
+        fullDescription: "SafeNaija helps people quickly alert trusted contacts when they are in danger or need urgent assistance. I built the entire product myself, including the mobile app, backend system, and website. The platform supports emergency messaging, location context, and safety workflows for high-pressure situations where speed and clarity matter.",
         problem: "People need a faster way to notify trusted contacts during emergencies such as accidents, health incidents, robberies, kidnappings, and missing-person situations.",
         impact: "Reduces friction during emergencies by making alerts, location details, and contact coordination available in one practical mobile-first workflow.",
         image: safenaijaImg,
@@ -33,6 +98,13 @@ export const projects = [
             "Health and personal safety alerts",
             "Mobile-first user experience",
             "QR-code scanning"
+        ],
+        contributions: [
+            "Built the entire SafeNaija mobile app, backend, and website alone",
+            "Designed and implemented the emergency alert workflow from mobile experience to API delivery",
+            "Built the backend services for contacts, alerts, location sharing, and user flows",
+            "Created the public website and connected the product experience across web and mobile",
+            "Handled the end-to-end product delivery from architecture to deployment"
         ],
         highlight: "A practical safety product designed to help people act quickly when every second matters."
     },
@@ -62,7 +134,7 @@ export const projects = [
         id: "imprexitrak",
         title: "ImprexiTrak",
         shortDescription: "Project tracking and workflow management platform for transparent execution, team coordination, and delivery visibility.",
-        fullDescription: "ImprexiTrak helps teams track projects, tasks, documents, conversations, and delivery progress in one operational platform. It is designed for teams that need clearer visibility, better accountability, and smoother communication across project stages.",
+        fullDescription: "ImprexiTrak helps teams track projects, tasks, documents, conversations, and delivery progress in one operational platform. I built the entire software myself, from the frontend experience to the backend workflows and deployment. It is designed for teams that need clearer visibility, better accountability, and smoother communication across project stages.",
         problem: "Teams managing active projects need a single source of truth for progress, documents, tasks, updates, and communication.",
         impact: "Improves execution visibility by centralizing project tracking, team collaboration, notifications, and workflow management.",
         image: trakImg,
@@ -78,13 +150,19 @@ export const projects = [
             "Document management",
             "Progress visibility dashboards"
         ],
+        contributions: [
+            "Built the entire software alone, covering frontend, backend, real-time communication, and deployment",
+            "Designed the project tracking workflow, task system, notification flow, and document management experience",
+            "Implemented backend APIs and real-time Socket.IO features for team communication",
+            "Connected the product experience across dashboards, status updates, and operational project visibility"
+        ],
         highlight: "A workflow platform built to keep teams, documents, and decisions moving together."
     },
     {
         id: "siraj",
         title: "Siraj",
         shortDescription: "Ramadan reading, reflection, and journaling companion designed to support consistent Qur'an engagement.",
-        fullDescription: "Siraj is a Ramadan companion app for structured Qur'an reading, daily reflection, and private spiritual journaling. It helps users keep a meaningful routine by breaking the month into guided daily sessions.",
+        fullDescription: "Siraj is a Ramadan companion app for structured Qur'an reading, daily reflection, and private spiritual journaling. I built the entire software myself, including the mobile experience, backend structure, and product workflow. It helps users keep a meaningful routine by breaking the month into guided daily sessions.",
         problem: "Many people want a consistent Ramadan reading and reflection habit but need a simple structure that keeps daily progress, reflection, and journaling in one place.",
         impact: "Encourages consistent daily engagement through guided reading sessions, reflection prompts, and a calm mobile experience.",
         image: sirajImg,
@@ -98,6 +176,12 @@ export const projects = [
             "Reflection prompts",
             "Private spiritual journaling",
             "Mobile-first experience"
+        ],
+        contributions: [
+            "Built the entire software alone, from product flow to mobile interface and backend support",
+            "Designed the daily Ramadan reading and reflection experience",
+            "Implemented journaling, reading-session structure, and mobile-first user flows",
+            "Handled the engineering decisions for the app architecture and delivery"
         ],
         highlight: "A focused companion for building a steadier Ramadan reading and reflection routine."
     }
