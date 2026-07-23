@@ -120,7 +120,9 @@ const ProjectDetails = () => {
 
                         {project.contributions && (
                             <div className="mb-10">
-                                <h3 className="text-2xl font-bold mb-4 text-primary-text">My Contributions</h3>
+                                <h3 className="text-2xl font-bold mb-4 text-primary-text">
+                                    {project.contributionsTitle || "My Contributions"}
+                                </h3>
                                 <ul className="space-y-3">
                                     {project.contributions.map((contribution) => (
                                         <li key={contribution} className="flex items-start gap-3 text-secondary-text">

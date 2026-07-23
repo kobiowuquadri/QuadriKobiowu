@@ -11,6 +11,11 @@ import pagiaCardImg from '../assets/pagia.png';
 import pagiaImg from '../assets/pagia-project.jpg';
 import pagiaMobileLibrary from '../assets/pagia-mobile-library.png';
 import pagiaMobileDetail from '../assets/pagia-mobile-detail.png';
+import rekrutklinFeatureImg from '../assets/feature design.png';
+import rekrutklinPrescreeningImg from '../assets/rekrutklin-prescreening.png';
+import rekrutklinDashboardImg from '../assets/rekrutklin-dashboard.png';
+import rekrutklinParticipantDetailsImg from '../assets/rekrutklin-participant-details.png';
+import rekrutklinVideoSessionImg from '../assets/rekrutklin-video-session.png';
 import sirajImg from '../assets/siraj.png';
 import sirajApp1 from '../assets/sirajapp1.png';
 import sirajApp2 from '../assets/sirajapp2.png';
@@ -76,6 +81,68 @@ export const projects = [
             "Improved API response consistency for frontend performance and usability"
         ],
         highlight: "A scalable backend designed to handle complex publishing, commerce, monetization, and admin workflows cleanly."
+    },
+    {
+        id: "rekrutklin-mobile-app",
+        title: "Rekrutklin Mobile App",
+        shortDescription: "Mobile clinical trial recruitment platform for participant pre-screening, eligibility criteria, appointments, pipelines, video sessions, and trial operations.",
+        fullDescription: "I developed the Rekrutklin mobile application, a React Native and Expo-based platform built for clinical research teams and trial participants. The app supports participant pre-screening, consent flows, trial criteria management, recruitment pipelines, appointment coordination, user management, push notifications, deep linking, and video session workflows.\n\nThe project was designed for both operational staff and participants, with a focus on clean mobile UX, secure authentication, responsive layouts, and app store readiness for Android and iOS.",
+        problem: "Clinical research teams need a secure mobile workspace for managing trial recruitment operations, participant screening, eligibility, appointments, pipelines, and video session workflows.",
+        impact: "The app gives clinical research teams a centralized mobile workflow for recruitment operations, reducing manual coordination and making participant screening, trial tracking, and follow-up easier to manage from mobile devices.",
+        image: rekrutklinFeatureImg,
+        gallery: [
+            rekrutklinFeatureImg,
+            rekrutklinPrescreeningImg,
+            rekrutklinDashboardImg,
+            rekrutklinParticipantDetailsImg,
+            rekrutklinVideoSessionImg
+        ],
+        playStoreLink: "https://play.google.com/store/apps/details?id=com.rekrutklin.mobile",
+        technologies: [
+            "React Native",
+            "Expo",
+            "TypeScript",
+            "Expo Router",
+            "NativeWind",
+            "Zustand",
+            "TanStack Query",
+            "Axios",
+            "Expo Secure Store",
+            "Expo Notifications",
+            "Expo Updates",
+            "React Native Agora",
+            "EAS Build",
+            "Google Play Console",
+            "App Store Connect"
+        ],
+        role: "Mobile App Developer / React Native Engineer",
+        features: [
+            "Clinical trial recruitment dashboard",
+            "Participant pre-screening",
+            "Trial criteria management",
+            "Recruitment pipeline tracking",
+            "Appointment and session management",
+            "Staff and user management",
+            "Deep link login access",
+            "Push notification support",
+            "Video session workflow",
+            "Privacy policy, terms, and SMS consent pages",
+            "Android, iOS, and tablet-ready app store assets"
+        ],
+        contributionsTitle: "My Responsibilities",
+        contributions: [
+            "Built the mobile app using React Native, Expo, Expo Router, and TypeScript",
+            "Implemented staff login, secure session storage, authenticated API requests, and role-aware app navigation",
+            "Developed participant pre-screening flows with Terms of Use, Privacy Policy, and SMS consent agreements",
+            "Built trial management features including trial creation, eligibility criteria configuration, recruitment lists, and participant pipeline tracking",
+            "Implemented appointment and session workflows with Agora-powered video session screens",
+            "Added deep link support for login and public access flows",
+            "Integrated Expo push notification setup and handled native configuration for Android and iOS builds",
+            "Created legal document screens for Privacy Policy, Terms of Use, and SMS Consent",
+            "Prepared Android and iOS production builds with EAS Build and configured Play Store/App Store assets, splash screens, icons, screenshots, and release metadata",
+            "Improved mobile form usability, keyboard scrolling behavior, tablet screenshots, and app store submission readiness"
+        ],
+        highlight: "Built and prepared for release a React Native/Expo clinical trial recruitment app with pre-screening, staff authentication, trial management, recruitment pipelines, video sessions, push notifications, deep links, and Android/iOS store deployment support."
     },
     {
         id: "safenaija",
