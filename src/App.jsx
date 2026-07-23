@@ -9,6 +9,7 @@ import BuyMeCoffee from './components/BuyMeCoffee/BuyMeCoffee'
 
 
 import ProjectDetails from './pages/ProjectDetails/ProjectDetails'
+import ProjectsPage from './pages/Projects/ProjectsPage'
 
 function App() {
   useEffect(() => {
@@ -23,6 +24,7 @@ function App() {
     <div className="bg-primary-bg min-h-screen">
       <Routes>
         <Route index element={<Home />} />
+        <Route path='/projects' element={<ProjectsPage />} />
         <Route path='/project/:id' element={<ProjectDetails />} />
         <Route path='/success' element={<Success />} />
       </Routes>

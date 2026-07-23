@@ -4,7 +4,11 @@ import { FaGithub, FaExternalLinkAlt, FaArrowRight, FaApple, FaGooglePlay } from
 import { Link } from 'react-router-dom';
 import { projects } from '../../data/projectsData';
 
+const FEATURED_PROJECT_LIMIT = 6;
+
 const Projects = () => {
+  const featuredProjects = projects.slice(0, FEATURED_PROJECT_LIMIT);
+
   return (
     <section id="projects" className="bg-primary-bg text-primary-text py-20">
       <div className="container mx-auto px-4">
@@ -20,16 +24,31 @@ const Projects = () => {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-          {projects.map((project, index) => (
-            <ProjectCard key={index} project={project} index={index} />
+          {featuredProjects.map((project, index) => (
+            <ProjectCard key={project.id} project={project} index={index} />
           ))}
         </div>
+
+        <motion.div
+          className="mt-12 flex justify-center"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <Link
+            to="/projects"
+            className="inline-flex items-center justify-center gap-3 rounded-lg border border-accent bg-accent px-7 py-3 font-bold text-primary-bg transition-colors duration-300 hover:bg-white"
+          >
+            See More Projects <FaArrowRight />
+          </Link>
+        </motion.div>
       </div>
     </section>
   );
 };
 
-const ProjectCard = ({ project, index }) => {
+export const ProjectCard = ({ project, index }) => {
   return (
     <motion.div
       className="bg-secondary-bg rounded-lg overflow-hidden shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col h-full border border-border-color hover:border-accent"
