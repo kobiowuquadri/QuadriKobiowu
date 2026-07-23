@@ -16,6 +16,9 @@ import rekrutklinPrescreeningImg from '../assets/rekrutklin-prescreening.png';
 import rekrutklinDashboardImg from '../assets/rekrutklin-dashboard.png';
 import rekrutklinParticipantDetailsImg from '../assets/rekrutklin-participant-details.png';
 import rekrutklinVideoSessionImg from '../assets/rekrutklin-video-session.png';
+import gfbHeroDesktopImg from '../assets/gfb-website-hero-desktop.png';
+import gfbAboutDesktopImg from '../assets/gfb-website-about-desktop.png';
+import gfbMobileImg from '../assets/gfb-website-mobile.png';
 import sirajImg from '../assets/siraj.png';
 import sirajApp1 from '../assets/sirajapp1.png';
 import sirajApp2 from '../assets/sirajapp2.png';
@@ -176,28 +179,6 @@ export const projects = [
         highlight: "A practical safety product designed to help people act quickly when every second matters."
     },
     {
-        id: "kodelift",
-        title: "Kodelift",
-        shortDescription: "Grassroots technology empowerment initiative helping young learners build practical software skills.",
-        fullDescription: "Kodelift is a grassroots technology empowerment initiative designed to equip young minds with practical software development skills, mentorship, and real-world project experience. The program focuses on structured learning, community support, and early exposure to technology careers.",
-        problem: "Many young learners need accessible, practical, and guided pathways into technology beyond theory-heavy learning.",
-        impact: "Creates early access to software development education through structured training, mentorship, and project-based learning for students.",
-        image: kodeliftImg,
-        gallery: [kodeliftImg],
-        technologies: ["Tech Education", "Mentorship", "Community Building", "Software Development Training"],
-        liveLink: "https://kodelift.ng/",
-        role: "Program Coordinator & Instructor",
-        features: [
-            "Structured software development training",
-            "Mentorship for young learners",
-            "Project-based learning",
-            "Community technology empowerment",
-            "Secondary school outreach",
-            "Career readiness guidance"
-        ],
-        highlight: "Equipping young minds with practical technology skills and the confidence to build."
-    },
-    {
         id: "imprexitrak",
         title: "ImprexiTrak",
         shortDescription: "Project tracking and workflow management platform for transparent execution, team coordination, and delivery visibility.",
@@ -224,6 +205,76 @@ export const projects = [
             "Connected the product experience across dashboards, status updates, and operational project visibility"
         ],
         highlight: "A workflow platform built to keep teams, documents, and decisions moving together."
+    },
+    {
+        id: "gfb-strategic-consulting-website",
+        title: "GFB Strategic Consulting Limited Website",
+        shortDescription: "A modern corporate consulting website built from scratch for GFB Strategic Consulting Limited, focused on premium branding, responsive pages, dynamic content, and contact experience.",
+        fullDescription: "I built the official website for GFB Strategic Consulting Limited from scratch, creating a modern, premium, and professional corporate platform for a business transformation and strategic consulting firm serving corporate organizations, banks, fintechs, telecoms, energy companies, SMEs, NGOs, and West African institutions.\n\nThe goal was to create a stronger digital presence that clearly communicates the company's services, credibility, values, portfolio, and thought leadership across desktop, tablet, and mobile.",
+        problem: "GFB Strategic Consulting Limited needed a polished corporate website that could communicate its consulting services, credibility, portfolio, thought leadership, and contact pathways to business leaders and institutional clients.",
+        impact: "The final website presents GFB Strategic Consulting Limited as a credible, modern, and premium consulting brand. It improves user experience, communicates services more clearly, and provides a stronger digital presence for corporate clients and business leaders.",
+        image: gfbHeroDesktopImg,
+        gallery: [gfbHeroDesktopImg, gfbAboutDesktopImg, gfbMobileImg],
+        liveLink: "https://gfbsconsulting.ng/",
+        technologies: [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "Node.js API",
+            "Google Maps Embed",
+            "Responsive Web Design",
+            "SEO Metadata"
+        ],
+        role: "Website Designer & Frontend Developer",
+        features: [
+            "Full-width modern hero section with strong brand messaging",
+            "Responsive sticky navigation and mobile menu",
+            "Premium service cards and portfolio cards",
+            "Dynamic blog and portfolio content rendering",
+            "Partner logo marquee section",
+            "Contact form connected to an API endpoint",
+            "Google Maps contact section",
+            "SEO-friendly page structure",
+            "Official LinkedIn and Instagram integration",
+            "Fully responsive design across desktop, tablet, and mobile"
+        ],
+        contributionsTitle: "My Responsibilities",
+        contributions: [
+            "Built the website from scratch for GFB Strategic Consulting Limited",
+            "Designed and developed the landing page and inner pages",
+            "Improved visual hierarchy, spacing, typography, and responsiveness",
+            "Applied the company's official brand colors: navy, blue, green, white, and black",
+            "Created content sections across all key pages",
+            "Built dynamic blog and portfolio detail pages",
+            "Integrated official social media links",
+            "Used African business-focused visuals to support the brand story",
+            "Optimized mobile and desktop layouts",
+            "Built a functional contact form connected to a backend API",
+            "Created Home, About, Services, service detail, Portfolio, portfolio detail, Blog, blog detail, Contact, and Recruitment pages"
+        ],
+        highlight: "A from-scratch corporate website build for a premium consulting brand, combining strong business messaging, responsive design, dynamic content, and a functional contact experience."
+    },
+    {
+        id: "kodelift",
+        title: "Kodelift",
+        shortDescription: "Grassroots technology empowerment initiative helping young learners build practical software skills.",
+        fullDescription: "Kodelift is a grassroots technology empowerment initiative designed to equip young minds with practical software development skills, mentorship, and real-world project experience. The program focuses on structured learning, community support, and early exposure to technology careers.",
+        problem: "Many young learners need accessible, practical, and guided pathways into technology beyond theory-heavy learning.",
+        impact: "Creates early access to software development education through structured training, mentorship, and project-based learning for students.",
+        image: kodeliftImg,
+        gallery: [kodeliftImg],
+        technologies: ["Tech Education", "Mentorship", "Community Building", "Software Development Training"],
+        liveLink: "https://kodelift.ng/",
+        role: "Program Coordinator & Instructor",
+        features: [
+            "Structured software development training",
+            "Mentorship for young learners",
+            "Project-based learning",
+            "Community technology empowerment",
+            "Secondary school outreach",
+            "Career readiness guidance"
+        ],
+        highlight: "Equipping young minds with practical technology skills and the confidence to build."
     },
     {
         id: "siraj",
