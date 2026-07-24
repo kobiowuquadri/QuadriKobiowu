@@ -25,6 +25,9 @@ import cyberblockGalaxyImg from '../assets/cyberblock-website-galaxy.png';
 import modulesDesktopImg from '../assets/modules-website-desktop.png';
 import modulesTabletImg from '../assets/modules-website-tablet.png';
 import modulesIphoneImg from '../assets/modules-website-iphone.png';
+import yacsnDesktopImg from '../assets/yacsn-website-desktop.png';
+import yacsnFoldImg from '../assets/yacsn-website-fold.png';
+import yacsnIphoneImg from '../assets/yacsn-website-iphone.png';
 import codeVortexDesktopImg from '../assets/codevortex-website-desktop.png';
 import codeVortexTabletImg from '../assets/codevortex-website-tablet.png';
 import codeVortexMobileImg from '../assets/codevortex-website-mobile.png';
@@ -364,6 +367,46 @@ export const projects = [
             "Prepared and deployed the website on the public domain"
         ],
         highlight: "A from-scratch business support website built to help organisations request device repair and reduce technology downtime."
+    },
+    {
+        id: "yacsn-website",
+        title: "YACSN",
+        shortDescription: "A professional HVAC and air-conditioning services website built to present trusted cooling, insulation, maintenance, and support solutions.",
+        fullDescription: "I built the YACSN website together with a friend for an HVAC and air-conditioning solutions brand focused on reliable comfort, quality service, and professional support.\n\nThe website presents YACSN's air-conditioning, HVAC, insulation, sales, pre-sales, spare parts, and maintenance services in a polished, responsive format. The goal was to make the brand feel trustworthy, service-driven, and easy to contact for individuals, organisations, consultants, contractors, and commercial clients.",
+        problem: "YACSN needed a clear and professional web presence that could communicate its HVAC expertise, showcase services, and make it easier for customers to discover air-conditioning solutions and contact the team.",
+        impact: "The website gives YACSN a stronger online presence for promoting high-standard HVAC services, improving service discovery, and supporting customer inquiries.",
+        image: yacsnDesktopImg,
+        gallery: [yacsnDesktopImg, yacsnFoldImg, yacsnIphoneImg],
+        liveLink: "https://yacsn.com/",
+        technologies: [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "Responsive Web Design",
+            "SEO Metadata",
+            "Website Deployment"
+        ],
+        role: "Website Developer",
+        features: [
+            "Responsive HVAC services website",
+            "Service pages for pre-sales, sales, spare parts, and maintenance",
+            "Professional hero sections with comfort-focused messaging",
+            "Projects and company information pages",
+            "Contact-focused user journey",
+            "Mobile-friendly navigation",
+            "Trust-building service cards and visual sections",
+            "SEO-friendly page structure"
+        ],
+        contributionsTitle: "My Contributions",
+        contributions: [
+            "Built the website together with a friend",
+            "Implemented responsive pages for the HVAC and air-conditioning services brand",
+            "Structured service content to make YACSN's offering easier to understand",
+            "Helped create a professional visual presentation across mobile and wider layouts",
+            "Improved navigation and contact pathways for customer inquiries",
+            "Prepared the website for public launch on the YACSN domain"
+        ],
+        highlight: "A collaborative client website build for an HVAC brand, focused on service clarity, trust, responsive design, and customer contact."
     },
     {
         id: "code-vortex-academy",
