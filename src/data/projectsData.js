@@ -19,6 +19,9 @@ import rekrutklinVideoSessionImg from '../assets/rekrutklin-video-session.png';
 import gfbHeroDesktopImg from '../assets/gfb-website-hero-desktop.png';
 import gfbAboutDesktopImg from '../assets/gfb-website-about-desktop.png';
 import gfbMobileImg from '../assets/gfb-website-mobile.png';
+import cyberblockDesktopImg from '../assets/cyberblock-website-desktop.png';
+import cyberblockIphoneImg from '../assets/cyberblock-website-iphone.png';
+import cyberblockGalaxyImg from '../assets/cyberblock-website-galaxy.png';
 import codeVortexDesktopImg from '../assets/codevortex-website-desktop.png';
 import codeVortexTabletImg from '../assets/codevortex-website-tablet.png';
 import codeVortexMobileImg from '../assets/codevortex-website-mobile.png';
@@ -278,6 +281,46 @@ export const projects = [
             "Career readiness guidance"
         ],
         highlight: "Equipping young minds with practical technology skills and the confidence to build."
+    },
+    {
+        id: "cyberblock-website",
+        title: "Cyberblock",
+        shortDescription: "A modern cybersecurity website built for a client to present security solutions, trust-focused messaging, and clear contact pathways.",
+        fullDescription: "I built the Cyberblock website for a cybersecurity client that provides security solutions and technology integrations. The website presents the brand with a clean, modern, and professional web experience across desktop and mobile.\n\nThe project focused on communicating trust, technical credibility, and solution clarity while giving prospective clients a simple path to explore the company, understand its cybersecurity offering, and make contact.",
+        problem: "Cyberblock needed a professional website that could communicate its cybersecurity positioning clearly, support client trust, and make its solutions easier to discover.",
+        impact: "The final website gives Cyberblock a stronger digital presence, a more polished brand presentation, and a responsive experience for organizations exploring cybersecurity support.",
+        image: cyberblockDesktopImg,
+        gallery: [cyberblockDesktopImg, cyberblockIphoneImg, cyberblockGalaxyImg],
+        liveLink: "https://www.cyberblocksec.com/",
+        technologies: [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "Responsive Web Design",
+            "SEO Metadata",
+            "Website Deployment"
+        ],
+        role: "Website Designer & Frontend Developer",
+        features: [
+            "Modern cybersecurity landing page",
+            "Responsive desktop and mobile layouts",
+            "Service and solutions presentation",
+            "Company information pages",
+            "Contact-focused user journey",
+            "Strong brand visuals and security-focused messaging",
+            "SEO-friendly page structure",
+            "Cross-device presentation for client review and public use"
+        ],
+        contributionsTitle: "My Responsibilities",
+        contributions: [
+            "Built the Cyberblock website from scratch for a client",
+            "Designed the page structure, visual hierarchy, spacing, and responsive layouts",
+            "Created a professional cybersecurity brand presentation across home, solutions, company, and contact experiences",
+            "Optimized the website for desktop and mobile viewing",
+            "Implemented clear navigation and calls to action for prospective clients",
+            "Prepared and deployed the public website on the client's domain"
+        ],
+        highlight: "A from-scratch client website for a cybersecurity brand, focused on credibility, responsive design, and clear solution communication."
     },
     {
         id: "code-vortex-academy",
