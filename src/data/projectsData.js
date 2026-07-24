@@ -22,6 +22,9 @@ import gfbMobileImg from '../assets/gfb-website-mobile.png';
 import cyberblockDesktopImg from '../assets/cyberblock-website-desktop.png';
 import cyberblockIphoneImg from '../assets/cyberblock-website-iphone.png';
 import cyberblockGalaxyImg from '../assets/cyberblock-website-galaxy.png';
+import modulesDesktopImg from '../assets/modules-website-desktop.png';
+import modulesTabletImg from '../assets/modules-website-tablet.png';
+import modulesIphoneImg from '../assets/modules-website-iphone.png';
 import codeVortexDesktopImg from '../assets/codevortex-website-desktop.png';
 import codeVortexTabletImg from '../assets/codevortex-website-tablet.png';
 import codeVortexMobileImg from '../assets/codevortex-website-mobile.png';
@@ -321,6 +324,46 @@ export const projects = [
             "Prepared and deployed the public website on the client's domain"
         ],
         highlight: "A from-scratch client website for a cybersecurity brand, focused on credibility, responsive design, and clear solution communication."
+    },
+    {
+        id: "modules-website",
+        title: "Modules",
+        shortDescription: "A responsive business device support website for onsite repair, maintenance, and technology support services across Nigeria.",
+        fullDescription: "I built the Modules website for a business device support brand focused on helping organisations reduce technology downtime through onsite repair, maintenance, and support services.\n\nThe website positions Modules as a practical support partner for businesses and enterprises that rely on laptops, desktops, smartphones, and other work devices. It was designed to communicate fast response, technical confidence, service clarity, and easy access to support requests across desktop, tablet, and mobile.",
+        problem: "Modules needed a professional digital presence that could explain its business device support offering, build confidence with organisations, and make onsite support requests easy to start.",
+        impact: "The website gives Modules a polished public platform for communicating its services, reaching business customers, and converting support inquiries through clear calls to action.",
+        image: modulesDesktopImg,
+        gallery: [modulesDesktopImg, modulesTabletImg, modulesIphoneImg],
+        liveLink: "https://modules.ng/",
+        technologies: [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "Responsive Web Design",
+            "SEO Metadata",
+            "Website Deployment"
+        ],
+        role: "Website Designer & Frontend Developer",
+        features: [
+            "Full-width business device support hero section",
+            "Responsive desktop, tablet, and mobile layouts",
+            "Service-focused navigation and content structure",
+            "Onsite support request calls to action",
+            "Business audience messaging for SMEs, startups, schools, NGOs, healthcare, and corporate teams",
+            "Trust-building presentation for repair, maintenance, and support services",
+            "Mobile-friendly contact and WhatsApp access",
+            "SEO-friendly page structure"
+        ],
+        contributionsTitle: "My Responsibilities",
+        contributions: [
+            "Built the Modules website from scratch",
+            "Designed the visual layout, responsive structure, typography, and spacing",
+            "Created a clear service presentation for business device repair and support",
+            "Implemented desktop, tablet, and mobile experiences using the new brand visuals",
+            "Added conversion-focused calls to action for onsite support requests",
+            "Prepared and deployed the website on the public domain"
+        ],
+        highlight: "A from-scratch business support website built to help organisations request device repair and reduce technology downtime."
     },
     {
         id: "code-vortex-academy",

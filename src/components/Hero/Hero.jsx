@@ -1,8 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaArrowDown, FaBriefcase, FaHandshake, FaRocket } from 'react-icons/fa';
+import { projects } from '../../data/projectsData';
 
 const Hero = () => {
+  const projectCount = projects.length;
+
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -47,6 +50,27 @@ const Hero = () => {
             From startups to enterprise solutions, I help businesses transform ideas into
             reliable and impactful software.
           </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.32 }}
+            className="mx-auto grid max-w-2xl grid-cols-3 gap-2 sm:gap-3"
+          >
+            {[
+              { value: `${projectCount}+`, label: "Projects Delivered" },
+              { value: "5+", label: "Client Industries" },
+              { value: "3", label: "Core Platforms" }
+            ].map((metric) => (
+              <div
+                key={metric.label}
+                className="rounded-lg border border-border-color bg-secondary-bg/60 px-2 py-3 backdrop-blur-sm sm:px-4"
+              >
+                <p className="font-mono text-xl font-bold text-accent sm:text-3xl">{metric.value}</p>
+                <p className="mt-1 text-[10px] uppercase leading-snug tracking-widest text-secondary-text sm:text-xs">{metric.label}</p>
+              </div>
+            ))}
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}

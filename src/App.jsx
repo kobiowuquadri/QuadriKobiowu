@@ -1,6 +1,6 @@
 import './App.css'
 import Home from './pages/Home/Home'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import Success from './components/Contact/Success'
 import { useEffect } from 'react'
 import AOS from 'aos';
@@ -10,6 +10,16 @@ import BuyMeCoffee from './components/BuyMeCoffee/BuyMeCoffee'
 
 import ProjectDetails from './pages/ProjectDetails/ProjectDetails'
 import ProjectsPage from './pages/Projects/ProjectsPage'
+
+const RouteScrollReset = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  }, [pathname]);
+
+  return null;
+};
 
 function App() {
   useEffect(() => {
@@ -22,6 +32,7 @@ function App() {
 
   return (
     <div className="bg-primary-bg min-h-screen">
+      <RouteScrollReset />
       <Routes>
         <Route index element={<Home />} />
         <Route path='/projects' element={<ProjectsPage />} />
