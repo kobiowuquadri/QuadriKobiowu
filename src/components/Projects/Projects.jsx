@@ -52,12 +52,16 @@ const Projects = () => {
 export const ProjectCard = ({ project, index }) => {
   return (
     <motion.div
-      className="bg-secondary-bg rounded-lg overflow-hidden shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col h-full border border-border-color hover:border-accent"
+      className="bg-secondary-bg rounded-lg overflow-hidden shadow-xl hover:-translate-y-2 hover:shadow-[0_25px_50px_-20px_rgba(230,213,184,0.25)] transition-all duration-300 flex flex-col h-full border border-border-color hover:border-accent/70"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
-      <div className="relative group overflow-hidden aspect-[4/3] bg-primary-bg sm:aspect-auto sm:h-72 md:h-80">
+      <Link
+        to={`/project/${project.id}`}
+        aria-label={`View details for ${project.title}`}
+        className="relative group block overflow-hidden aspect-[4/3] bg-primary-bg sm:aspect-auto sm:h-72 md:h-80"
+      >
         {project.image ? (
           <img
             src={project.image}
@@ -87,28 +91,36 @@ export const ProjectCard = ({ project, index }) => {
             </div>
           </div>
         )}
-        <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300"></div>
 
-        {/* Overlay Action */}
+        {project.category && (
+          <span className="absolute top-3 left-3 rounded-full border border-accent/40 bg-primary-bg/80 px-3 py-1 font-mono text-[11px] uppercase tracking-widest text-accent backdrop-blur-sm">
+            {project.category}
+          </span>
+        )}
+
+        {/* Hover scrim + action, only visible on hover so the image stays clear at rest */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <Link
-            to={`/project/${project.id}`}
-            className="bg-accent text-primary-bg px-6 py-2 rounded-full font-bold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
-          >
+          <span className="bg-accent text-primary-bg px-6 py-2 rounded-full font-bold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
             View Details
-          </Link>
+          </span>
         </div>
-      </div>
+      </Link>
 
       <div className="p-6 flex flex-col flex-grow">
-        <div className="flex justify-between items-start mb-4">
-          <h3 className="text-xl font-bold font-poppins text-accent">{project.title}</h3>
-          <div className="flex space-x-4">
+        <div className="flex justify-between items-start mb-4 gap-3">
+          <h3 className="text-xl font-bold font-poppins text-accent">
+            <Link to={`/project/${project.id}`} className="hover:underline underline-offset-4 decoration-accent/50">
+              {project.title}
+            </Link>
+          </h3>
+          <div className="flex shrink-0 space-x-4">
             {project.githubLink && (
               <motion.a
                 href={project.githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={`${project.title} source code`}
                 className="text-primary-text hover:text-accent transition-colors duration-300"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
@@ -121,6 +133,7 @@ export const ProjectCard = ({ project, index }) => {
                 href={project.liveLink}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={`${project.title} live demo`}
                 className="text-primary-text hover:text-accent transition-colors duration-300"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
@@ -133,6 +146,7 @@ export const ProjectCard = ({ project, index }) => {
                 href={project.appStoreLink}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={`${project.title} on the App Store`}
                 className="text-primary-text hover:text-accent transition-colors duration-300"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
@@ -145,6 +159,7 @@ export const ProjectCard = ({ project, index }) => {
                 href={project.playStoreLink}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={`${project.title} on Google Play`}
                 className="text-primary-text hover:text-accent transition-colors duration-300"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}

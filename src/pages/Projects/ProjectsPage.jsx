@@ -18,17 +18,34 @@ const getProjectGroups = (project) => {
   const tech = project.technologies.join(" ").toLowerCase();
   const role = project.role.toLowerCase();
   const title = project.title.toLowerCase();
+  const category = (project.category || "").toLowerCase();
   const groups = ["All"];
 
-  if (role.includes("backend") || tech.includes("node") || tech.includes("express")) {
+  if (category.includes("backend") || role.includes("backend") || tech.includes("node") || tech.includes("express")) {
     groups.push("Backend");
   }
 
-  if (role.includes("mobile") || tech.includes("react native") || tech.includes("expo")) {
+  if (
+    category.includes("mobile") ||
+    role.includes("mobile") ||
+    Boolean(project.appStoreLink) ||
+    Boolean(project.playStoreLink) ||
+    tech.includes("react native") ||
+    tech.includes("flutter") ||
+    tech.includes("expo")
+  ) {
     groups.push("Mobile");
   }
 
-  if (role.includes("frontend") || role.includes("website") || tech.includes("html") || tech.includes("css") || title.includes("website")) {
+  if (
+    category.includes("website") ||
+    category.includes("web platform") ||
+    role.includes("frontend") ||
+    role.includes("website") ||
+    tech.includes("html") ||
+    tech.includes("css") ||
+    title.includes("website")
+  ) {
     groups.push("Websites");
   }
 
@@ -36,7 +53,7 @@ const getProjectGroups = (project) => {
     groups.push("Full Software");
   }
 
-  if (role.includes("instructor") || tech.includes("education") || title.includes("kodelift")) {
+  if (category.includes("community") || role.includes("instructor") || tech.includes("education") || title.includes("kodelift")) {
     groups.push("Education");
   }
 

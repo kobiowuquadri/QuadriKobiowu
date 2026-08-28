@@ -34,11 +34,79 @@ import codeVortexMobileImg from '../assets/codevortex-website-mobile.png';
 import sirajImg from '../assets/siraj.png';
 import sirajApp1 from '../assets/sirajapp1.png';
 import sirajApp2 from '../assets/sirajapp2.png';
+import sandlinkDesktopImg from '../assets/sandlink-website-desktop.png';
+import sandlinkMobileHeroImg from '../assets/sandlink-website-mobile-hero.png';
+import sandlinkMobileCategoriesImg from '../assets/sandlink-website-mobile-categories.png';
+import sandlinkMobileStoreImg from '../assets/sandlink-website-mobile-store.png';
 
 export const projects = [
     {
+        id: "sandlink-marketplace",
+        title: "SandLink Marketplace",
+        category: "Mobile App",
+        shortDescription: "A construction-materials marketplace connecting vendors, buyers, and logistics partners across Nigeria — source aggregates, coordinate delivery, and track orders from one mobile app.",
+        fullDescription: "SandLink is a two-sided marketplace for the Nigerian construction industry. Buyers such as contractors, builders, developers, and diaspora project owners browse verified vendor listings for materials like sharp sand, filling sand, gravel/chippings, boulders, laterite, cement, and blocks, then get connected with vetted truck owners for delivery. It covers Lagos, Abuja, Ogun, and Port Harcourt.\n\nI built the entire product myself across three repos: a Flutter mobile app for iOS and Android, a Next.js web frontend, and a Node.js/Express backend API, alongside a companion e-commerce storefront for branded merchandise.",
+        problem: "Buyers and vendors in the Nigerian construction industry needed a trustworthy way to source materials, coordinate delivery with vetted truck owners, and track orders, while diaspora project owners needed remote visibility into sourcing and delivery.",
+        impact: "Gives contractors, builders, developers, and diaspora project owners a single mobile experience to discover verified vendors, coordinate logistics, and track deliveries in real time across Lagos, Abuja, Ogun, and Port Harcourt.",
+        image: sandlinkDesktopImg,
+        gallery: [sandlinkDesktopImg, sandlinkMobileHeroImg, sandlinkMobileCategoriesImg, sandlinkMobileStoreImg],
+        liveLink: "https://sandlinkmarketplace.com/",
+        appStoreLink: "https://apps.apple.com/us/app/sandlink-marketplace/id6761065022",
+        playStoreLink: "https://play.google.com/store/apps/details?id=com.sandlinkmarketplace.sandlink",
+        technologies: [
+            "Flutter",
+            "GetX",
+            "Google Maps",
+            "Firebase",
+            "Socket.IO",
+            "Hive",
+            "Next.js 15",
+            "React 19",
+            "TypeScript",
+            "Redux Toolkit",
+            "Tailwind CSS",
+            "Radix UI",
+            "Framer Motion",
+            "NextAuth",
+            "Node.js",
+            "Express 5",
+            "Prisma ORM",
+            "MongoDB",
+            "Redis",
+            "BullMQ",
+            "AWS S3",
+            "JWT",
+            "Twilio",
+            "Paystack"
+        ],
+        role: "Software Engineer",
+        features: [
+            "Vendor product listings with photos, descriptions, and transparent pricing",
+            "Location-based sourcing to match buyers with the nearest verified suppliers and drivers",
+            "In-app real-time chat between buyers, vendors, and drivers",
+            "Order tracking and delivery coordination with live status updates",
+            "Supplier and driver ratings and reviews",
+            "Push notifications",
+            "Integrated payments",
+            "Companion e-commerce storefront (SandLink Store) for branded merchandise",
+            "Diaspora-focused remote project oversight and transparent sourcing"
+        ],
+        contributions: [
+            "Built the entire product alone across three repos: Flutter mobile app, Next.js web frontend, and Node.js/Express backend API",
+            "Designed the two-sided marketplace flow connecting buyers, vendors, and logistics partners",
+            "Implemented real-time chat and order tracking using Socket.IO",
+            "Built background job processing for notifications and order workflows using Redis and BullMQ",
+            "Integrated Paystack payments, Twilio SMS, and Firebase Cloud Messaging push notifications",
+            "Set up media storage and image processing with AWS S3 and Sharp",
+            "Built the companion SandLink Store e-commerce experience",
+            "Shipped the mobile app to the App Store and Google Play"
+        ],
+        highlight: "A full-stack construction marketplace built solo end-to-end — mobile app, web frontend, and backend — connecting vendors, buyers, and logistics partners across Nigeria."
+    },
+    {
         id: "pagia",
         title: "Pagia",
+        category: "Backend Platform",
         shortDescription: "Scalable backend for digital publishing, book commerce, ads, subscriptions, payouts, KYC, messaging, and revenue tracking.",
         fullDescription: "I built the entire backend system for Pagia, a digital publishing and e-commerce platform that enables authors and bookstores to publish, sell, advertise, and monetize books while giving readers access to a searchable book marketplace and reading experience.\n\nThe backend is built with Node.js, Express.js, TypeScript, Sequelize, MySQL, Socket.IO, Cloudinary, JWT authentication, cron jobs, and payment integrations. It includes role-based flows for readers, authors, bookstores, and administrators.",
         problem: "Pagia needed a structured backend that could support a multi-role publishing marketplace with book sales, reader access, author monetization, bookstore inventory, ads, subscriptions, KYC, messaging, and admin operations.",
@@ -100,6 +168,7 @@ export const projects = [
     {
         id: "rekrutklin-mobile-app",
         title: "Rekrutklin Mobile App",
+        category: "Mobile App",
         shortDescription: "Mobile clinical trial recruitment platform for participant pre-screening, eligibility criteria, appointments, pipelines, video sessions, and trial operations.",
         fullDescription: "I developed the Rekrutklin mobile application, a React Native and Expo-based platform built for clinical research teams and trial participants. The app supports participant pre-screening, consent flows, trial criteria management, recruitment pipelines, appointment coordination, user management, push notifications, deep linking, and video session workflows.\n\nThe project was designed for both operational staff and participants, with a focus on clean mobile UX, secure authentication, responsive layouts, and app store readiness for Android and iOS.",
         problem: "Clinical research teams need a secure mobile workspace for managing trial recruitment operations, participant screening, eligibility, appointments, pipelines, and video session workflows.",
@@ -162,6 +231,7 @@ export const projects = [
     {
         id: "safenaija",
         title: "SafeNaija",
+        category: "Mobile App",
         shortDescription: "Emergency response and personal safety platform for fast alerts, location sharing, and trusted contact coordination.",
         fullDescription: "SafeNaija helps people quickly alert trusted contacts when they are in danger or need urgent assistance. I built the entire product myself, including the mobile app, backend system, and website. The platform supports emergency messaging, location context, and safety workflows for high-pressure situations where speed and clarity matter.",
         problem: "People need a faster way to notify trusted contacts during emergencies such as accidents, health incidents, robberies, kidnappings, and missing-person situations.",
@@ -193,6 +263,7 @@ export const projects = [
     {
         id: "imprexitrak",
         title: "ImprexiTrak",
+        category: "Web Platform",
         shortDescription: "Project tracking and workflow management platform for transparent execution, team coordination, and delivery visibility.",
         fullDescription: "ImprexiTrak helps teams track projects, tasks, documents, conversations, and delivery progress in one operational platform. I built the entire software myself, from the frontend experience to the backend workflows and deployment. It is designed for teams that need clearer visibility, better accountability, and smoother communication across project stages.",
         problem: "Teams managing active projects need a single source of truth for progress, documents, tasks, updates, and communication.",
@@ -221,6 +292,7 @@ export const projects = [
     {
         id: "gfb-strategic-consulting-website",
         title: "GFB Strategic Consulting Limited Website",
+        category: "Website",
         shortDescription: "A modern corporate consulting website built from scratch for GFB Strategic Consulting Limited, focused on premium branding, responsive pages, dynamic content, and contact experience.",
         fullDescription: "I built the official website for GFB Strategic Consulting Limited from scratch, creating a modern, premium, and professional corporate platform for a business transformation and strategic consulting firm serving corporate organizations, banks, fintechs, telecoms, energy companies, SMEs, NGOs, and West African institutions.\n\nThe goal was to create a stronger digital presence that clearly communicates the company's services, credibility, values, portfolio, and thought leadership across desktop, tablet, and mobile.",
         problem: "GFB Strategic Consulting Limited needed a polished corporate website that could communicate its consulting services, credibility, portfolio, thought leadership, and contact pathways to business leaders and institutional clients.",
@@ -269,6 +341,7 @@ export const projects = [
     {
         id: "kodelift",
         title: "Kodelift",
+        category: "Community Program",
         shortDescription: "Grassroots technology empowerment initiative helping young learners build practical software skills.",
         fullDescription: "Kodelift is a grassroots technology empowerment initiative designed to equip young minds with practical software development skills, mentorship, and real-world project experience. The program focuses on structured learning, community support, and early exposure to technology careers.",
         problem: "Many young learners need accessible, practical, and guided pathways into technology beyond theory-heavy learning.",
@@ -291,6 +364,7 @@ export const projects = [
     {
         id: "cyberblock-website",
         title: "Cyberblock",
+        category: "Website",
         shortDescription: "A modern cybersecurity website built for a client to present security solutions, trust-focused messaging, and clear contact pathways.",
         fullDescription: "I built the Cyberblock website for a cybersecurity client that provides security solutions and technology integrations. The website presents the brand with a clean, modern, and professional web experience across desktop and mobile.\n\nThe project focused on communicating trust, technical credibility, and solution clarity while giving prospective clients a simple path to explore the company, understand its cybersecurity offering, and make contact.",
         problem: "Cyberblock needed a professional website that could communicate its cybersecurity positioning clearly, support client trust, and make its solutions easier to discover.",
@@ -331,6 +405,7 @@ export const projects = [
     {
         id: "modules-website",
         title: "Modules",
+        category: "Website",
         shortDescription: "A responsive business device support website for onsite repair, maintenance, and technology support services across Nigeria.",
         fullDescription: "I built the Modules website for a business device support brand focused on helping organisations reduce technology downtime through onsite repair, maintenance, and support services.\n\nThe website positions Modules as a practical support partner for businesses and enterprises that rely on laptops, desktops, smartphones, and other work devices. It was designed to communicate fast response, technical confidence, service clarity, and easy access to support requests across desktop, tablet, and mobile.",
         problem: "Modules needed a professional digital presence that could explain its business device support offering, build confidence with organisations, and make onsite support requests easy to start.",
@@ -371,6 +446,7 @@ export const projects = [
     {
         id: "yacsn-website",
         title: "YACSN",
+        category: "Website",
         shortDescription: "A professional HVAC and air-conditioning services website built to present trusted cooling, insulation, maintenance, and support solutions.",
         fullDescription: "I built the YACSN website together with a friend for an HVAC and air-conditioning solutions brand focused on reliable comfort, quality service, and professional support.\n\nThe website presents YACSN's air-conditioning, HVAC, insulation, sales, pre-sales, spare parts, and maintenance services in a polished, responsive format. The goal was to make the brand feel trustworthy, service-driven, and easy to contact for individuals, organisations, consultants, contractors, and commercial clients.",
         problem: "YACSN needed a clear and professional web presence that could communicate its HVAC expertise, showcase services, and make it easier for customers to discover air-conditioning solutions and contact the team.",
@@ -411,6 +487,7 @@ export const projects = [
     {
         id: "code-vortex-academy",
         title: "Code Vortex Academy",
+        category: "Website",
         shortDescription: "A responsive coding academy website for kids, teens, and beginners learning tech skills through practical project-based classes.",
         fullDescription: "I built the Code Vortex Academy website for my coding academy, creating a polished digital presence for live coding classes, course discovery, enrollment, contact, and brand storytelling.\n\nThe website presents Code Vortex Academy as a practical coding school in Ibadan for kids, teens, and beginners who want to learn tech skills by building real projects. It was designed to communicate the academy's offer clearly across desktop, tablet, and mobile.",
         problem: "Code Vortex Academy needed a professional website that could explain its coding programs, build trust with parents and learners, and make course discovery and enrollment easy.",
@@ -451,6 +528,7 @@ export const projects = [
     {
         id: "siraj",
         title: "Siraj",
+        category: "Mobile App",
         shortDescription: "Ramadan reading, reflection, and journaling companion designed to support consistent Qur'an engagement.",
         fullDescription: "Siraj is a Ramadan companion app for structured Qur'an reading, daily reflection, and private spiritual journaling. I built the entire software myself, including the mobile experience, backend structure, and product workflow. It helps users keep a meaningful routine by breaking the month into guided daily sessions.",
         problem: "Many people want a consistent Ramadan reading and reflection habit but need a simple structure that keeps daily progress, reflection, and journaling in one place.",
