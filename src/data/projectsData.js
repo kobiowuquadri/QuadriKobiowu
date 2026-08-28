@@ -36,8 +36,8 @@ import sirajApp1 from '../assets/sirajapp1.png';
 import sirajApp2 from '../assets/sirajapp2.png';
 import sandlinkDesktopImg from '../assets/sandlink-website-desktop.png';
 import sandlinkMobileHeroImg from '../assets/sandlink-website-mobile-hero.png';
-import sandlinkMobileCategoriesImg from '../assets/sandlink-website-mobile-categories.png';
-import sandlinkMobileStoreImg from '../assets/sandlink-website-mobile-store.png';
+import sandlinkAppOnboardingImg from '../assets/sandlink-app-onboarding.png';
+import sandlinkAppHomeImg from '../assets/sandlink-app-home.png';
 
 export const projects = [
     {
@@ -49,7 +49,7 @@ export const projects = [
         problem: "Buyers and vendors in the Nigerian construction industry needed a trustworthy way to source materials, coordinate delivery with vetted truck owners, and track orders, while diaspora project owners needed remote visibility into sourcing and delivery.",
         impact: "Gives contractors, builders, developers, and diaspora project owners a single mobile experience to discover verified vendors, coordinate logistics, and track deliveries in real time across Lagos, Abuja, Ogun, and Port Harcourt.",
         image: sandlinkDesktopImg,
-        gallery: [sandlinkDesktopImg, sandlinkMobileHeroImg, sandlinkMobileCategoriesImg, sandlinkMobileStoreImg],
+        gallery: [sandlinkDesktopImg, sandlinkAppOnboardingImg, sandlinkAppHomeImg, sandlinkMobileHeroImg],
         liveLink: "https://sandlinkmarketplace.com/",
         appStoreLink: "https://apps.apple.com/us/app/sandlink-marketplace/id6761065022",
         playStoreLink: "https://play.google.com/store/apps/details?id=com.sandlinkmarketplace.sandlink",
