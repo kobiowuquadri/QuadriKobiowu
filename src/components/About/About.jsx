@@ -5,10 +5,10 @@ import myCV from '../../assets/QUADRI_ KOBIOWU_ CV.pdf';
 import profileImage from '../../assets/devquat01-profile.jpg';
 
 const strengths = [
-  "Software engineering and product development",
+  "Backend engineering and API development",
+  "Payment systems, idempotency, and concurrency safety",
   "Full-stack web application delivery",
   "Mobile development with React Native and Expo",
-  "Backend architecture, APIs, and database design",
   "System design, deployment, and infrastructure planning",
   "Team leadership, developer mentoring, and technical direction"
 ];
@@ -24,7 +24,7 @@ const technologyGroups = [
   },
   {
     title: "Backend",
-    items: ["Node.js", "NestJS", "Express.js", "REST APIs", "GraphQL", "Prisma", "JWT/Auth"]
+    items: ["Node.js", "NestJS", "Express.js", "Java (Learning)", "REST APIs", "Payment Systems", "Idempotency", "Prisma", "JWT/Auth"]
   },
   {
     title: "Databases",
@@ -61,21 +61,20 @@ const AboutMe = () => {
             className="space-y-6"
           >
             <p className="text-secondary-text font-poppins leading-relaxed text-lg">
-              I am an independent Software Engineer based in Nigeria, building reliable
-              web, mobile, and backend systems for startups, businesses, NGOs,
-              educational organizations, and technology teams.
+              I am a 22-year-old Software Engineer based in Nigeria, with a strong focus
+              on backend engineering while working confidently across web and mobile products.
+              I build for startups, businesses, NGOs, educational organizations, and technology teams.
             </p>
             <p className="text-secondary-text font-poppins leading-relaxed text-lg">
-              My work spans the full product lifecycle: understanding the problem,
-              designing the system, building the interface, engineering the API,
-              shaping the database, deploying the product, and improving it with real
-              user feedback.
+              I enjoy the engineering problems where correctness matters: payment flows,
+              idempotent requests, transaction integrity, database consistency, reliable
+              integrations, and preventing race conditions under concurrent workloads.
             </p>
             <p className="text-secondary-text font-poppins leading-relaxed text-lg">
-              I bring a practical blend of engineering depth, product thinking, team
-              leadership, and developer mentoring. I enjoy turning early ideas into
-              useful software, improving existing systems, and helping teams make better
-              technical decisions.
+              I am currently learning Java to deepen my backend foundation and prepare
+              for more demanding fintech systems. Payment infrastructure is an area I
+              genuinely enjoy, and I want to keep building software that moves money safely,
+              predictably, and at scale.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-3 pt-2">

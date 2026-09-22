@@ -11,7 +11,9 @@ import {
   FaServer,
   FaLinux,
   FaGithub,
-  FaAws
+  FaAws,
+  FaCreditCard,
+  FaJava
 } from 'react-icons/fa';
 import {
   SiJavascript,
@@ -101,10 +103,14 @@ const Skills = () => {
         { name: "Node.js", icon: FaNodeJs },
         { name: "NestJS", icon: SiNestjs },
         { name: "Express.js", icon: SiExpress },
+        { name: "Java (Learning)", icon: FaJava },
         { name: "REST APIs", icon: FaServer },
         { name: "GraphQL", icon: SiGraphql },
         { name: "Prisma", icon: SiPrisma },
-        { name: "JWT/Auth", icon: FaServer }
+        { name: "JWT/Auth", icon: FaServer },
+        { name: "Payment Systems", icon: FaCreditCard },
+        { name: "Idempotency", icon: FaServer },
+        { name: "Race-Condition Safety", icon: FaServer }
       ]
     },
     {

@@ -81,7 +81,7 @@ const Footer = () => {
             transition={{ delay: 0.3 }}
           >
             <p className="text-xs font-mono px-4 py-2 border border-white/5 rounded-full bg-white/5 inline-block">
-              Independent Software Engineer available for projects, consulting, and roles
+              Software Engineer focused on reliable backend systems and payment workflows
             </p>
           </motion.div>
         </motion.div>

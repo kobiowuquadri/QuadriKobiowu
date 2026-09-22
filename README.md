@@ -1,6 +1,6 @@
 # Quadri Kobiowu Portfolio
 
-Personal portfolio website for Quadri Kobiowu, an independent Software Engineer, Full-Stack Developer, Mobile App Engineer, Backend Engineer, Technical Consultant, and System Architect based in Nigeria.
+Personal portfolio website for Quadri Kobiowu, a backend-focused Software Engineer, Full-Stack Developer, Mobile App Engineer, Technical Consultant, and System Architect based in Nigeria.
 
 ## Overview
 

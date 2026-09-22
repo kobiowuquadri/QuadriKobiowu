@@ -1,24 +1,25 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaBriefcase, FaGraduationCap } from 'react-icons/fa';
+import { FaBriefcase, FaExternalLinkAlt, FaGraduationCap } from 'react-icons/fa';
 
 const experiences = [
     {
-        title: "Independent Software Engineer",
-        company: "Self-Directed Practice",
+        title: "Software Engineer",
+        company: "Freelance & Contract Projects",
         location: "Nigeria / Remote",
         period: "Present",
         responsibilities: [
             "Build software solutions for startups, businesses, NGOs, educational organizations, and technology companies",
-            "Deliver web applications, mobile applications, API platforms, dashboards, and operational business systems",
-            "Design backend architecture, database models, authentication flows, integrations, and deployment pipelines",
-            "Provide technical consulting, architecture reviews, product planning, and engineering execution",
-            "Collaborate with founders, product owners, designers, engineers, and community teams to ship practical solutions"
+            "Engineer backend systems and APIs with a focus on payment workflows, idempotency, transaction safety, and race-condition prevention",
+            "Design database models, authentication flows, third-party integrations, background jobs, and deployment pipelines",
+            "Deliver complete web and mobile products while keeping backend reliability and operational correctness central",
+            "Currently learning Java and deepening my understanding of backend architecture for fintech-scale systems"
         ]
     },
     {
         title: "Former CTO",
         company: "NAGIDA Foods",
+        website: "https://www.nagidafoods.com/",
         location: "Hybrid",
         period: "2024 - 2025",
         responsibilities: [
@@ -30,6 +31,7 @@ const experiences = [
     {
         title: "Program Coordinator & Instructor",
         company: "Kodelift Initiative",
+        website: "https://kodelift.ng/",
         location: "Ibadan, Nigeria",
         period: "2025",
         responsibilities: [
@@ -81,7 +83,19 @@ const Experience = () => {
                                         <FaBriefcase className="mt-1 flex-shrink-0 text-accent text-xl" />
                                         <div>
                                             <h3 className="text-xl md:text-2xl font-bold text-accent mb-2">{exp.title}</h3>
-                                            <p className="text-lg text-primary-text font-semibold">{exp.company}</p>
+                                            {exp.website ? (
+                                                <a
+                                                    href={exp.website}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="inline-flex items-center gap-2 text-lg text-primary-text font-semibold transition-colors hover:text-accent"
+                                                >
+                                                    {exp.company}
+                                                    <FaExternalLinkAlt className="text-xs" aria-hidden="true" />
+                                                </a>
+                                            ) : (
+                                                <p className="text-lg text-primary-text font-semibold">{exp.company}</p>
+                                            )}
                                             <p className="text-sm text-secondary-text">{exp.location}</p>
                                         </div>
                                     </div>

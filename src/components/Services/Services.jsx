@@ -15,7 +15,7 @@ const services = [
   },
   {
     title: "Backend Engineering",
-    description: "Scalable APIs, authentication systems, integrations, database design, and production-ready server logic.",
+    description: "Reliable APIs, payment workflows, idempotent operations, authentication, integrations, database design, and concurrency-safe server logic.",
     icon: FaServer
   },
   {

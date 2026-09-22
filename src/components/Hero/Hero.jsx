@@ -32,10 +32,10 @@ const Hero = () => {
             <h2 className="text-2xl sm:text-4xl md:text-6xl font-light text-primary-text/90 leading-tight">
               Software Engineer
               <span className="hidden md:inline text-secondary-text/40"> | </span>
-              <span className="block md:inline text-primary-text/75">Full-Stack Developer</span>
+              <span className="block md:inline text-primary-text/75">Backend Engineering Focus</span>
             </h2>
             <p className="text-lg sm:text-xl md:text-2xl font-light text-[#A7F3D0]">
-              Mobile App Engineer
+              Full-Stack Developer | Mobile App Engineer
             </p>
           </motion.div>
 
@@ -45,10 +45,9 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.25 }}
             className="text-secondary-text text-base sm:text-lg md:text-xl max-w-3xl mx-auto font-poppins leading-relaxed"
           >
-            I build scalable web applications, mobile applications, backend systems, APIs,
-            business platforms, and digital products that solve real-world problems.
-            From startups to enterprise solutions, I help businesses transform ideas into
-            reliable and impactful software.
+            I build reliable backend systems, APIs, payment workflows, web applications,
+            and mobile products. I care deeply about correctness in production, especially
+            idempotency, transaction safety, race-condition handling, and scalable system design.
           </motion.p>
 
           <motion.div
@@ -60,7 +59,7 @@ const Hero = () => {
             {[
               { value: `${projectCount}+`, label: "Projects Delivered" },
               { value: "5+", label: "Client Industries" },
-              { value: "3", label: "Core Platforms" }
+              { value: "22", label: "Years Old" }
             ].map((metric) => (
               <div
                 key={metric.label}
