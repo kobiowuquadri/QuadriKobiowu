@@ -126,5 +126,5 @@ npm run preview
 ## Notes
 
 - The contact form opens a prefilled email draft using `mailto:`.
-- Favicon and profile assets are generated from `devquat.png`.
+- Favicon and profile assets are generated from `devquat01.png`.
 - The project detail page automatically renders optional contribution/responsibility sections when a project defines them.

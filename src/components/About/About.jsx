@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaCheckCircle } from 'react-icons/fa';
 import myCV from '../../assets/QUADRI_ KOBIOWU_ CV.pdf';
-import profileImage from '../../assets/devquat-profile.jpg';
+import profileImage from '../../assets/devquat01-profile.jpg';
 
 const strengths = [
   "Software engineering and product development",
