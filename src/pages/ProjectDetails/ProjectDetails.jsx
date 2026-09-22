@@ -9,11 +9,24 @@ const ProjectDetails = () => {
     const projectIndex = projects.findIndex(p => p.id === id);
     const project = projectIndex === -1 ? undefined : projects[projectIndex];
     const [lightboxIndex, setLightboxIndex] = useState(null);
+    const [imageOrientations, setImageOrientations] = useState({});
 
     useEffect(() => {
         window.scrollTo(0, 0);
         setLightboxIndex(null);
+        setImageOrientations({});
     }, [id]);
+
+    const recordImageOrientation = (image, event) => {
+        const { naturalWidth, naturalHeight } = event.currentTarget;
+        const orientation = naturalHeight > naturalWidth ? 'portrait' : 'landscape';
+
+        setImageOrientations((current) => (
+            current[image] === orientation
+                ? current
+                : { ...current, [image]: orientation }
+        ));
+    };
 
     useEffect(() => {
         if (lightboxIndex === null) return undefined;
@@ -106,11 +119,12 @@ const ProjectDetails = () => {
                     </div>
                 </motion.div>
 
-                <div className="grid lg:grid-cols-2 gap-12 mb-16">
+                <div className="mb-16">
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
+                        className="mx-auto max-w-5xl"
                     >
                         <div className="max-w-none mb-10">
                             <h3 className="text-2xl font-bold mb-4 text-primary-text">Overview</h3>
@@ -184,32 +198,40 @@ const ProjectDetails = () => {
                     </motion.div>
 
                     <motion.div
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.4 }}
-                        className="lg:sticky lg:top-24 lg:self-start"
+                        className="mt-14"
                     >
                         {project.gallery && project.gallery.length > 0 ? (
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                {project.gallery.map((img, idx) => (
-                                    <button
-                                        key={img}
-                                        type="button"
-                                        onClick={() => setLightboxIndex(idx)}
-                                        className="group relative bg-secondary-bg rounded-xl p-2 shadow-2xl overflow-hidden h-fit text-left"
-                                        aria-label={`Expand ${project.title} screenshot ${idx + 1}`}
-                                    >
-                                        <img
-                                            src={img}
-                                            alt={`${project.title} screenshot ${idx + 1}`}
-                                            className="w-full h-auto rounded-lg transform group-hover:scale-105 transition-transform duration-500"
-                                            loading="lazy"
-                                        />
-                                        <span className="absolute inset-2 flex items-center justify-center rounded-lg bg-black/0 group-hover:bg-black/40 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                                            <FaExpand className="text-primary-text" />
-                                        </span>
-                                    </button>
-                                ))}
+                            <div>
+                                <h2 className="mb-6 text-2xl font-bold text-primary-text md:text-3xl">Project Gallery</h2>
+                                <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-8">
+                                    {project.gallery.map((img, idx) => {
+                                        const isPortrait = imageOrientations[img] === 'portrait';
+
+                                        return (
+                                            <button
+                                                key={img}
+                                                type="button"
+                                                onClick={() => setLightboxIndex(idx)}
+                                                className={`group relative h-fit overflow-hidden rounded-xl bg-secondary-bg p-2 text-left shadow-2xl ${isPortrait ? 'w-full max-w-md justify-self-center' : 'w-full md:col-span-2'}`}
+                                                aria-label={`Expand ${project.title} screenshot ${idx + 1}`}
+                                            >
+                                                <img
+                                                    src={img}
+                                                    alt={`${project.title} screenshot ${idx + 1}`}
+                                                    className={`rounded-lg transition-transform duration-500 group-hover:scale-[1.02] ${isPortrait ? 'mx-auto max-h-[760px] w-auto max-w-full object-contain' : 'h-auto w-full'}`}
+                                                    loading="lazy"
+                                                    onLoad={(event) => recordImageOrientation(img, event)}
+                                                />
+                                                <span className="absolute inset-2 flex items-center justify-center rounded-lg bg-black/0 opacity-0 transition-all duration-300 group-hover:bg-black/40 group-hover:opacity-100">
+                                                    <FaExpand className="text-primary-text" />
+                                                </span>
+                                            </button>
+                                        );
+                                    })}
+                                </div>
                             </div>
                         ) : (
                             <div className="rounded-xl border border-border-color bg-secondary-bg p-8">
@@ -293,7 +315,7 @@ const ProjectDetails = () => {
                             transition={{ duration: 0.2 }}
                             src={project.gallery[lightboxIndex]}
                             alt={`${project.title} screenshot ${lightboxIndex + 1}`}
-                            className="max-h-full max-w-full rounded-lg object-contain"
+                            className="max-h-[calc(100vh-2rem)] max-w-[calc(100vw-2rem)] rounded-lg object-contain sm:max-h-[calc(100vh-5rem)] sm:max-w-[calc(100vw-5rem)]"
                             onClick={(e) => e.stopPropagation()}
                         />
 
