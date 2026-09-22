@@ -9,24 +9,11 @@ const ProjectDetails = () => {
     const projectIndex = projects.findIndex(p => p.id === id);
     const project = projectIndex === -1 ? undefined : projects[projectIndex];
     const [lightboxIndex, setLightboxIndex] = useState(null);
-    const [imageOrientations, setImageOrientations] = useState({});
 
     useEffect(() => {
         window.scrollTo(0, 0);
         setLightboxIndex(null);
-        setImageOrientations({});
     }, [id]);
-
-    const recordImageOrientation = (image, event) => {
-        const { naturalWidth, naturalHeight } = event.currentTarget;
-        const orientation = naturalHeight > naturalWidth ? 'portrait' : 'landscape';
-
-        setImageOrientations((current) => (
-            current[image] === orientation
-                ? current
-                : { ...current, [image]: orientation }
-        ));
-    };
 
     useEffect(() => {
         if (lightboxIndex === null) return undefined;
@@ -208,7 +195,7 @@ const ProjectDetails = () => {
                                 <h2 className="mb-6 text-2xl font-bold text-primary-text md:text-3xl">Project Gallery</h2>
                                 <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-8">
                                     {project.gallery.map((img, idx) => {
-                                        const isPortrait = imageOrientations[img] === 'portrait';
+                                        const isPortrait = project.galleryOrientations?.[idx] === 'portrait';
 
                                         return (
                                             <button
@@ -223,7 +210,6 @@ const ProjectDetails = () => {
                                                     alt={`${project.title} screenshot ${idx + 1}`}
                                                     className={`rounded-lg transition-transform duration-500 group-hover:scale-[1.02] ${isPortrait ? 'mx-auto max-h-[760px] w-auto max-w-full object-contain' : 'h-auto w-full'}`}
                                                     loading="lazy"
-                                                    onLoad={(event) => recordImageOrientation(img, event)}
                                                 />
                                                 <span className="absolute inset-2 flex items-center justify-center rounded-lg bg-black/0 opacity-0 transition-all duration-300 group-hover:bg-black/40 group-hover:opacity-100">
                                                     <FaExpand className="text-primary-text" />

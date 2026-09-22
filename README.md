@@ -23,10 +23,10 @@ Each project card has its own `Read More` link that opens a dedicated project de
 Current homepage project flow:
 
 ```txt
-Pagia -> Rekrutklin Mobile App -> SafeNaija -> ImprexiTrak -> GFB Strategic Consulting Limited Website -> Kodelift
+SandLink Marketplace -> Rekrutklin Mobile App -> SafeNaija -> ImprexiTrak -> GFB Strategic Consulting Limited Website -> Kodelift
 ```
 
-Cyberblock, Modules, YACSN, Code Vortex Academy, and Siraj remain in the project data and appear on the `/projects` page even though they are outside the 6-card homepage limit.
+Pagia, Cyberblock, Modules, YACSN, Code Vortex Academy, and Siraj remain in the project data and appear on the `/projects` page even though they are outside the 6-card homepage limit.
 
 ## Tech Stack
 
