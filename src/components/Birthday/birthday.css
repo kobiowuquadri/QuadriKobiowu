@@ -1,0 +1,170 @@
+/* Birthday celebration styles (loaded only on the birthday). */
+
+/* Balloons start just below the screen and rise until they're above it. */
+.bday-balloon-rise {
+  animation-name: bday-rise;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+  will-change: transform;
+}
+
+@keyframes bday-rise {
+  from {
+    transform: translate3d(-50%, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, calc(-100vh - 100%), 0);
+  }
+}
+
+.bday-balloon-sway {
+  animation: bday-sway ease-in-out infinite alternate;
+  transform-origin: 50% 0;
+}
+
+@keyframes bday-sway {
+  from {
+    transform: translateX(-12px) rotate(-5deg);
+  }
+  to {
+    transform: translateX(12px) rotate(5deg);
+  }
+}
+
+.bday-pop-text {
+  animation: bday-pop-text 1.4s ease-out forwards;
+}
+
+@keyframes bday-pop-text {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.6);
+  }
+  15% {
+    opacity: 1;
+    transform: translate(-50%, -80%) scale(1.05);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -260%) scale(1);
+  }
+}
+
+/* Candle flames lean and shrink with --lean (0-1), set from the mic level. */
+.bday-flame-wrap {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 16px;
+  height: 30px;
+  transform-origin: 50% 100%;
+  transform: translateX(-50%) skewX(calc(var(--lean, 0) * -28deg)) scaleY(calc(1 - var(--lean, 0) * 0.35));
+  transition: transform 80ms linear;
+}
+
+.bday-flame {
+  position: absolute;
+  inset: 0;
+  border-radius: 50% 50% 50% 50% / 70% 70% 30% 30%;
+  background: radial-gradient(
+    circle at 50% 75%,
+    #ffffff 0 12%,
+    #fef3c7 22%,
+    #fcd34d 40%,
+    #f97316 70%,
+    rgba(239, 68, 68, 0) 100%
+  );
+  box-shadow: 0 0 14px 4px rgba(251, 191, 36, 0.55), 0 0 36px 12px rgba(249, 115, 22, 0.25);
+  transform-origin: 50% 100%;
+  animation: bday-flicker 0.18s ease-in-out infinite alternate;
+}
+
+@keyframes bday-flicker {
+  from {
+    transform: scale(1, 1) rotate(-2deg);
+    opacity: 0.92;
+  }
+  to {
+    transform: scale(0.92, 1.08) rotate(2deg);
+    opacity: 1;
+  }
+}
+
+.bday-smoke {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+}
+
+.bday-smoke span {
+  position: absolute;
+  left: -4px;
+  bottom: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: rgba(229, 231, 235, 0.55);
+  filter: blur(2px);
+  opacity: 0;
+  animation: bday-smoke 1.6s ease-out forwards;
+}
+
+.bday-smoke span:nth-child(2) {
+  --drift: -7px;
+  animation-delay: 0.15s;
+}
+
+.bday-smoke span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes bday-smoke {
+  0% {
+    opacity: 0.7;
+    transform: translate(0, 0) scale(0.6);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--drift, 6px), -46px) scale(2.2);
+  }
+}
+
+/* Striped wax for the number candles. */
+.bday-candle-digit {
+  background: repeating-linear-gradient(135deg, #f9a8d4 0 7px, #fff1f2 7px 14px);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 2px 0 rgba(0, 0, 0, 0.35));
+}
+
+.bday-wiggle {
+  animation: bday-wiggle 3s ease-in-out infinite;
+}
+
+@keyframes bday-wiggle {
+  0%,
+  82%,
+  100% {
+    transform: rotate(0);
+  }
+  86% {
+    transform: rotate(-12deg);
+  }
+  90% {
+    transform: rotate(12deg);
+  }
+  94% {
+    transform: rotate(-6deg);
+  }
+  97% {
+    transform: rotate(3deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bday-flame,
+  .bday-wiggle {
+    animation: none;
+  }
+}

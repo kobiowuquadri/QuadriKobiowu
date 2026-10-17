@@ -2,9 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaArrowDown, FaBriefcase, FaHandshake, FaRocket } from 'react-icons/fa';
 import { projects } from '../../data/projectsData';
+import { useBirthday } from '../Birthday/BirthdayContext';
 
 const Hero = () => {
   const projectCount = projects.length;
+  const { age, isBirthday, openCelebration } = useBirthday();
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
@@ -59,16 +61,35 @@ const Hero = () => {
             {[
               { value: `${projectCount}+`, label: "Projects Delivered" },
               { value: "5+", label: "Client Industries" },
-              { value: "22", label: "Years Old" }
-            ].map((metric) => (
-              <div
-                key={metric.label}
-                className="rounded-lg border border-border-color bg-secondary-bg/60 px-2 py-3 backdrop-blur-sm sm:px-4"
-              >
-                <p className="font-mono text-xl font-bold text-accent sm:text-3xl">{metric.value}</p>
-                <p className="mt-1 text-[10px] uppercase leading-snug tracking-widest text-secondary-text sm:text-xs">{metric.label}</p>
-              </div>
-            ))}
+              { value: `${age}`, label: isBirthday ? "Years Old Today" : "Years Old", birthday: isBirthday }
+            ].map((metric) => {
+              const content = (
+                <>
+                  <p className="font-mono text-xl font-bold text-accent sm:text-3xl">{metric.value}</p>
+                  <p className="mt-1 text-[10px] uppercase leading-snug tracking-widest text-secondary-text sm:text-xs">{metric.label}</p>
+                </>
+              );
+
+              return metric.birthday ? (
+                <button
+                  key={metric.label}
+                  type="button"
+                  onClick={openCelebration}
+                  aria-label={`It's my birthday, I'm ${metric.value} today. Open the celebration`}
+                  className="relative rounded-lg border border-[#F9A8D4]/60 bg-[#F9A8D4]/10 px-2 py-3 shadow-[0_0_24px_rgba(249,168,212,0.25)] backdrop-blur-sm transition-colors duration-300 hover:bg-[#F9A8D4]/20 sm:px-4"
+                >
+                  <span className="absolute -right-2 -top-3 animate-bounce text-xl" aria-hidden="true">🎂</span>
+                  {content}
+                </button>
+              ) : (
+                <div
+                  key={metric.label}
+                  className="rounded-lg border border-border-color bg-secondary-bg/60 px-2 py-3 backdrop-blur-sm sm:px-4"
+                >
+                  {content}
+                </div>
+              );
+            })}
           </motion.div>
 
           <motion.div

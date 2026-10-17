@@ -6,6 +6,7 @@ import { useEffect } from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import BuyMeCoffee from './components/BuyMeCoffee/BuyMeCoffee'
+import BirthdayProvider from './components/Birthday/BirthdayProvider'
 
 
 import ProjectDetails from './pages/ProjectDetails/ProjectDetails'
@@ -31,16 +32,18 @@ function App() {
   }, [])
 
   return (
-    <div className="bg-primary-bg min-h-screen">
-      <RouteScrollReset />
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path='/projects' element={<ProjectsPage />} />
-        <Route path='/project/:id' element={<ProjectDetails />} />
-        <Route path='/success' element={<Success />} />
-      </Routes>
-      <BuyMeCoffee />
-    </div>
+    <BirthdayProvider>
+      <div className="bg-primary-bg min-h-screen">
+        <RouteScrollReset />
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path='/projects' element={<ProjectsPage />} />
+          <Route path='/project/:id' element={<ProjectDetails />} />
+          <Route path='/success' element={<Success />} />
+        </Routes>
+        <BuyMeCoffee />
+      </div>
+    </BirthdayProvider>
   )
 }
 
