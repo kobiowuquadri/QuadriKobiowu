@@ -16,11 +16,11 @@ let lastTime = 0;
 const prefersReducedMotion = () =>
   window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ?? false;
 
+// Drawn at CSS-pixel size, not device pixels: fast-moving confetti doesn't need
+// retina sharpness, and it keeps the full-screen canvas cheap on 4K screens.
 const resize = () => {
-  const ratio = Math.min(window.devicePixelRatio || 1, 2);
-  canvas.width = window.innerWidth * ratio;
-  canvas.height = window.innerHeight * ratio;
-  context.setTransform(ratio, 0, 0, ratio, 0, 0);
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
 };
 
 const ensureCanvas = () => {
@@ -79,7 +79,13 @@ const step = (time) => {
     return true;
   });
 
-  frame = particles.length ? requestAnimationFrame(step) : null;
+  if (particles.length) {
+    frame = requestAnimationFrame(step);
+  } else {
+    // Hide the idle canvas so the browser stops compositing a full-screen layer.
+    frame = null;
+    canvas.style.display = 'none';
+  }
 };
 
 // angle is in degrees (-90 is straight up); spread is the cone width around it.
@@ -108,6 +114,7 @@ export const burst = (x, y, { count = 60, angle = -90, spread = 360, speed = 9, 
   }
 
   if (!frame) {
+    canvas.style.display = 'block';
     lastTime = performance.now();
     frame = requestAnimationFrame(step);
   }
@@ -117,9 +124,9 @@ export const burst = (x, y, { count = 60, angle = -90, spread = 360, speed = 9, 
 export const celebrate = () => {
   const { innerWidth: width, innerHeight: height } = window;
   const speed = height / 26;
-  burst(0, height, { count: 130, angle: -60, spread: 45, speed });
-  burst(width, height, { count: 130, angle: -120, spread: 45, speed });
-  setTimeout(() => burst(width / 2, height * 0.35, { count: 100, speed: 12 }), 250);
+  burst(0, height, { count: 100, angle: -60, spread: 45, speed });
+  burst(width, height, { count: 100, angle: -120, spread: 45, speed });
+  setTimeout(() => burst(width / 2, height * 0.35, { count: 70, speed: 12 }), 250);
 };
 
 export const destroyConfetti = () => {

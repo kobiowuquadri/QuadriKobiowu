@@ -31,6 +31,11 @@
   }
 }
 
+.bday-paused .bday-balloon-rise,
+.bday-paused .bday-balloon-sway {
+  animation-play-state: paused;
+}
+
 .bday-pop-text {
   animation: bday-pop-text 1.4s ease-out forwards;
 }

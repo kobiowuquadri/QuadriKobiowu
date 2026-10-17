@@ -4,12 +4,14 @@ import { FaGift, FaTimes } from 'react-icons/fa';
 import { useBirthday } from './BirthdayContext';
 import Balloons from './Balloons';
 import CelebrationModal from './CelebrationModal';
+import NasheedPlayer from './NasheedPlayer';
 import { celebrate, destroyConfetti } from './confetti';
-import { playSparkle, setMuted as setSoundMuted, stopNasheed } from './sounds';
+import { getNasheed, isMuted, playNasheed, playSparkle, setMuted as setSoundMuted, stopNasheed } from './sounds';
 import './birthday.css';
 
 const WELCOME_SEEN_KEY = 'qk-birthday-welcome-seen';
 const MUTED_KEY = 'qk-birthday-muted';
+const INTERACTION_EVENTS = ['pointerdown', 'pointerup', 'touchend', 'keydown', 'click'];
 
 const readStorage = (type, key) => {
   try {
@@ -56,6 +58,29 @@ const BirthdayCelebration = () => {
     setSoundMuted(muted);
     writeStorage('localStorage', MUTED_KEY, muted ? '1' : '0');
   }, [muted]);
+
+  // Autoplay the nasheed on visit. Browsers block sound until the visitor
+  // interacts with the page, so if that happens, start on their first tap,
+  // click or key press instead.
+  useEffect(() => {
+    const audio = getNasheed();
+    const stopListening = () => {
+      INTERACTION_EVENTS.forEach((event) => window.removeEventListener(event, startOnInteraction, true));
+      audio.removeEventListener('play', stopListening);
+    };
+    const startOnInteraction = (event) => {
+      // The player's own buttons decide for themselves.
+      if (event.target.closest?.('[data-nasheed-control]') || isMuted()) return;
+      playNasheed();
+    };
+
+    if (isMuted()) return undefined;
+    INTERACTION_EVENTS.forEach((event) => window.addEventListener(event, startOnInteraction, true));
+    // Once it has played (by autoplay, a tap or the play button), never force it again.
+    audio.addEventListener('play', stopListening);
+    playNasheed();
+    return stopListening;
+  }, []);
 
   const showToast = useCallback((next) => setToast({ id: Date.now(), ...next }), []);
 
@@ -105,11 +130,16 @@ const BirthdayCelebration = () => {
   }, [popCount, age, showToast]);
 
   const handlePop = useCallback(() => setPopCount((count) => count + 1), []);
-  const toggleMuted = useCallback(() => setMuted((value) => !value), []);
+
+  // Turning sound back on also starts the nasheed.
+  const toggleMuted = useCallback(() => {
+    if (muted) playNasheed();
+    setMuted(!muted);
+  }, [muted]);
 
   return (
     <>
-      {!reducedMotion && <Balloons age={age} maxBalloons={maxBalloons} onPop={handlePop} />}
+      {!reducedMotion && <Balloons age={age} maxBalloons={maxBalloons} onPop={handlePop} paused={isOpen} />}
 
       <div className="pointer-events-none fixed inset-x-0 top-20 z-[55] flex justify-center px-4" aria-live="polite">
         <AnimatePresence>
@@ -119,7 +149,7 @@ const BirthdayCelebration = () => {
               initial={{ opacity: 0, y: -16 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -16 }}
-              className="pointer-events-auto flex w-full max-w-md items-center gap-3 rounded-xl border border-accent/30 bg-secondary-bg/95 px-4 py-3 text-sm text-primary-text shadow-2xl backdrop-blur-md"
+              className="pointer-events-auto flex w-full max-w-md items-center gap-3 rounded-xl border border-accent/30 bg-secondary-bg px-4 py-3 text-sm text-primary-text shadow-2xl"
             >
               <p className="flex-1 leading-snug">{toast.message}</p>
               {toast.action && (
@@ -147,19 +177,25 @@ const BirthdayCelebration = () => {
         </AnimatePresence>
       </div>
 
-      <div className="fixed bottom-8 left-4 z-50 flex flex-col items-start gap-2">
+      <div className="fixed bottom-8 left-4 z-[53] flex flex-col items-start gap-2">
         <AnimatePresence>
           {popCount > 0 && (
             <motion.span
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 8 }}
-              className="rounded-full border border-border-color bg-secondary-bg/90 px-3 py-1 font-mono text-xs text-accent shadow-lg backdrop-blur-sm"
+              className="rounded-full border border-border-color bg-secondary-bg px-3 py-1 font-mono text-xs text-accent shadow-lg"
             >
               🎈 {popCount} popped
             </motion.span>
           )}
         </AnimatePresence>
+        <motion.div
+          initial={{ opacity: 0, x: -80 }}
+          animate={{ opacity: 1, x: 0, transition: { delay: 0.8, duration: 0.4 } }}
+        >
+          <NasheedPlayer compact muted={muted} onToggleMute={toggleMuted} />
+        </motion.div>
         <motion.button
           type="button"
           onClick={openCelebration}

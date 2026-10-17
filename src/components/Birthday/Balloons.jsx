@@ -58,18 +58,19 @@ const BalloonShape = ({ color, label }) => (
   </svg>
 );
 
-const Balloons = ({ age, maxBalloons, onPop }) => {
+const Balloons = ({ age, maxBalloons, onPop, paused }) => {
   const [balloons, setBalloons] = useState(() =>
     Array.from({ length: Math.min(5, maxBalloons) }, (_, i) => createBalloon(i * 0.8))
   );
   const [notes, setNotes] = useState([]);
 
   useEffect(() => {
+    if (paused) return undefined;
     const interval = setInterval(() => {
       setBalloons((current) => (current.length >= maxBalloons ? current : [...current, createBalloon()]));
     }, SPAWN_EVERY_MS);
     return () => clearInterval(interval);
-  }, [maxBalloons]);
+  }, [maxBalloons, paused]);
 
   const removeBalloon = useCallback((id) => {
     setBalloons((current) => current.filter((balloon) => balloon.id !== id));
@@ -103,7 +104,12 @@ const Balloons = ({ age, maxBalloons, onPop }) => {
   };
 
   return (
-    <div className="pointer-events-none fixed inset-0 z-[45] overflow-hidden" aria-hidden="true">
+    // Above the header (z-50) on purpose: balloons moving *under* its frosted
+    // background would force the browser to re-blur it on every frame.
+    <div
+      className={`pointer-events-none fixed inset-0 z-[51] overflow-hidden ${paused ? 'bday-paused' : ''}`}
+      aria-hidden="true"
+    >
       <svg width="0" height="0" className="absolute" focusable="false">
         <defs>
           <radialGradient id="bday-balloon-shade" cx="35%" cy="30%" r="75%">
@@ -141,10 +147,10 @@ const Balloons = ({ age, maxBalloons, onPop }) => {
       {notes.map((note) => (
         <span
           key={note.id}
-          className={`bday-pop-text absolute whitespace-nowrap rounded-full border px-3 py-1 font-mono text-xs shadow-lg backdrop-blur-sm sm:text-sm ${
+          className={`bday-pop-text absolute whitespace-nowrap rounded-full border px-3 py-1 font-mono text-xs shadow-lg sm:text-sm ${
             note.golden
-              ? 'border-[#FACC15]/60 bg-[#FACC15]/15 text-[#FDE68A]'
-              : 'border-accent/30 bg-primary-bg/80 text-accent'
+              ? 'border-[#FACC15]/60 bg-[#2A2410] text-[#FDE68A]'
+              : 'border-accent/30 bg-primary-bg/95 text-accent'
           }`}
           style={{ left: note.x, top: note.y }}
         >

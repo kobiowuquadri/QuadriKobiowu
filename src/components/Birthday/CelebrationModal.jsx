@@ -1,21 +1,11 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import {
-  FaCheck,
-  FaCopy,
-  FaEnvelope,
-  FaPause,
-  FaPlay,
-  FaShareAlt,
-  FaTimes,
-  FaVolumeMute,
-  FaVolumeUp,
-} from 'react-icons/fa';
+import { FaCheck, FaCopy, FaEnvelope, FaShareAlt, FaTimes, FaVolumeMute, FaVolumeUp } from 'react-icons/fa';
 import BirthdayCake from './BirthdayCake';
+import NasheedPlayer from './NasheedPlayer';
 import { GIFT_ACCOUNT, WISH_EMAIL } from './birthdayConfig';
 import { celebrate } from './confetti';
-import { isMuted, NASHEED, pauseNasheed, playNasheed, primeNasheed, stopNasheed } from './sounds';
-import useNasheed from './useNasheed';
+import { isMuted, playNasheed, primeNasheed } from './sounds';
 
 const FOCUS_RING =
   'focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 focus-visible:ring-offset-2 focus-visible:ring-offset-secondary-bg';
@@ -45,58 +35,6 @@ const copyText = async (text) => {
     field.remove();
     return copied;
   }
-};
-
-const NasheedPlayer = ({ muted, onUnmute }) => {
-  const { playing, progress } = useNasheed();
-
-  const toggle = () => {
-    if (playing) {
-      pauseNasheed();
-      return;
-    }
-    if (muted) onUnmute();
-    playNasheed();
-  };
-
-  return (
-    <section aria-labelledby="nasheed-title">
-      <h3 id="nasheed-title" className="text-xs font-medium uppercase tracking-[0.2em] text-secondary-text">
-        Nasheed
-      </h3>
-      <div className="mt-3 flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.03] p-3">
-        <button
-          type="button"
-          onClick={toggle}
-          aria-label={playing ? 'Pause nasheed' : 'Play nasheed'}
-          className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent text-primary-bg transition-colors hover:bg-white ${FOCUS_RING}`}
-        >
-          {playing ? <FaPause size={12} /> : <FaPlay size={12} className="ml-0.5" />}
-        </button>
-        <div className="min-w-0 flex-1">
-          <p className="truncate text-sm font-medium text-primary-text">{NASHEED.title}</p>
-          <p className="truncate text-xs text-secondary-text">{NASHEED.artist} · Vocals only</p>
-          <div className="mt-2 h-1 overflow-hidden rounded-full bg-white/10" aria-hidden="true">
-            <div
-              className="h-full rounded-full bg-accent transition-[width] duration-300 ease-linear"
-              style={{ width: `${progress * 100}%` }}
-            />
-          </div>
-        </div>
-      </div>
-      <p className="mt-2 text-[11px] leading-relaxed text-secondary-text/70">
-        &ldquo;
-        <a href={NASHEED.sourceUrl} target="_blank" rel="noopener noreferrer" className="underline-offset-2 hover:text-accent hover:underline">
-          {NASHEED.title}
-        </a>
-        &rdquo; by {NASHEED.artist}, licensed under{' '}
-        <a href={NASHEED.licenseUrl} target="_blank" rel="noopener noreferrer" className="underline-offset-2 hover:text-accent hover:underline">
-          {NASHEED.license}
-        </a>
-        .
-      </p>
-    </section>
-  );
 };
 
 const CelebrationModal = ({ isOpen, onClose, age, muted, onToggleMute }) => {
@@ -137,7 +75,6 @@ const CelebrationModal = ({ isOpen, onClose, age, muted, onToggleMute }) => {
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
       document.body.style.overflow = previousOverflow;
-      stopNasheed();
       previousFocus?.focus?.();
     };
   }, [isOpen, onClose]);
@@ -182,7 +119,7 @@ const CelebrationModal = ({ isOpen, onClose, age, muted, onToggleMute }) => {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed inset-0 z-[70] flex items-end justify-center bg-black/75 backdrop-blur-sm md:items-center md:p-6"
+          className="fixed inset-0 z-[70] flex items-end justify-center bg-black/80 md:items-center md:p-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -205,6 +142,7 @@ const CelebrationModal = ({ isOpen, onClose, age, muted, onToggleMute }) => {
               <button
                 type="button"
                 onClick={onToggleMute}
+                data-nasheed-control
                 aria-label={muted ? 'Turn sound on' : 'Mute sound'}
                 className={ICON_BUTTON}
               >
@@ -279,7 +217,7 @@ const CelebrationModal = ({ isOpen, onClose, age, muted, onToggleMute }) => {
                 </div>
               </section>
 
-              <NasheedPlayer muted={muted} onUnmute={onToggleMute} />
+              <NasheedPlayer muted={muted} onToggleMute={onToggleMute} />
             </div>
           </motion.div>
         </motion.div>

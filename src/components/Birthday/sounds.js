@@ -31,16 +31,20 @@ export const getNasheed = () => {
   if (!nasheed) {
     nasheed = new Audio(nasheedUrl);
     nasheed.preload = 'none';
-    nasheed.volume = 0.85;
+    nasheed.volume = 0.7;
   }
   return nasheed;
 };
 
+// Resolves to false when the browser blocks playback (no tap/click yet).
 export const playNasheed = () => {
   wantsNasheed = true;
   const audio = getNasheed();
   audio.muted = false;
-  audio.play().catch(() => {});
+  return audio
+    .play()
+    .then(() => true)
+    .catch(() => false);
 };
 
 export const pauseNasheed = () => {
