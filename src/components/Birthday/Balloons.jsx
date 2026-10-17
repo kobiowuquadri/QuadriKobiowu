@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { burst, GOLD_COLORS } from './confetti';
-import { playChime, playPop } from './sounds';
+import { playPop, playSparkle } from './sounds';
 
 const COLORS = ['#F9A8D4', '#2DD4BF', '#E6D5B8', '#C4B5FD', '#FDE68A', '#FCA5A5', '#A7F3D0'];
 const GOLDEN_CHANCE = 0.12;
@@ -83,7 +83,7 @@ const Balloons = ({ age, maxBalloons, onPop }) => {
     removeBalloon(balloon.id);
     playPop();
     if (balloon.golden) {
-      playChime();
+      playSparkle();
       burst(x, y, { count: 130, speed: 13, colors: GOLD_COLORS });
     } else {
       burst(x, y, { count: 40, speed: 8, colors: [balloon.color, '#FFFFFF', '#E6D5B8'] });

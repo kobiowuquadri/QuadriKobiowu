@@ -138,6 +138,20 @@
   filter: drop-shadow(0 2px 0 rgba(0, 0, 0, 0.35));
 }
 
+.bday-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(230, 213, 184, 0.2) transparent;
+}
+
+.bday-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.bday-scroll::-webkit-scrollbar-thumb {
+  background: rgba(230, 213, 184, 0.2);
+  border-radius: 9999px;
+}
+
 .bday-wiggle {
   animation: bday-wiggle 3s ease-in-out infinite;
 }

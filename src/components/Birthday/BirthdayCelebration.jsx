@@ -5,7 +5,7 @@ import { useBirthday } from './BirthdayContext';
 import Balloons from './Balloons';
 import CelebrationModal from './CelebrationModal';
 import { celebrate, destroyConfetti } from './confetti';
-import { playChime, setMuted as setSoundMuted, stopBirthdaySong } from './sounds';
+import { playSparkle, setMuted as setSoundMuted, stopNasheed } from './sounds';
 import './birthday.css';
 
 const WELCOME_SEEN_KEY = 'qk-birthday-welcome-seen';
@@ -84,7 +84,7 @@ const BirthdayCelebration = () => {
     return () => {
       document.title = originalTitle;
       destroyConfetti();
-      stopBirthdaySong();
+      stopNasheed();
     };
   }, []);
 
@@ -100,7 +100,7 @@ const BirthdayCelebration = () => {
     showToast(milestone);
     if (milestone.big) {
       celebrate();
-      playChime();
+      playSparkle();
     }
   }, [popCount, age, showToast]);
 
@@ -179,7 +179,6 @@ const BirthdayCelebration = () => {
         isOpen={isOpen}
         onClose={closeCelebration}
         age={age}
-        popCount={popCount}
         muted={muted}
         onToggleMute={toggleMuted}
       />

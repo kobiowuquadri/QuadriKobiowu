@@ -50,7 +50,10 @@ const CakeArt = () => (
   </svg>
 );
 
-const BirthdayCake = ({ age, onAllOut }) => {
+const BUTTON_FOCUS =
+  'focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 focus-visible:ring-offset-2 focus-visible:ring-offset-secondary-bg';
+
+const BirthdayCake = ({ age, onAllOut, onMicStart }) => {
   const digits = String(age).split('');
   const [lit, setLit] = useState(() => digits.map(() => true));
   const litRef = useRef(lit);
@@ -94,8 +97,13 @@ const BirthdayCake = ({ age, onAllOut }) => {
   };
 
   let hint = 'Make a wish, then tap the flames or blow into your mic.';
-  if (allOut) hint = '🎉 Wish made! Hip hip hooray!';
-  else if (remaining < digits.length) hint = remaining === 1 ? 'One more… 💨' : 'Keep going… 💨';
+  if (allOut) hint = 'Wish made. Thank you for celebrating with me!';
+  else if (remaining < digits.length) hint = remaining === 1 ? 'One more candle…' : 'Keep going…';
+
+  const startMic = () => {
+    onMicStart?.();
+    start();
+  };
 
   return (
     <div className="text-center">
@@ -138,7 +146,7 @@ const BirthdayCake = ({ age, onAllOut }) => {
         <CakeArt />
       </div>
 
-      <p className="mt-4 min-h-[1.5rem] text-sm text-primary-text" aria-live="polite">
+      <p className="mt-4 min-h-[1.5rem] text-balance text-sm text-primary-text" aria-live="polite">
         {hint}
       </p>
 
@@ -146,9 +154,9 @@ const BirthdayCake = ({ age, onAllOut }) => {
         <button
           type="button"
           onClick={relight}
-          className="mt-3 inline-flex items-center gap-2 rounded-lg border border-accent/40 px-4 py-2 font-mono text-sm text-primary-text transition-colors hover:bg-accent/10"
+          className={`mt-3 inline-flex items-center gap-2 rounded-lg border border-white/10 px-4 py-2 text-sm font-medium text-primary-text transition-colors hover:border-accent/40 hover:bg-white/5 ${BUTTON_FOCUS}`}
         >
-          <FaRedo size={12} /> Light them again
+          <FaRedo size={11} /> Light them again
         </button>
       ) : (
         <div className="mt-3 flex flex-col items-center gap-2">
@@ -156,7 +164,7 @@ const BirthdayCake = ({ age, onAllOut }) => {
             <button
               type="button"
               onClick={stop}
-              className="inline-flex items-center gap-2 rounded-lg border border-[#F9A8D4]/60 bg-[#F9A8D4]/10 px-4 py-2 font-mono text-sm text-[#F9A8D4]"
+              className={`inline-flex items-center gap-2 rounded-lg border border-[#F9A8D4]/50 bg-[#F9A8D4]/10 px-4 py-2 text-sm font-medium text-[#F9A8D4] ${BUTTON_FOCUS}`}
             >
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#F9A8D4] opacity-75" />
@@ -167,9 +175,9 @@ const BirthdayCake = ({ age, onAllOut }) => {
           ) : (
             <button
               type="button"
-              onClick={start}
+              onClick={startMic}
               disabled={status === 'starting'}
-              className="inline-flex items-center gap-2 rounded-lg border border-accent/40 px-4 py-2 font-mono text-sm text-primary-text transition-colors hover:bg-accent/10 disabled:opacity-60"
+              className={`inline-flex items-center gap-2 rounded-lg border border-white/10 px-4 py-2 text-sm font-medium text-primary-text transition-colors hover:border-accent/40 hover:bg-white/5 disabled:opacity-60 ${BUTTON_FOCUS}`}
             >
               <FaMicrophone size={13} /> {status === 'starting' ? 'Waiting for your mic…' : 'Blow with your mic'}
             </button>
