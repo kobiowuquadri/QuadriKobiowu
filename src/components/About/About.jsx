@@ -38,7 +38,7 @@ const technologyGroups = [
 
 const AboutMe = () => {
   return (
-    <section id="about" className="bg-secondary-bg text-primary-text py-20">
+    <section id="about" className="bg-secondary-bg text-primary-text py-20 overflow-hidden">
       <div className="container mx-auto px-4">
         <motion.div
           className="flex items-center gap-2 mb-16"
@@ -116,8 +116,8 @@ const AboutMe = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="relative group max-w-md mx-auto"
           >
-            <div className="absolute -top-4 -left-4 w-20 h-20 border-t-2 border-l-2 border-accent rounded-tl-lg opacity-60"></div>
-            <div className="absolute -bottom-4 -right-4 w-20 h-20 border-b-2 border-r-2 border-accent rounded-br-lg opacity-60"></div>
+            <div className="absolute -top-2 -left-2 sm:-top-4 sm:-left-4 w-20 h-20 border-t-2 border-l-2 border-accent rounded-tl-lg opacity-60"></div>
+            <div className="absolute -bottom-2 -right-2 sm:-bottom-4 sm:-right-4 w-20 h-20 border-b-2 border-r-2 border-accent rounded-br-lg opacity-60"></div>
 
             <div className="relative bg-secondary-bg rounded-lg p-2 border border-border-color group-hover:border-accent transition-colors duration-500 shadow-2xl">
               <div className="relative overflow-hidden rounded-lg bg-primary-bg/50">
