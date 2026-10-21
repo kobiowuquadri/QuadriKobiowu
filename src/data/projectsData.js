@@ -1,3 +1,4 @@
+import estateNgImg from '../assets/estateng.png';
 import trakImg from '../assets/trak1.png';
 import trakApp1 from '../assets/trakapp1.png';
 import trakApp2 from '../assets/trakapp2.png';
@@ -40,6 +41,47 @@ import sandlinkAppOnboardingImg from '../assets/sandlink-app-onboarding.png';
 import sandlinkAppHomeImg from '../assets/sandlink-app-home.png';
 
 export const projects = [
+    {
+        id: "myestateng",
+        title: "MyEstateNG",
+        category: "Backend Platform",
+        shortDescription: "Estate management platform for gated communities in Nigeria. I worked on the backend for tenant management, subscriptions, houses, and guest logs.",
+        fullDescription: "MyEstateNG is an estate management platform for gated estates in Nigeria, used by estates including Lekki Garden 4, Silverland Zone, and Greenville. Estate managers and associations use the web portal to oversee access and keep track of their residents, houses, and visitors, while residents use the mobile app for bill payments, emergencies, amenity bookings, and an in-estate marketplace.\n\nI worked on the backend as a Backend Engineer, on the services behind tenant management, estate subscriptions, house records, and guest logs, using Node.js, Express.js, MongoDB, Redis, and BullMQ.",
+        problem: "Gated estates need one reliable system to know who lives in which house, which estates have an active subscription, and who comes in and out, instead of relying on paper registers and spreadsheets.",
+        impact: "Gives estate management a single, structured record of tenants, houses, subscriptions, and visitor activity, powering the MyEstateNG web portal and mobile app.",
+        image: estateNgImg,
+        gallery: [estateNgImg],
+        galleryOrientations: ["landscape"],
+        liveLink: "https://myestate.ng/",
+        technologies: [
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "Redis",
+            "BullMQ"
+        ],
+        role: "Backend Engineer",
+        features: [
+            "Web portal for estate managers to oversee access and track residents, houses, and visitors",
+            "Tenant and resident management for every house in an estate",
+            "Estate subscriptions",
+            "Guest logs and guest code validation at the gate",
+            "Emergency reporting for health, theft, and fire incidents",
+            "Bill payments for power and water tokens, estate dues, and airtime",
+            "In-estate marketplace for residents to offer products and services",
+            "Amenities booking for residents",
+            "Real-time notifications for complaints and updates"
+        ],
+        contributions: [
+            "Worked on the Node.js and Express backend behind the MyEstateNG web portal and mobile app",
+            "Tenant management: adding, updating, and tracking tenants across an estate's houses",
+            "Subscriptions: managing estate subscriptions on the platform",
+            "Houses: house records for each estate and the residents linked to them",
+            "Guest logs: recording visitor entries so estate management can see who came in and when",
+            "Background job processing with Redis and BullMQ, with MongoDB as the main database"
+        ],
+        highlight: "The backend behind a gated-estate platform, keeping tenants, houses, subscriptions, and guest activity organised for estate management."
+    },
     {
         id: "sandlink-marketplace",
         title: "SandLink Marketplace",

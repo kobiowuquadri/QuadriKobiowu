@@ -61,7 +61,7 @@ const AboutMe = () => {
             className="space-y-6"
           >
             <p className="text-secondary-text font-poppins leading-relaxed text-lg">
-              I am a 22-year-old Software Engineer based in Nigeria, with a strong focus
+              I am a 23-year-old Software Engineer based in Nigeria, with a strong focus
               on backend engineering while working confidently across web and mobile products.
               I build for startups, businesses, NGOs, educational organizations, and technology teams.
             </p>
